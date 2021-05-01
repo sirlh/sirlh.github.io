@@ -1374,6 +1374,7 @@ article .content .caption {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    margin-bottom: 15px;
   }
   #footer .footer-bottom {
     margin: 0.3rem 0 1rem 0;
