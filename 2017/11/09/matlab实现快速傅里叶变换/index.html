@@ -148,22 +148,22 @@
     </header>
     
     <div class="content" itemprop="articleBody">
-        <p><img src="https://raw.githubusercontent.com/sirlh/photo/37053cd70b6a797b9b8cc7b9db769272b1ee24dc/timg.jpg"></p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"<p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/37053cd70b6a797b9b8cc7b9db769272b1ee24dc/timg.jpg" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/37053cd70b6a797b9b8cc7b9db769272b1ee24dc/timg.jpg"></a></p>
 <p>傅里叶变换是能将信号从时域转到频域的一种变换形式，是我们分析信号的常用方法，毕竟相比于时域的纷乱复杂，频域显得清爽很多。有关傅里叶变换的理解，可以看我之前转载的一篇文章：<a target="_blank" rel="noopener" href="http://luheng.online/2017/04/19/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E5%82%85%E9%87%8C%E5%8F%B6%E5%88%86%E6%9E%90%E4%B9%8B%E6%8E%90%E6%AD%BB%E6%95%99%E7%A8%8B%EF%BC%88%E5%AE%8C%E6%95%B4%E7%89%88%EF%BC%89/#more">【转载】傅里叶分析之掐死教程（完整版） </a>。<br>本篇文章主要介绍快速傅里叶变换（FFT）的一种，基2FFT，讲诉计算原理和提供相应的matlab代码。</p>
 <span id="more"></span>
 
-<h3 id="DFT和FFT"><a href="#DFT和FFT" class="headerlink" title="DFT和FFT"></a>DFT和FFT</h3><p>DFT是离散傅里叶变换，是傅里叶变换在离散系统的表现形式。<br>离散信号x(n)的傅里叶变换可以表示为：<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/xn.PNG"><br>其中k=0,1,2…N-1,所以DFT的运算量为N的平方，当N取值很大时，计算量就会十分巨大。所以需要找一些算法去优化它的计算，减少计算量，这便是FFT，快速傅里叶变换。</p>
+<h3 id="DFT和FFT"><a href="#DFT和FFT" class="headerlink" title="DFT和FFT"></a>DFT和FFT</h3><p>DFT是离散傅里叶变换，是傅里叶变换在离散系统的表现形式。<br>离散信号x(n)的傅里叶变换可以表示为：<br><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/xn.PNG" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/xn.PNG"></a><br>其中k=0,1,2…N-1,所以DFT的运算量为N的平方，当N取值很大时，计算量就会十分巨大。所以需要找一些算法去优化它的计算，减少计算量，这便是FFT，快速傅里叶变换。</p>
 <p>一般来说，FFT算法主要分为两种类型，时域抽取和频域抽取。两者的区别主要是提取数列的方法不一致，在计算上表现为蝶形因子的位置不同，前者蝶形因子出现在输入端，后者出现在输出端。</p>
-<p>以N=8为例，时域抽取：<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/shiyu.PNG" alt="时域抽取"><br>频域抽取<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/pinyu.PNG" alt="频域抽取"></p>
+<p>以N=8为例，时域抽取：<br><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/shiyu.PNG" title="时域抽取" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/shiyu.PNG" alt="时域抽取"></a><br>频域抽取<br><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/pinyu.PNG" title="频域抽取" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/pinyu.PNG" alt="频域抽取"></a></p>
 <h3 id="基2FFT计算原理"><a href="#基2FFT计算原理" class="headerlink" title="基2FFT计算原理"></a>基2FFT计算原理</h3><p>本文所写的FFT以时域抽取为例，频域抽取不作讲解，下面是计算过程。</p>
-<p>时间抽取FFT是将N点输入序列x(n)，按照奇偶分为奇数列和偶数列。<br>奇数列：x(1),x(3),x(5)….x(N-1)<br>偶数列：x(0),x(2),x(4)….x(N-2)<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/jisuan1.PNG"></p>
-<p>由于旋转因子具备对称性和周期性（周期为N/2），所以可以得到：<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/jisuan3.PNG"></p>
-<p><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/jisuan4.PNG"><br>如果对X1(k)和X2(K)继续用这样的办法分解下去，最终一个N点的DFT可以用一组2点的DFT去计算。所以在基2的FFT中，总共有log2(N)级运算，每级有N/2个2点FFT的蝶形运算。</p>
+<p>时间抽取FFT是将N点输入序列x(n)，按照奇偶分为奇数列和偶数列。<br>奇数列：x(1),x(3),x(5)….x(N-1)<br>偶数列：x(0),x(2),x(4)….x(N-2)<br><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/jisuan1.PNG" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/jisuan1.PNG"></a></p>
+<p>由于旋转因子具备对称性和周期性（周期为N/2），所以可以得到：<br><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/jisuan3.PNG" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/jisuan3.PNG"></a></p>
+<p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/jisuan4.PNG" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/jisuan4.PNG"></a><br>如果对X1(k)和X2(K)继续用这样的办法分解下去，最终一个N点的DFT可以用一组2点的DFT去计算。所以在基2的FFT中，总共有log2(N)级运算，每级有N/2个2点FFT的蝶形运算。</p>
 <p>这里我想说得再清晰一些，可是感觉自己表诉得不够准确，害怕误导大家，所以计算过程希望读者还是自己算一遍下来，去感受一下,相信你们会有感悟，如有问题，欢迎大家和在评论区交流。</p>
 <p>单个蝶形运算图示</p>
-<p><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/diexing.PNG"></p>
-<p>N=8时，时间抽取FFT的运算流图如下：<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/N8.PNG"></p>
-<h3 id="直接计算DFT和基2FFT算法运算量比较"><a href="#直接计算DFT和基2FFT算法运算量比较" class="headerlink" title="直接计算DFT和基2FFT算法运算量比较"></a>直接计算DFT和基2FFT算法运算量比较</h3><p>直接计算DFT由公式：<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/xn.PNG"><br>它的运算量为N^2。</p>
+<p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/diexing.PNG" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/diexing.PNG"></a></p>
+<p>N=8时，时间抽取FFT的运算流图如下：<br><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/N8.PNG" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/N8.PNG"></a></p>
+<h3 id="直接计算DFT和基2FFT算法运算量比较"><a href="#直接计算DFT和基2FFT算法运算量比较" class="headerlink" title="直接计算DFT和基2FFT算法运算量比较"></a>直接计算DFT和基2FFT算法运算量比较</h3><p>直接计算DFT由公式：<br><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/xn.PNG" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/xn.PNG"></a><br>它的运算量为N^2。</p>
 <p>根据FFT的运算规则可见，当N=2^M时，从运算流图可以看出，应该会用M级蝶形，每一级都有N/2个蝶形运算构成。因此，每一级都需要N/2复数乘和N次复数加（每个蝶形需要两次复数加法），所以：</p>
 <p>M级运算总的复数乘次数为:  M<em>N/2 = log2（N）（N/2）<br>复数的加次数为： M</em>N = Nlog2(N)</p>
 <p>当 N&gt;&gt;1 时，N^2&gt;&gt;og2（N）*（N/2），所以基2FFT算法比直接计算DFT得到运算量大大减少。</p>
@@ -174,11 +174,16 @@
 
 <p>这里说下程序的特点，由于快速傅里叶变换本身因为计算的原因，要求输入的N应该为2^M（M是级数）即类似2，4，8，16…这些数字，所以当输入N=3，6，12时，我们并不能进行快速傅里叶变换，不过在程序中我加入了修改提示，还顺便卖萌装年轻，算是比较人性化的一部分。</p>
 <p>此外，还有输入序列x(n)的长度和N之间的关系处理：<br>当N &gt; 数列长度时，说明采样点过多，需要我们为序列后面补零，这点在程序中我也添加了。<br>当N &lt; 数列长度，说明采样不足，实际上这样的采样对输入的信号绝对是会有损耗的，即便计算出来也没有太大的意义，除非有专门的算法做处理，类似一些压缩技术，不然计算的结果只是数学上的数字，对实际并没有多大的用途。</p>
-<p>当输入一个周期的正弦序列A，信号长度为32,N=32时，效果如下图。<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/matlab.png"></p>
+<p>当输入一个周期的正弦序列A，信号长度为32,N=32时，效果如下图。<br><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/matlab.png" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/matlab.png"></a></p>
 <p>关于程序或者文章的问题，欢迎和我在评论区和我讨论，有打赏就更好了。如文章有错误，请斧正。</p>
 <h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p>数字信号处理（高西全，丁美玉）.西安电子科技大学出版社<br>手把手教你理解(FFT).百度文库<br>还有好几篇不记得了在哪找的PPT（—— ——#）</p>
 <p>本文完。 </p>
-
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>
     </div>
 </article>
 

@@ -148,7 +148,7 @@
     </header>
     
     <div class="content" itemprop="articleBody">
-        <p>这是一个使用FPGA制作的小游戏，知识主要是VGA的使用和关于游戏的逻辑处理。在这篇中将会讲诉VGA的显示原理和使用，还有一些关于键盘的消抖的小知识。</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"<p>这是一个使用FPGA制作的小游戏，知识主要是VGA的使用和关于游戏的逻辑处理。在这篇中将会讲诉VGA的显示原理和使用，还有一些关于键盘的消抖的小知识。</p>
 <span id="more"></span>
 
 <h1 id="游戏介绍"><a href="#游戏介绍" class="headerlink" title="游戏介绍"></a>游戏介绍</h1><h2 id="游戏规则"><a href="#游戏规则" class="headerlink" title="游戏规则"></a>游戏规则</h2><blockquote>
@@ -284,18 +284,18 @@
 <td>显示所需的数据</td>
 </tr>
 </tbody></table>
-<h2 id="总体的设计图"><a href="#总体的设计图" class="headerlink" title="总体的设计图"></a>总体的设计图</h2><p><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/shamite.PNG"></p>
+<h2 id="总体的设计图"><a href="#总体的设计图" class="headerlink" title="总体的设计图"></a>总体的设计图</h2><p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/shamite.PNG" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/shamite.PNG"></a></p>
 <h1 id="方案设计"><a href="#方案设计" class="headerlink" title="方案设计"></a>方案设计</h1><h2 id="键盘模块-1"><a href="#键盘模块-1" class="headerlink" title="键盘模块"></a>键盘模块</h2><p>键盘模块的要点在于消抖，和控制方块移动。</p>
 <h3 id="消抖"><a href="#消抖" class="headerlink" title="消抖"></a>消抖</h3><p>无论是什么器件，键盘的消抖都是老套路，分为硬件消抖和软件消抖，硬件消抖如使用RS触发器实现或者是加电容实现，一般是制作板子的时候考虑加上去的，平时我们使用现成的板子，大多数都是使用软件消抖。</p>
 <p>键盘产生抖动是机械特性，在我们按下按键是接触点的电压波形大致如下图：</p>
-<p><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/key.PNG"></p>
+<p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/key.PNG" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/key.PNG"></a></p>
 <p>从图可以看出，按下时会有一段上下波动的波形，松开时也有一段。</p>
 <p>软件消抖常用的方法是延时，作用就是避开这一段“抖动”的波形，达到消抖的目的。</p>
 <figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(counter &lt;= T) <span class="comment">//按的时间不够长</span></span><br><span class="line">	<span class="keyword">begin</span></span><br><span class="line">		counter = counter + <span class="number">1&#x27;b1</span>;</span><br><span class="line">        up_key_press &lt;= <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">else</span>  <span class="comment">//按下足够久了，认为是真的按下</span></span><br><span class="line">    <span class="keyword">begin</span></span><br><span class="line">         counter &lt;= <span class="number">0</span>;</span><br><span class="line">         up_key_press &lt;= <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 
 <p>硬件消抖这里也稍微拓展下。</p>
 <p>RS触发器实现</p>
-<p><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/rs.jpg"></p>
+<p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/rs.jpg" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/rs.jpg"></a></p>
 <p>图中两个“与非”门构成一个RS触发器。当按键未按下时，输出为0;当键按下时，输出为1。此时即使用按键的机械性能，使按键因弹性抖动而产生瞬时断开（抖动跳开B），只要按键不返回原始状态A，双稳态电路的状态不改变，输出保持为0，不会产生抖动的波形。也就是说，即使B点的电压波形是抖动的，但经双稳态电路之后，其输出为正规的矩形波。这一点通过分析RS触发器的工作过程很容易得到验证。</p>
 <p>至于其他的硬件消抖电路，如：用电容构成的积分电路实现，采用D触发器实现，这里不再拓展，如有兴趣，可自行查阅资料。</p>
 <h3 id="控制移动"><a href="#控制移动" class="headerlink" title="控制移动"></a>控制移动</h3><p>这个功能的实现，应该说不难。知道要改变哪个参数能使它移动，改变它就可以实现了，在这个游戏系统中，控制方块上下移动是改变 move_y 这个参数，左右移动是改变move_x，不过在后面测试游戏时，我觉得左右移动没有必要加上去，就把它去了,具体的操作看代码吧。</p>
@@ -303,15 +303,15 @@
 <h3 id="VGA原理"><a href="#VGA原理" class="headerlink" title="VGA原理"></a>VGA原理</h3><p>VGA从扫描方式上分行扫描和场扫描两种，扫描就是一个电子枪（CRT），啾啾啾的扫，水平方向叫行扫描，垂直方向叫场扫描，这个电子枪它又可发出三种颜色光，分别是R(红色)，G(绿色)，B(蓝色)，光的三原色都有，原则上三原色按照比例不同搭配，那你想要什么颜色就可以给你什么颜色，但实际上呢，VGA中红，绿，蓝的输入线分别是3,3,2根；也就是说红色有2^3=8种，同理，绿色八种，蓝色四种，相互搭配，便有8  X 8  X 4=256种搭配，也就是VGA能显示256种颜色。</p>
 <p>扫描过程是怎样的？</p>
 <p>以行扫描为例:</p>
-<p><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/hc.PNG"></p>
+<p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/hc.PNG" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/hc.PNG"></a></p>
 <p>从图可以看出，电子枪从左往右扫射一行回头再到下一行，直至最后完成一帧画面，又重头开始。那什么时候掉头，什么时候算是完成一帧画面，这就有个区域了，区域怎么定，是由显示模式决定的，看下图。</p>
-<p><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/table.PNG"></p>
+<p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/table.PNG" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/table.PNG"></a></p>
 <p>我们可以看到有多种显示模式，不同的显示模式所需的时钟频率可是不一样的，如果细心查看，就会注意到，行时序的c区和列时序的q区恰好是640和480这两个熟悉的数字，其实这就是显示时序段的范围。 </p>
 <p> VGA中定义行时序和场时序都需要同步脉冲（Sync a）、显示后沿（Back porch b）、显示时序段（Display interval c）和显示前沿（Front porch d）四部分。只有在显示时序段，也就是C区才可以信号显示出来，其他区域，你就算给VGA信号，你也看不到。</p>
 <p><strong>行时序</strong></p>
-<p><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/h.PNG"></p>
+<p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/h.PNG" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/h.PNG"></a></p>
 <p><strong>场时序</strong></p>
-<p><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/v.PNG"></p>
+<p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/v.PNG" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/v.PNG"></a></p>
 <p>那么我们怎么知道，电子枪（CRT）有没有扫描到显示时序段呢？方法是加入行同步计数器和列同步计数器用，反正时序是固定的，行同步计数器是扫一下计数器加一，列计数器是一行扫完计数器加一，两者都扫到C区了，也就是计数器都达到一定数值（a区长度+B区长度），表明屏幕可以显示信号，我就给信号，要黑色，rgb全给0，要白色，全给1，反正就是给信号，这和在坐标轴上画图的感觉是一样一样的。</p>
 <h2 id="控制模块-1"><a href="#控制模块-1" class="headerlink" title="控制模块"></a>控制模块</h2><p>控制模块就像这个游戏系统的控制中心一般，制定了关于这个游戏的一切规则。</p>
 <p>主要有那么几个要点:</p>
@@ -326,9 +326,9 @@
 
 <h3 id="“画”方块和挡板"><a href="#“画”方块和挡板" class="headerlink" title="“画”方块和挡板"></a>“画”方块和挡板</h3><p>关于如何“画”，前面举过画方块的例子，就是把行列计数器当做 x,y。x给个区域，y给个区域，再给个颜色，就画出来了。至于移动呢，移动就代表着位置是个变量，设定一个x,y都是变量的点，然后以这个点为中心画出你要的方块或者挡板，改变这个点的x,y便是将它移动。</p>
 <p>以挡板从右向左移动为例：</p>
-<p><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/ban.PNG"></p>
+<p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/ban.PNG" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/ban.PNG"></a></p>
 <h3 id="产生随机数"><a href="#产生随机数" class="headerlink" title="产生随机数"></a>产生随机数</h3><p>产生伪随机数的方法最常见的是利用一种线性反馈移位寄存器(LFSR),它是由n个D触发器和若干个异或门组成的，如下图：</p>
-<p><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/suiji.PNG"></p>
+<p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/suiji.PNG" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/bizhang_game/suiji.PNG"></a></p>
 <p>实际上这个有规律可循的，只不过D触发器一多，显得很乱，很像随机产生的样子，但确实不是真正意义上的随机数，是个伪随机数，但在这里使用足够了的。</p>
 <p>但这种方法也有bug,就是高位它不容易变化的时候，挡板垂直方向就不够分散，举个例子，以8个D触发器组成的为例，数字范围从0~1111_1111,如果高位变化不大，如从1110_0000变成1110_0101,高位不怎么变化的话，整个数字大小实际上就是改变一点点，图像表现为前后两个挡板垂直位置上相差几个像素点，这就显得过于集中，而且这种办法无法生成 0 这个数字。</p>
 <p>为了将挡板”离散一点”，我就将竖直方向的长减去挡板的长度后得到的空隙分段化，分为8段，这样挡板之间的距离要么相等，不然都会有一段距离，显得离散些。怎么实现呢？</p>
@@ -374,7 +374,12 @@
 
 <h1 id="写在后面的话"><a href="#写在后面的话" class="headerlink" title="写在后面的话"></a>写在后面的话</h1><p>关于这个小游戏的讲解就到这里，有任何疑问可以在评论处指出或者联系我，我会及时更新，文章若有错误，恳请读者在评论区指出斧正，我会修改。</p>
 <p>欢迎大家在评论区与我交流，学习。</p>
-
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>
     </div>
 </article>
 

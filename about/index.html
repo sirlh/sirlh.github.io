@@ -76,7 +76,7 @@
     
     <div class="content" itemprop="articleBody">
         
-            <blockquote>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"<blockquote>
 <p> 好好活就是有意义的事，有意义的事就是好好活</p>
 </blockquote>
 <h3 id="关于作者"><a href="#关于作者" class="headerlink" title="关于作者"></a>关于作者</h3><pre><code>- 有点理想的普通人
@@ -91,8 +91,13 @@
 <h3 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h3><pre><code>- 记录后期的学习
 - 分享生活
 </code></pre>
-<p><img src="/images/heart.png"></p>
-
+<p><a href="/images/heart.png" class="gallery-item"><img src="/images/heart.png"></a></p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>
         
     </div>
 

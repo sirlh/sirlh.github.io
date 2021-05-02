@@ -143,7 +143,7 @@
     </header>
     
     <div class="content" itemprop="articleBody">
-        <p><img src="https://raw.githubusercontent.com/sirlh/photo/37053cd70b6a797b9b8cc7b9db769272b1ee24dc/69530.png" alt="markdown的使用"></p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"<p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sirlh/photo/37053cd70b6a797b9b8cc7b9db769272b1ee24dc/69530.png" title="markdown的使用" class="gallery-item"><img src="https://raw.githubusercontent.com/sirlh/photo/37053cd70b6a797b9b8cc7b9db769272b1ee24dc/69530.png" alt="markdown的使用"></a></p>
 <p>关于markdown的简介博主在这里不再赘述啦，如果想了解更多，可以看看下列的链接。</p>
 <p><a target="_blank" rel="noopener" href="http://daringfireball.net/projects/markdown/syntax">创始人 John Gruber 的 Markdown 语法说明</a></p>
 <p><a target="_blank" rel="noopener" href="http://wowubuntu.com/markdown/#overview">Markdown 中文版语法说明</a></p>
@@ -228,7 +228,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.testButton &#123; color:black;font-size:12px;padding-top:10px;padding-bottom:10px;padding-left:25px;padding-right:25px;border-width:;border-color:white;border-style:;border-radius:10px;background-color:#f3f3f3;&#125;.testButton:hover&#123;color:white;background-color:#0684bd;border-color:#87daff;&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line">&lt;button class&#x3D;&quot;testButton&quot; onclick&#x3D;&quot;document.all.child1.style.display&#x3D;(document.all.child1.style.display &#x3D;&#x3D;&#39;none&#39;)?&#39;&#39;:&#39;none&#39;&quot;&gt;点击显\隐代码&lt;&#x2F;button&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;child1&quot; style&#x3D;&quot;display:none&quot;&gt; </span><br><span class="line"></span><br><span class="line">此处放代码</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;div&gt; </span><br></pre></td></tr></table></figure>
 </div> 
 
-
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>
     </div>
 </article>
 
