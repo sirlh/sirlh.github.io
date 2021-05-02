@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    
+    
+        
+            
+                <link rel="shortcut icon" href="/images/favicon.ico">
+            
+        
+        
+            
+                <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+            
+        
+        
+            
+                <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+            
+        
+    
+    <!-- title -->
+    <title>matlab实现快速傅里叶变换</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@2/distr/fira_code.css" rel="stylesheet">
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+
+    <div id="header-post">
+    <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+    <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+    <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i
+                class="fas fa-chevron-up fa-lg"></i></a>
+    <span id="menu">
+    <span id="nav">
+      <ul>
+          
+              <li><a href="/">Home</a></li>
+          
+              <li><a href="/archives/">Articles</a></li>
+          
+              <li><a href="/categories/">Category</a></li>
+          
+              <li><a href="/about/">About</a></li>
+          
+              <li><a href="/search/">Search</a></li>
+          
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+          
+              <li><a class="icon" href="/2017/11/22/FPGA-%E6%95%B0%E5%AD%97%E9%97%B9%E9%92%9F/"><i class="fas fa-chevron-left"
+                                                                           aria-hidden="true"
+                                                                           onmouseover="$('#i-prev').toggle();"
+                                                                           onmouseout="$('#i-prev').toggle();"></i></a></li>
+          
+          
+              <li><a class="icon" href="/2017/11/03/FPGA.%E7%9F%A9%E9%98%B5%E9%94%AE%E7%9B%98/"><i class="fas fa-chevron-right"
+                                                                           aria-hidden="true"
+                                                                           onmouseover="$('#i-next').toggle();"
+                                                                           onmouseout="$('#i-next').toggle();"></i></a></li>
+          
+          <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i
+                          class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();"
+                          onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true"
+                                        onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();"
+                                        onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://sirlh.github.io/2017/11/09/matlab%E5%AE%9E%E7%8E%B0%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=matlab实现快速傅里叶变换"><i
+                    class="fab fa-qq " aria-hidden="true"></i></a></li>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=https://sirlh.github.io/2017/11/09/matlab%E5%AE%9E%E7%8E%B0%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=matlab实现快速傅里叶变换"><i
+                    class="fab fa-weibo " aria-hidden="true"></i></a></li>
+    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://sirlh.github.io/2017/11/09/matlab%E5%AE%9E%E7%8E%B0%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&text=matlab实现快速傅里叶变换"><i
+                    class="fab fa-twitter " aria-hidden="true"></i></a></li>
+    <li><a class="icon" href="mailto:?subject=matlab实现快速傅里叶变换&body=Check out this article: https://sirlh.github.io/2017/11/09/matlab%E5%AE%9E%E7%8E%B0%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"><i
+                    class="fas fa-envelope " aria-hidden="true"></i></a></li>
+</ul>
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#DFT%E5%92%8CFFT"><span class="toc-number">1.</span> <span class="toc-text">DFT和FFT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA2FFT%E8%AE%A1%E7%AE%97%E5%8E%9F%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">基2FFT计算原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E8%AE%A1%E7%AE%97DFT%E5%92%8C%E5%9F%BA2FFT%E7%AE%97%E6%B3%95%E8%BF%90%E7%AE%97%E9%87%8F%E6%AF%94%E8%BE%83"><span class="toc-number">3.</span> <span class="toc-text">直接计算DFT和基2FFT算法运算量比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#matlab%E7%A8%8B%E5%BA%8F"><span class="toc-number">4.</span> <span class="toc-text">matlab程序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-number">5.</span> <span class="toc-text">参考文献</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+<div class="content index py4">
+    
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        
+    <h1 class="posttitle" itemprop="name headline">
+        matlab实现快速傅里叶变换
+    </h1>
+
+        <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">
+            Lu Heng
+            
+        </span>
+      </span>
+            
+    <div class="postdate">
+        
+            <time datetime="2017-11-09T15:05:45.000Z"
+                  itemprop="datePublished">2017-11-09</time>
+            
+                (Updated:
+                <time datetime="2021-05-02T20:40:24.574Z"
+                      itemprop="dateModified">2021-05-02</time>)
+            
+        
+    </div>
+
+            
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Matlab/">Matlab</a>
+    </div>
+
+            
+        </div>
+    </header>
+    
+    <div class="content" itemprop="articleBody">
+        <p><img src="https://raw.githubusercontent.com/sirlh/photo/37053cd70b6a797b9b8cc7b9db769272b1ee24dc/timg.jpg"></p>
+<p>傅里叶变换是能将信号从时域转到频域的一种变换形式，是我们分析信号的常用方法，毕竟相比于时域的纷乱复杂，频域显得清爽很多。有关傅里叶变换的理解，可以看我之前转载的一篇文章：<a target="_blank" rel="noopener" href="http://luheng.online/2017/04/19/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E5%82%85%E9%87%8C%E5%8F%B6%E5%88%86%E6%9E%90%E4%B9%8B%E6%8E%90%E6%AD%BB%E6%95%99%E7%A8%8B%EF%BC%88%E5%AE%8C%E6%95%B4%E7%89%88%EF%BC%89/#more">【转载】傅里叶分析之掐死教程（完整版） </a>。<br>本篇文章主要介绍快速傅里叶变换（FFT）的一种，基2FFT，讲诉计算原理和提供相应的matlab代码。</p>
+<span id="more"></span>
+
+<h3 id="DFT和FFT"><a href="#DFT和FFT" class="headerlink" title="DFT和FFT"></a>DFT和FFT</h3><p>DFT是离散傅里叶变换，是傅里叶变换在离散系统的表现形式。<br>离散信号x(n)的傅里叶变换可以表示为：<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/xn.PNG"><br>其中k=0,1,2…N-1,所以DFT的运算量为N的平方，当N取值很大时，计算量就会十分巨大。所以需要找一些算法去优化它的计算，减少计算量，这便是FFT，快速傅里叶变换。</p>
+<p>一般来说，FFT算法主要分为两种类型，时域抽取和频域抽取。两者的区别主要是提取数列的方法不一致，在计算上表现为蝶形因子的位置不同，前者蝶形因子出现在输入端，后者出现在输出端。</p>
+<p>以N=8为例，时域抽取：<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/shiyu.PNG" alt="时域抽取"><br>频域抽取<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/pinyu.PNG" alt="频域抽取"></p>
+<h3 id="基2FFT计算原理"><a href="#基2FFT计算原理" class="headerlink" title="基2FFT计算原理"></a>基2FFT计算原理</h3><p>本文所写的FFT以时域抽取为例，频域抽取不作讲解，下面是计算过程。</p>
+<p>时间抽取FFT是将N点输入序列x(n)，按照奇偶分为奇数列和偶数列。<br>奇数列：x(1),x(3),x(5)….x(N-1)<br>偶数列：x(0),x(2),x(4)….x(N-2)<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/jisuan1.PNG"></p>
+<p>由于旋转因子具备对称性和周期性（周期为N/2），所以可以得到：<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/jisuan3.PNG"></p>
+<p><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/jisuan4.PNG"><br>如果对X1(k)和X2(K)继续用这样的办法分解下去，最终一个N点的DFT可以用一组2点的DFT去计算。所以在基2的FFT中，总共有log2(N)级运算，每级有N/2个2点FFT的蝶形运算。</p>
+<p>这里我想说得再清晰一些，可是感觉自己表诉得不够准确，害怕误导大家，所以计算过程希望读者还是自己算一遍下来，去感受一下,相信你们会有感悟，如有问题，欢迎大家和在评论区交流。</p>
+<p>单个蝶形运算图示</p>
+<p><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/diexing.PNG"></p>
+<p>N=8时，时间抽取FFT的运算流图如下：<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/N8.PNG"></p>
+<h3 id="直接计算DFT和基2FFT算法运算量比较"><a href="#直接计算DFT和基2FFT算法运算量比较" class="headerlink" title="直接计算DFT和基2FFT算法运算量比较"></a>直接计算DFT和基2FFT算法运算量比较</h3><p>直接计算DFT由公式：<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/xn.PNG"><br>它的运算量为N^2。</p>
+<p>根据FFT的运算规则可见，当N=2^M时，从运算流图可以看出，应该会用M级蝶形，每一级都有N/2个蝶形运算构成。因此，每一级都需要N/2复数乘和N次复数加（每个蝶形需要两次复数加法），所以：</p>
+<p>M级运算总的复数乘次数为:  M<em>N/2 = log2（N）（N/2）<br>复数的加次数为： M</em>N = Nlog2(N)</p>
+<p>当 N&gt;&gt;1 时，N^2&gt;&gt;og2（N）*（N/2），所以基2FFT算法比直接计算DFT得到运算量大大减少。</p>
+<h3 id="matlab程序"><a href="#matlab程序" class="headerlink" title="matlab程序"></a>matlab程序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">A&#x3D;input(&#39;请输入序列A：&#39;);</span><br><span class="line">N&#x3D;input(&#39;请输入N：&#39;);</span><br><span class="line">L&#x3D;length(A(:)); %输入序列长度</span><br><span class="line">b&#x3D;0;</span><br><span class="line">if(N&lt;L)</span><br><span class="line">    P&#x3D;input(&#39;由于N小于序列长度，采样信号不完整，计算无意义，建议重新输入N\n 1:重新输入N\n 0：坚持计算\n&#39;);</span><br><span class="line">    if(P&#x3D;&#x3D;1)</span><br><span class="line">        N&#x3D;input(&#39;请输入N：&#39;);</span><br><span class="line">        while(N&lt;L)</span><br><span class="line">            N&#x3D;input(&#39;N仍小于序列长度，请重新输入：\n&#39;);</span><br><span class="line">        end</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">while 1</span><br><span class="line">    M&#x3D;log2(N); %M是层数</span><br><span class="line">    if(M&#x3D;&#x3D;fix(M))  % 判断是否适合做快速傅里叶变换</span><br><span class="line">            if( log2(L) &lt; M)</span><br><span class="line">                while(log2(L+b)~&#x3D;M)</span><br><span class="line">                    b&#x3D;b+1;</span><br><span class="line">                end</span><br><span class="line">                for n&#x3D;L+1:1:L+b</span><br><span class="line">                    A(n)&#x3D;0;</span><br><span class="line">                end</span><br><span class="line">                L&#x3D;length(A);</span><br><span class="line">            end</span><br><span class="line">                    X0&#x3D;myfft(A,M);</span><br><span class="line">                    X1&#x3D;fft(A,N);</span><br><span class="line">                    X2&#x3D;myfft(A,M)-fft(A,N);</span><br><span class="line">                    %%%%   画图</span><br><span class="line">                    subplot(4,1,1); </span><br><span class="line">                    stem(A); </span><br><span class="line">                    title(&#39;A序列&#39;); </span><br><span class="line">                    </span><br><span class="line">                    subplot(4,1,2); </span><br><span class="line">                    stem(X0); </span><br><span class="line">                    title(&#39;A序列的myfft&#39;);</span><br><span class="line">                    </span><br><span class="line">                    subplot(4,1,3); </span><br><span class="line">                    stem(X1);</span><br><span class="line">                    title(&#39;A序列的fft&#39;); </span><br><span class="line">                    </span><br><span class="line">                    subplot(4,1,4); </span><br><span class="line">                    stem(X2);</span><br><span class="line">                    title(&#39;myfft-fft&#39;); </span><br><span class="line">                    %%%%%</span><br><span class="line">                    flag&#x3D;1;</span><br><span class="line">                    break;</span><br><span class="line">    else</span><br><span class="line">        y&#x3D;input(&#39;N点不适合做快速傅里叶变换，现在您有两个选择\n 0：重新输入N\n 1：使用直接傅里叶变换\n&#39;);</span><br><span class="line">        if(y&#x3D;&#x3D;0)</span><br><span class="line">            N&#x3D;input(&#39;请重新输入N\n&#39;);</span><br><span class="line">            if(N&lt;L)</span><br><span class="line">                P&#x3D;input(&#39;由于N小于序列长度，采样信号不完整，计算无意义，建议重新输入N\n 1:重新输入N\n 0：坚持计算\n&#39;);</span><br><span class="line">                if(P&#x3D;&#x3D;1)</span><br><span class="line">                    N&#x3D;input(&#39;请输入N：&#39;);</span><br><span class="line">                    while(N&lt;L)</span><br><span class="line">                        N&#x3D;input(&#39;N仍小于序列长度，请重新输入：\n&#39;);</span><br><span class="line">                    end</span><br><span class="line">                end</span><br><span class="line">            end</span><br><span class="line">        else</span><br><span class="line">            if(y&#x3D;&#x3D;1)</span><br><span class="line">                X1&#x3D;fft(A,N);</span><br><span class="line">                subplot(2,1,1); </span><br><span class="line">                stem(A); </span><br><span class="line">                title(&#39;A序列&#39;);</span><br><span class="line">                subplot(2,1,2); </span><br><span class="line">                stem(X1); </span><br><span class="line">                title(&#39;A序列的DFT&#39;);</span><br><span class="line">                break;</span><br><span class="line">            else</span><br><span class="line">                fprintf(&#39;拜托！只有0和1两个选择，— —#\n&#39;);</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">    end</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p>FFT函数文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">%%  myfft函数，此程序是用来调用的</span><br><span class="line"></span><br><span class="line">function [A] &#x3D; myfft(A,M) </span><br><span class="line">N&#x3D;2^M;  % M 表示层数</span><br><span class="line">LH&#x3D;N&#x2F;2; </span><br><span class="line">J&#x3D;LH; </span><br><span class="line">N1&#x3D;N-2; </span><br><span class="line">%倒序程序</span><br><span class="line">for I&#x3D;1:1:N1    </span><br><span class="line">    if I&lt;J </span><br><span class="line">       T&#x3D;A(I+1); </span><br><span class="line">       A(I+1)&#x3D;A(J+1);        </span><br><span class="line">       A(J+1)&#x3D;T;     </span><br><span class="line">    end</span><br><span class="line">    K&#x3D;LH;</span><br><span class="line">    if J&gt;&#x3D;K         </span><br><span class="line">        J&#x3D;J-K;        </span><br><span class="line">        K&#x3D;K&#x2F;2;     </span><br><span class="line">    end</span><br><span class="line">    J&#x3D;J+K;</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">for L&#x3D;1:1:M    </span><br><span class="line">    B&#x3D;2^(L-1);     </span><br><span class="line">    for J&#x3D;0:B-1 </span><br><span class="line">        p&#x3D;J*2^(M-L);        </span><br><span class="line">        for k&#x3D;J:2^L:N-1 </span><br><span class="line">            T&#x3D;A(k+1)+A(k+B+1)*exp(-1i*2*pi*p&#x2F;N); </span><br><span class="line">            A(k+B+1)&#x3D;A(k+1)-A(k+B+1)*exp(-1i*2*pi*p&#x2F;N); </span><br><span class="line">            A(k+1)&#x3D;T; </span><br><span class="line">        end</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">B&#x3D;(0);</span><br><span class="line">for i&#x3D;1:2^M</span><br><span class="line">    B(i)&#x3D;A(i);</span><br><span class="line">end</span><br><span class="line">A&#x3D;B;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这里说下程序的特点，由于快速傅里叶变换本身因为计算的原因，要求输入的N应该为2^M（M是级数）即类似2，4，8，16…这些数字，所以当输入N=3，6，12时，我们并不能进行快速傅里叶变换，不过在程序中我加入了修改提示，还顺便卖萌装年轻，算是比较人性化的一部分。</p>
+<p>此外，还有输入序列x(n)的长度和N之间的关系处理：<br>当N &gt; 数列长度时，说明采样点过多，需要我们为序列后面补零，这点在程序中我也添加了。<br>当N &lt; 数列长度，说明采样不足，实际上这样的采样对输入的信号绝对是会有损耗的，即便计算出来也没有太大的意义，除非有专门的算法做处理，类似一些压缩技术，不然计算的结果只是数学上的数字，对实际并没有多大的用途。</p>
+<p>当输入一个周期的正弦序列A，信号长度为32,N=32时，效果如下图。<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/matlab/FFT/matlab.png"></p>
+<p>关于程序或者文章的问题，欢迎和我在评论区和我讨论，有打赏就更好了。如文章有错误，请斧正。</p>
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p>数字信号处理（高西全，丁美玉）.西安电子科技大学出版社<br>手把手教你理解(FFT).百度文库<br>还有好几篇不记得了在哪找的PPT（—— ——#）</p>
+<p>本文完。 </p>
+
+    </div>
+</article>
+
+
+
+<script>
+    //检测推送
+    var pushType = "";
+    var pushLink = "";
+    var siteName = "HENG";
+  
+    var ValineButton = document.getElementsByClassName("vsubmit vbtn")[0];
+    //分情况推送
+    if (pushType === "sc") {
+      var title = "text=" + siteName + "上又有新评论啦~!";
+      function send_valine_Server() {
+        //获取元素信息
+        var pagename = document.title;
+        var wz = pagename.indexOf("|");
+        var res = pagename.substring(0, wz);
+        var pageurl = document.URL;
+        var ptime = new Date();
+        var vnick = document.getElementsByClassName("vnick vinput")[0].value;
+        var vmail = document.getElementsByClassName("vmail vinput")[0].value;
+        var vlink = document.getElementsByClassName("vlink vinput")[0].value;
+        var veditor = document.getElementsByClassName("veditor vinput")[0].value;
+        var text = "desp=";
+        var data =
+          text +
+          "|昵称：" +
+          "|邮箱：" +
+          "|网站地址：" +
+          "|当前页面：" +
+          "|评论内容：" +
+          "|跳转链接：" +
+          "|评论时间" +
+          "\n" +
+          "|----|----|----|----|" +
+          "\n" +
+          "|   " +
+          vnick +
+          "   |   " +
+          vmail +
+          "  |  " +
+          vlink +
+          "|   " +
+          res +
+          "| " +
+          veditor +
+          "| " +
+          pageurl +
+          "|" +
+          ptime.toLocaleString() +
+          "|";
+        var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
+        httpRequest.open("POST", pushLink, true); //第二步：打开连接
+        httpRequest.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded"
+        ); //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+        httpRequest.send(title + "&" + data); //发送请求 将情头体写在send中
+      }
+      ValineButton.onclick = send_valine_Server;
+    } else if (pushType === "qmsg") {
+      var title = "msg=" + siteName + "上又有新评论啦~!\n";
+      function send_valine_Qmsg() {
+        //获取元素信息
+        var pagename = document.title;
+        var wz = pagename.indexOf("|");
+        var res = pagename.substring(0, wz);
+        var pageurl = document.URL;
+        var ptime = new Date();
+        var vnick = document.getElementsByClassName("vnick vinput")[0].value;
+        var vmail = document.getElementsByClassName("vmail vinput")[0].value;
+        var vlink = document.getElementsByClassName("vlink vinput")[0].value;
+        var veditor = document.getElementsByClassName("veditor vinput")[0].value;
+        var data =
+          "昵称：" +
+          vnick +
+          "\n邮箱：" +
+          vmail +
+          "\n网站地址：" +
+          vlink +
+          "\n当前页面：" +
+          pagename +
+          "\n评论内容：" +
+          veditor +
+          "\n跳转链接：" +
+          pageurl +
+          "\n评论时间" +
+          ptime.toLocaleString();
+        var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
+        httpRequest.open("POST", pushLink, true); //第二步：打开连接
+        httpRequest.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded"
+        ); //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+        httpRequest.send(title + data); //发送请求 将情头体写在send中
+      }
+      ValineButton.onclick = send_valine_Qmsg;
+    }
+  </script>
+    
+
+        
+        <iframe src="https://sirlh.github.io/js-reward/public/index.html" style="height:240px; margin: 0 auto"  frameborder="0"></iframe>
+    
+        <div id="footer-post-container">
+    <div id="footer-post">
+
+        <div id="nav-footer" style="display: none">
+            <ul>
+                
+                    <li><a href="/">Home</a></li>
+                
+                    <li><a href="/archives/">Articles</a></li>
+                
+                    <li><a href="/categories/">Category</a></li>
+                
+                    <li><a href="/about/">About</a></li>
+                
+                    <li><a href="/search/">Search</a></li>
+                
+            </ul>
+        </div>
+
+        <div id="toc-footer" style="display: none">
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#DFT%E5%92%8CFFT"><span class="toc-number">1.</span> <span class="toc-text">DFT和FFT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA2FFT%E8%AE%A1%E7%AE%97%E5%8E%9F%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">基2FFT计算原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E8%AE%A1%E7%AE%97DFT%E5%92%8C%E5%9F%BA2FFT%E7%AE%97%E6%B3%95%E8%BF%90%E7%AE%97%E9%87%8F%E6%AF%94%E8%BE%83"><span class="toc-number">3.</span> <span class="toc-text">直接计算DFT和基2FFT算法运算量比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#matlab%E7%A8%8B%E5%BA%8F"><span class="toc-number">4.</span> <span class="toc-text">matlab程序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-number">5.</span> <span class="toc-text">参考文献</span></a></li></ol>
+        </div>
+
+        <div id="share-footer" style="display: none">
+            <ul>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://sirlh.github.io/2017/11/09/matlab%E5%AE%9E%E7%8E%B0%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=matlab实现快速傅里叶变换"><i
+                    class="fab fa-qq fa-lg" aria-hidden="true"></i></a></li>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=https://sirlh.github.io/2017/11/09/matlab%E5%AE%9E%E7%8E%B0%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&title=matlab实现快速傅里叶变换"><i
+                    class="fab fa-weibo fa-lg" aria-hidden="true"></i></a></li>
+    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://sirlh.github.io/2017/11/09/matlab%E5%AE%9E%E7%8E%B0%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/&text=matlab实现快速傅里叶变换"><i
+                    class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+    <li><a class="icon" href="mailto:?subject=matlab实现快速傅里叶变换&body=Check out this article: https://sirlh.github.io/2017/11/09/matlab%E5%AE%9E%E7%8E%B0%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"><i
+                    class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+        </div>
+
+        <div id="actions-footer">
+            <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i
+                        class="fas fa-bars fa-lg"
+                        aria-hidden="true"></i> Menu</a>
+            <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i
+                        class="fas fa-list fa-lg"
+                        aria-hidden="true"></i> TOC</a>
+            <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i
+                        class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+            <a id="top" style="display:none" class="icon" href="#"
+               onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg"
+                                                                               aria-hidden="true"></i> Top
+            </a>
+        </div>
+
+    </div>
+</div>
+    
+
+
+    <footer id="footer">
+  
+  <div class="footer-top">
+    
+    &copy; 2021 <i class="fas fa-heart"></i>
+    Lu Heng 
+  </div>
+ <!--
+  <div class="footer-bottom">
+     
+  </div>-->
+</footer>
+
+</div>
+<!-- styles -->
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css">
+
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/justifiedGallery/3.7.0/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+
+<script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://cdn.staticfile.org/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+    
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            // copy-btn HTML
+            var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+            btn += '<i class="far fa-clone"></i>';
+            btn += '</span>';
+            // mount it!
+            $(".highlight .code pre").before(btn);
+            var clip = new ClipboardJS('.btn-copy', {
+                target: function (trigger) {
+                    return trigger.nextElementSibling;
+                }
+            });
+            clip.on('success', function (e) {
+                e.trigger.setAttribute('aria-label', "Copied!");
+                e.clearSelection();
+            })
+        })
+    </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+</body>
+
+</html>

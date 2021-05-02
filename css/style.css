@@ -1591,71 +1591,55 @@ article .content .caption {
   content: ")";
 }
 .highlight {
-  color: #000;
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
   background: #fff;
-}
-.highlight .code .subst,
-.highlight .code .title {
-  font-weight: normal;
   color: #000;
 }
 .highlight .code .comment,
-.highlight .code .quote {
-  color: #808080;
-  font-style: italic;
+.highlight .code .quote,
+.highlight .code .variable {
+  color: #008000;
 }
-.highlight .code .meta {
-  color: #808000;
-}
-.highlight .code .tag {
-  background: #efefef;
-}
-.highlight .code .section,
-.highlight .code .name,
-.highlight .code .literal,
 .highlight .code .keyword,
 .highlight .code .selector-tag,
-.highlight .code .type,
-.highlight .code .selector-id,
-.highlight .code .selector-class {
-  font-weight: bold;
-  color: #000080;
-}
-.highlight .code .attribute,
-.highlight .code .number,
-.highlight .code .regexp,
-.highlight .code .link {
-  font-weight: bold;
+.highlight .code .built_in,
+.highlight .code .name,
+.highlight .code .tag {
   color: #00f;
 }
-.highlight .code .number,
-.highlight .code .regexp,
-.highlight .code .link {
-  font-weight: normal;
+.highlight .code .string,
+.highlight .code .title,
+.highlight .code .section,
+.highlight .code .attribute,
+.highlight .code .literal,
+.highlight .code .template-tag,
+.highlight .code .template-variable,
+.highlight .code .type,
+.highlight .code .addition {
+  color: #a31515;
 }
-.highlight .code .string {
-  color: #008000;
-  font-weight: bold;
+.highlight .code .deletion,
+.highlight .code .selector-attr,
+.highlight .code .selector-pseudo,
+.highlight .code .meta {
+  color: #2b91af;
+}
+.highlight .code .doctag {
+  color: #808080;
+}
+.highlight .code .attr {
+  color: #f00;
 }
 .highlight .code .symbol,
 .highlight .code .bullet,
-.highlight .code .formula {
-  color: #000;
-  background: #d0eded;
-  font-style: italic;
+.highlight .code .link {
+  color: #00b0e8;
 }
-.highlight .code .doctag {
-  text-decoration: underline;
-}
-.highlight .code .variable,
-.highlight .code .template-variable {
-  color: #660e7a;
-}
-.highlight .code .addition {
-  background: #baeeba;
-}
-.highlight .code .deletion {
-  background: #ffc8bd;
+.highlight .code .line,
+.highlight .code .number {
+  font-family: Consolas, Arial, Helvetica, sans-serif;
 }
 .highlight .code .emphasis {
   font-style: italic;
@@ -1730,8 +1714,11 @@ table tr .gutter {
   color: #383838;
   text-align: right;
 }
+table tr .gutter .line {
+  font-family: Consolas, Arial, Helvetica, sans-serif;
+}
 table tr .code pre .line .meta + .bash {
-  color: #969896;
+  color: #fafafa;
 }
 .highlight {
   overflow-x: auto;

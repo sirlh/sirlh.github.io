@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    
+    
+        
+            
+                <link rel="shortcut icon" href="/images/favicon.ico">
+            
+        
+        
+            
+                <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+            
+        
+        
+            
+                <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+            
+        
+    
+    <!-- title -->
+    <title>电热水器的构造和原理</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@2/distr/fira_code.css" rel="stylesheet">
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+
+    <div id="header-post">
+    <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+    <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+    <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i
+                class="fas fa-chevron-up fa-lg"></i></a>
+    <span id="menu">
+    <span id="nav">
+      <ul>
+          
+              <li><a href="/">Home</a></li>
+          
+              <li><a href="/archives/">Articles</a></li>
+          
+              <li><a href="/categories/">Category</a></li>
+          
+              <li><a href="/about/">About</a></li>
+          
+              <li><a href="/search/">Search</a></li>
+          
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+          
+              <li><a class="icon" href="/2017/05/26/%E5%8D%8A%E5%AF%BC%E4%BD%93%E8%87%B4%E5%86%B7%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E4%BE%8B/"><i class="fas fa-chevron-left"
+                                                                           aria-hidden="true"
+                                                                           onmouseover="$('#i-prev').toggle();"
+                                                                           onmouseout="$('#i-prev').toggle();"></i></a></li>
+          
+          
+              <li><a class="icon" href="/2017/02/19/markdown%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"><i class="fas fa-chevron-right"
+                                                                           aria-hidden="true"
+                                                                           onmouseover="$('#i-next').toggle();"
+                                                                           onmouseout="$('#i-next').toggle();"></i></a></li>
+          
+          <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i
+                          class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();"
+                          onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true"
+                                        onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();"
+                                        onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://sirlh.github.io/2017/02/23/%E7%94%B5%E7%83%AD%E6%B0%B4%E5%99%A8%E7%9A%84%E6%9E%84%E9%80%A0%E5%92%8C%E5%8E%9F%E7%90%86/&title=电热水器的构造和原理"><i
+                    class="fab fa-qq " aria-hidden="true"></i></a></li>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=https://sirlh.github.io/2017/02/23/%E7%94%B5%E7%83%AD%E6%B0%B4%E5%99%A8%E7%9A%84%E6%9E%84%E9%80%A0%E5%92%8C%E5%8E%9F%E7%90%86/&title=电热水器的构造和原理"><i
+                    class="fab fa-weibo " aria-hidden="true"></i></a></li>
+    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://sirlh.github.io/2017/02/23/%E7%94%B5%E7%83%AD%E6%B0%B4%E5%99%A8%E7%9A%84%E6%9E%84%E9%80%A0%E5%92%8C%E5%8E%9F%E7%90%86/&text=电热水器的构造和原理"><i
+                    class="fab fa-twitter " aria-hidden="true"></i></a></li>
+    <li><a class="icon" href="mailto:?subject=电热水器的构造和原理&body=Check out this article: https://sirlh.github.io/2017/02/23/%E7%94%B5%E7%83%AD%E6%B0%B4%E5%99%A8%E7%9A%84%E6%9E%84%E9%80%A0%E5%92%8C%E5%8E%9F%E7%90%86/"><i
+                    class="fas fa-envelope " aria-hidden="true"></i></a></li>
+</ul>
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B5%E7%83%AD%E6%B0%B4%E5%99%A8%E7%9A%84%E6%9E%B6%E6%9E%84%E5%8E%9F%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">电热水器的架构原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B5%E7%83%AD%E6%B0%B4%E5%99%A8%E7%BB%93%E6%9E%84%E7%AE%80%E5%9B%BE"><span class="toc-number">1.1.</span> <span class="toc-text">电热水器结构简图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">1.2.</span> <span class="toc-text">工作原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B0%B4%E8%B7%AF%E9%83%A8%E5%88%86"><span class="toc-number">1.2.1.</span> <span class="toc-text">水路部分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%B5%E8%B7%AF%E9%83%A8%E5%88%86"><span class="toc-number">1.2.2.</span> <span class="toc-text">电路部分</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%B6%E9%83%A8%E4%BB%B6%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.</span> <span class="toc-text">零部件介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E8%83%86"><span class="toc-number">2.1.</span> <span class="toc-text">内胆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%95%81%E6%A3%92"><span class="toc-number">2.2.</span> <span class="toc-text">镁棒</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">2.2.1.</span> <span class="toc-text">工作原理：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%B2%E7%94%B5%E5%A2%99"><span class="toc-number">2.3.</span> <span class="toc-text">防电墙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A0%E7%83%AD%E7%AE%A1"><span class="toc-number">2.4.</span> <span class="toc-text">加热管</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A7%E6%B8%A9%E5%99%A8"><span class="toc-number">2.5.</span> <span class="toc-text">控温器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B6%85%E6%B8%A9%E4%BF%9D%E6%8A%A4%E5%99%A8%EF%BC%88%E7%83%AD%E6%96%AD%E8%B7%AF%E5%99%A8%EF%BC%89"><span class="toc-number">2.6.</span> <span class="toc-text">超温保护器（热断路器）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BC%8F%E7%94%B5%E4%BF%9D%E6%8A%A4%E6%8F%92%E5%A4%B4%E5%BC%80%E5%85%B3"><span class="toc-number">2.7.</span> <span class="toc-text">漏电保护插头开关</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E5%90%8E%E9%9D%A2%E7%9A%84%E8%AF%9D"><span class="toc-number">3.</span> <span class="toc-text">写在后面的话</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+<div class="content index py4">
+    
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        
+    <h1 class="posttitle" itemprop="name headline">
+        电热水器的构造和原理
+    </h1>
+
+        <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">
+            Lu Heng
+            
+        </span>
+      </span>
+            
+    <div class="postdate">
+        
+            <time datetime="2017-02-23T12:14:05.000Z"
+                  itemprop="datePublished">2017-02-23</time>
+            
+                (Updated:
+                <time datetime="2021-05-02T20:39:13.366Z"
+                      itemprop="dateModified">2021-05-02</time>)
+            
+        
+    </div>
+
+            
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E5%A5%87%E5%A5%87%E6%80%AA%E6%80%AA%E7%9A%84%E7%9F%A5%E8%AF%86/">奇奇怪怪的知识</a>
+    </div>
+
+            
+        </div>
+    </header>
+    
+    <div class="content" itemprop="articleBody">
+        <p><img src="https://raw.githubusercontent.com/sirlh/photo/master/inshiyi.png" alt="内部结构图"></p>
+<p>之所以写这篇文章，都是怪宿舍那该死的电热水器频频罢工，而且原因不明，修理师傅来了又走，螺丝刀左旋右旋之间，总会换下一些小零件，情况一直不乐观，不过，似乎是被人伺候了，热水器也总是会服服帖帖的工作几日，现在貌似还在服役期间（毕竟修理师傅中午刚来过），可我总是担心它会变坏，毕竟一直都没让我安心，所以我决定考究一番，况且技多不压身，O(∩_∩)O~。</p>
+<span id="more"></span>
+
+<p>先给你们看看它的样子吧，就是这个讨厌的家伙<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/electric%20water%20heater%3B.jpg" alt="电热水器"><br>下面便是我对它的研究，嗯哼（装作有学问的样子）。</p>
+<h2 id="电热水器的架构原理"><a href="#电热水器的架构原理" class="headerlink" title="电热水器的架构原理"></a>电热水器的架构原理</h2><h3 id="电热水器结构简图"><a href="#电热水器结构简图" class="headerlink" title="电热水器结构简图"></a>电热水器结构简图</h3><p>先看看外表的示意图<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/reshuishiyi.jpg" alt="简化的示意图"></p>
+<p>电热水器都是怎么工作的呢？</p>
+<h3 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h3><p> 储水式电热水器贮满水通电后，电热水器内的电热管将电热水器内胆内的水加热，当加热到所设定的温度时电路自动断开，电热管停止加热，整机处于保温状态。当内胆内水温降低到某一温度时，电热管再次通电加热,这种状态循环往复，以便电热水器始终有热水可用。<br><strong>结构主要分为电路和水路两部分：</strong></p>
+<h4 id="水路部分"><a href="#水路部分" class="headerlink" title="水路部分"></a>水路部分</h4><p>电热水器从第一次使用之后就是充满水了，之后进水通过安全阀单向（只能进水，不能出水）进入水箱内胆，下方进水口靠近水箱底部，其进水口上方有一挡板，使进入的冷水存在底部，防止冷水冲入上部影响热水水温，出水口在内胆上部，热水比冷水轻，在水的上部分，热水出水口也在此处，所以出水总是热的，要使热水流出，必须进入冷水，增加内胆内水压，热水才能被挤流出。关闭进水口，即使内胆存满热水也不会流出。流出的高温热水，通过调节混水阀，使之出水温度适合使用要求。热水能出来靠的是冷水进去时带来的水压，所以停水的时候即便内胆里充满水，里面的水也出不来，因为热水出水口在内胆上部。那冷水呢，停水了…(混水阀里的热水来自热水器，冷水是直接自来水管道的)。</p>
+<h4 id="电路部分"><a href="#电路部分" class="headerlink" title="电路部分"></a>电路部分</h4><p>电路的主要作用是对冷水加热至设定温度。<br>电热水器的加热通过电热管来进行，温度的设定则通过调节温控器进行，电热水器将电能转换成热能，传给被加热的媒体（水），水达到预定温度时，温控器会自动断电，停止加热。一段时间后，当水温比设定温度下降5℃左右时，温控器会重新工作，继续恢复加热至设定温度，如此反复工作。<br>原理图：<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/wenkong.png" alt="温控原理"></p>
+<h2 id="零部件介绍"><a href="#零部件介绍" class="headerlink" title="零部件介绍"></a>零部件介绍</h2><h3 id="内胆"><a href="#内胆" class="headerlink" title="内胆"></a>内胆</h3><p>内胆作为热水器的主要储水工具，它必须具备保温、耐压、不生锈、无水垢、不渗水的特性。决定一款热水器好坏的重要因素之一就是热水器的内胆，内胆的好坏直接决定了热水器的使用寿命，而且内胆一旦破损，那么热水器将很难修复，甚至直接报废，虽然热水器的品牌很多，内胆名称也五花八门，什么“金圭内胆”、“高釉包钢内胆”、“钛金内胆”、“不锈钢内胆”、“搪瓷内胆”、“钢制瓷釉内胆”、“金瓷内胆”等等，但实际上市面上常见的热水器内胆主要有不锈钢内胆和搪瓷内胆2种，所谓的钛金内胆、金圭内胆、石英瓷釉、蓝宝石等等，不过是在这两种主材外面镀上或加上稀有金属，换了个叫法而已。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th align="center">突出优点</th>
+<th align="right">缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>不锈钢内胆</td>
+<td align="center">价格相对低廉</td>
+<td align="right">焊缝易损易漏水</td>
+</tr>
+<tr>
+<td>晶硅内胆</td>
+<td align="center">强度高、不易生锈、寿命长</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>搪瓷内胆</td>
+<td align="center">不生锈、无水垢</td>
+<td align="right">易溶解、易腐蚀、易鱼鳞爆</td>
+</tr>
+<tr>
+<td>钛金内胆</td>
+<td align="center">强度好、寿命长</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>金圭内胆</td>
+<td align="center">抗腐蚀、抗冲击、寿命长</td>
+<td align="right">.</td>
+</tr>
+</tbody></table>
+<p><img src="https://raw.githubusercontent.com/sirlh/photo/master/neidan.png" alt="内胆"></p>
+<h3 id="镁棒"><a href="#镁棒" class="headerlink" title="镁棒"></a>镁棒</h3><p>镁棒主要作用在于保护电热棒，电加热棒在加热时容易与水里面的矿物质发生反应，从而减少加热棒的使用寿命。</p>
+<h4 id="工作原理："><a href="#工作原理：" class="headerlink" title="工作原理："></a>工作原理：</h4><p>利用的是阴极保护法，由于镁的活性大于加热棒的铁或铜，因此通过镁棒的作用，使水里面的矿物质先与镁棒反应。镁是电化学序列中电位较低的金属，生理上无毒。因此，用来制成镁棒保护内胆非常理想。镁棒的大小直接关系到保护内胆时间的长短和保护效果的大小，镁棒越大，保护效果越好，保护时间越长。<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/meibang.png" alt="镁棒"></p>
+<h3 id="防电墙"><a href="#防电墙" class="headerlink" title="防电墙"></a>防电墙</h3><p>利用了水本身所具有的电阻（国标规定自来水在15℃时电阻率应大于1300Ω），通过对热水器内通水管材质的选择（绝缘材料），管径和距离的确定形成“隔电墙”。当电热水器通电工作时，加热内胆的水即使有电，也会在通过“隔电墙”时被水本身的电阻衰减掉而达到将电隔离的目的，使热水器进出水两端达到几乎为零的电压和0.02mA/kw以下的极微弱电流。</p>
+<p><img src="https://raw.githubusercontent.com/sirlh/photo/master/fangdianqiang.png" alt="防电墙"></p>
+<h3 id="加热管"><a href="#加热管" class="headerlink" title="加热管"></a>加热管</h3><p>电能→热能转化装置，主要用它来对水进行加热（类似热得快），其功率为1500W-3000W，主要由发热电阻丝，铜管或不锈钢管，导热绝缘介质氧化镁和接线端子构成。当通电时，电流使发热电阻丝发热，热量通过电加热器将储在内胆的水加热，电热管由三层构成，最里面为电阻丝，中间为耐高温绝缘氧化镁粉，外层为不锈钢管（英格莱800金属管能耐受1357-1385C高温） 。电阻丝为直接发热元件，耐高温绝缘镁粉起到在高温下绝缘作用，以保证电热管的安全性。</p>
+<p><img src="https://raw.githubusercontent.com/sirlh/photo/master/jiarebang.png" alt="加热管"></p>
+<h3 id="控温器"><a href="#控温器" class="headerlink" title="控温器"></a>控温器</h3><p>现用控温器均为液体膨胀式结构。利用液体有热胀冷缩的特性，控温器将特殊液体密封在探管和毛细管组成的密封腔中，探管插到待测温部位，当该处温度上升时探管内液体膨胀，并沿毛细管移动至末端，膨胀的液体使膜盒变型后推动触点，使电路断开，停止加热。</p>
+<p>调节控温器旋钮，也就是调节将触点断开的位移量，而此位移量与感测的温度成特定比例。</p>
+<p>当温度下降后，膨胀后的液体会逐渐缩小体积，触点又回复到导通状态，发热管重新开始加热，这就是控温器控制水温的原理。当内胆的温度达到设定值时，液态受热膨胀流过毛细管顶起杠杆板，金属片自然弹起，断开两极，停止加热。当水温下降到设定温度的5℃左右时，液态冷缩，杠杆板自动回弹并压下弹簧片，电路重新闭合，开始加热，实现保温功能。<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/kongwenqi.png" alt="控温器"></p>
+<h3 id="超温保护器（热断路器）"><a href="#超温保护器（热断路器）" class="headerlink" title="超温保护器（热断路器）"></a>超温保护器（热断路器）</h3><p>原理是当内胆水温达到88℃或91℃时，金属片受热变形向上弹，顶起绝缘顶杆，断开两极实现防超温保护。当双极断开需复位时，必须手动按下手动复位键，并用万用表测量两极是否相通。<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/chaowen.png" alt="超温保护器"></p>
+<h3 id="漏电保护插头开关"><a href="#漏电保护插头开关" class="headerlink" title="漏电保护插头开关"></a>漏电保护插头开关</h3><p>原理是利用漏电开关内部装置，当电热水器有漏电或负载电流大过额定电流时会自动跳闸，切断电源，避免事故发生。<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/loudian.png" alt="漏电保护开关"></p>
+<h2 id="写在后面的话"><a href="#写在后面的话" class="headerlink" title="写在后面的话"></a>写在后面的话</h2><p>关于电热水器的构造原理在网上查询学习后，只能说是有所了解，不敢对此再有更多的讨论，科学与生活息息相关，这次算是为洗个热水澡操碎了心吧，本章完。</p>
+<p>关于本文：相关资料主要是从网上各个地方摘录下来的，来源不好注明出处，如有侵犯，请与我联系。</p>
+
+    </div>
+</article>
+
+
+
+<script>
+    //检测推送
+    var pushType = "";
+    var pushLink = "";
+    var siteName = "HENG";
+  
+    var ValineButton = document.getElementsByClassName("vsubmit vbtn")[0];
+    //分情况推送
+    if (pushType === "sc") {
+      var title = "text=" + siteName + "上又有新评论啦~!";
+      function send_valine_Server() {
+        //获取元素信息
+        var pagename = document.title;
+        var wz = pagename.indexOf("|");
+        var res = pagename.substring(0, wz);
+        var pageurl = document.URL;
+        var ptime = new Date();
+        var vnick = document.getElementsByClassName("vnick vinput")[0].value;
+        var vmail = document.getElementsByClassName("vmail vinput")[0].value;
+        var vlink = document.getElementsByClassName("vlink vinput")[0].value;
+        var veditor = document.getElementsByClassName("veditor vinput")[0].value;
+        var text = "desp=";
+        var data =
+          text +
+          "|昵称：" +
+          "|邮箱：" +
+          "|网站地址：" +
+          "|当前页面：" +
+          "|评论内容：" +
+          "|跳转链接：" +
+          "|评论时间" +
+          "\n" +
+          "|----|----|----|----|" +
+          "\n" +
+          "|   " +
+          vnick +
+          "   |   " +
+          vmail +
+          "  |  " +
+          vlink +
+          "|   " +
+          res +
+          "| " +
+          veditor +
+          "| " +
+          pageurl +
+          "|" +
+          ptime.toLocaleString() +
+          "|";
+        var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
+        httpRequest.open("POST", pushLink, true); //第二步：打开连接
+        httpRequest.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded"
+        ); //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+        httpRequest.send(title + "&" + data); //发送请求 将情头体写在send中
+      }
+      ValineButton.onclick = send_valine_Server;
+    } else if (pushType === "qmsg") {
+      var title = "msg=" + siteName + "上又有新评论啦~!\n";
+      function send_valine_Qmsg() {
+        //获取元素信息
+        var pagename = document.title;
+        var wz = pagename.indexOf("|");
+        var res = pagename.substring(0, wz);
+        var pageurl = document.URL;
+        var ptime = new Date();
+        var vnick = document.getElementsByClassName("vnick vinput")[0].value;
+        var vmail = document.getElementsByClassName("vmail vinput")[0].value;
+        var vlink = document.getElementsByClassName("vlink vinput")[0].value;
+        var veditor = document.getElementsByClassName("veditor vinput")[0].value;
+        var data =
+          "昵称：" +
+          vnick +
+          "\n邮箱：" +
+          vmail +
+          "\n网站地址：" +
+          vlink +
+          "\n当前页面：" +
+          pagename +
+          "\n评论内容：" +
+          veditor +
+          "\n跳转链接：" +
+          pageurl +
+          "\n评论时间" +
+          ptime.toLocaleString();
+        var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
+        httpRequest.open("POST", pushLink, true); //第二步：打开连接
+        httpRequest.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded"
+        ); //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+        httpRequest.send(title + data); //发送请求 将情头体写在send中
+      }
+      ValineButton.onclick = send_valine_Qmsg;
+    }
+  </script>
+    
+
+        
+        <iframe src="https://sirlh.github.io/js-reward/public/index.html" style="height:240px; margin: 0 auto"  frameborder="0"></iframe>
+    
+        <div id="footer-post-container">
+    <div id="footer-post">
+
+        <div id="nav-footer" style="display: none">
+            <ul>
+                
+                    <li><a href="/">Home</a></li>
+                
+                    <li><a href="/archives/">Articles</a></li>
+                
+                    <li><a href="/categories/">Category</a></li>
+                
+                    <li><a href="/about/">About</a></li>
+                
+                    <li><a href="/search/">Search</a></li>
+                
+            </ul>
+        </div>
+
+        <div id="toc-footer" style="display: none">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B5%E7%83%AD%E6%B0%B4%E5%99%A8%E7%9A%84%E6%9E%B6%E6%9E%84%E5%8E%9F%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">电热水器的架构原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B5%E7%83%AD%E6%B0%B4%E5%99%A8%E7%BB%93%E6%9E%84%E7%AE%80%E5%9B%BE"><span class="toc-number">1.1.</span> <span class="toc-text">电热水器结构简图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">1.2.</span> <span class="toc-text">工作原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B0%B4%E8%B7%AF%E9%83%A8%E5%88%86"><span class="toc-number">1.2.1.</span> <span class="toc-text">水路部分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%B5%E8%B7%AF%E9%83%A8%E5%88%86"><span class="toc-number">1.2.2.</span> <span class="toc-text">电路部分</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%B6%E9%83%A8%E4%BB%B6%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.</span> <span class="toc-text">零部件介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E8%83%86"><span class="toc-number">2.1.</span> <span class="toc-text">内胆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%95%81%E6%A3%92"><span class="toc-number">2.2.</span> <span class="toc-text">镁棒</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">2.2.1.</span> <span class="toc-text">工作原理：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%B2%E7%94%B5%E5%A2%99"><span class="toc-number">2.3.</span> <span class="toc-text">防电墙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A0%E7%83%AD%E7%AE%A1"><span class="toc-number">2.4.</span> <span class="toc-text">加热管</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A7%E6%B8%A9%E5%99%A8"><span class="toc-number">2.5.</span> <span class="toc-text">控温器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B6%85%E6%B8%A9%E4%BF%9D%E6%8A%A4%E5%99%A8%EF%BC%88%E7%83%AD%E6%96%AD%E8%B7%AF%E5%99%A8%EF%BC%89"><span class="toc-number">2.6.</span> <span class="toc-text">超温保护器（热断路器）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BC%8F%E7%94%B5%E4%BF%9D%E6%8A%A4%E6%8F%92%E5%A4%B4%E5%BC%80%E5%85%B3"><span class="toc-number">2.7.</span> <span class="toc-text">漏电保护插头开关</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E5%90%8E%E9%9D%A2%E7%9A%84%E8%AF%9D"><span class="toc-number">3.</span> <span class="toc-text">写在后面的话</span></a></li></ol>
+        </div>
+
+        <div id="share-footer" style="display: none">
+            <ul>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://sirlh.github.io/2017/02/23/%E7%94%B5%E7%83%AD%E6%B0%B4%E5%99%A8%E7%9A%84%E6%9E%84%E9%80%A0%E5%92%8C%E5%8E%9F%E7%90%86/&title=电热水器的构造和原理"><i
+                    class="fab fa-qq fa-lg" aria-hidden="true"></i></a></li>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=https://sirlh.github.io/2017/02/23/%E7%94%B5%E7%83%AD%E6%B0%B4%E5%99%A8%E7%9A%84%E6%9E%84%E9%80%A0%E5%92%8C%E5%8E%9F%E7%90%86/&title=电热水器的构造和原理"><i
+                    class="fab fa-weibo fa-lg" aria-hidden="true"></i></a></li>
+    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://sirlh.github.io/2017/02/23/%E7%94%B5%E7%83%AD%E6%B0%B4%E5%99%A8%E7%9A%84%E6%9E%84%E9%80%A0%E5%92%8C%E5%8E%9F%E7%90%86/&text=电热水器的构造和原理"><i
+                    class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+    <li><a class="icon" href="mailto:?subject=电热水器的构造和原理&body=Check out this article: https://sirlh.github.io/2017/02/23/%E7%94%B5%E7%83%AD%E6%B0%B4%E5%99%A8%E7%9A%84%E6%9E%84%E9%80%A0%E5%92%8C%E5%8E%9F%E7%90%86/"><i
+                    class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+        </div>
+
+        <div id="actions-footer">
+            <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i
+                        class="fas fa-bars fa-lg"
+                        aria-hidden="true"></i> Menu</a>
+            <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i
+                        class="fas fa-list fa-lg"
+                        aria-hidden="true"></i> TOC</a>
+            <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i
+                        class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+            <a id="top" style="display:none" class="icon" href="#"
+               onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg"
+                                                                               aria-hidden="true"></i> Top
+            </a>
+        </div>
+
+    </div>
+</div>
+    
+
+
+    <footer id="footer">
+  
+  <div class="footer-top">
+    
+    &copy; 2021 <i class="fas fa-heart"></i>
+    Lu Heng 
+  </div>
+ <!--
+  <div class="footer-bottom">
+     
+  </div>-->
+</footer>
+
+</div>
+<!-- styles -->
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css">
+
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/justifiedGallery/3.7.0/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+
+<script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://cdn.staticfile.org/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+    
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            // copy-btn HTML
+            var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+            btn += '<i class="far fa-clone"></i>';
+            btn += '</span>';
+            // mount it!
+            $(".highlight .code pre").before(btn);
+            var clip = new ClipboardJS('.btn-copy', {
+                target: function (trigger) {
+                    return trigger.nextElementSibling;
+                }
+            });
+            clip.on('success', function (e) {
+                e.trigger.setAttribute('aria-label', "Copied!");
+                e.clearSelection();
+            })
+        })
+    </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+</body>
+
+</html>

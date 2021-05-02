@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    
+    
+        
+            
+                <link rel="shortcut icon" href="/images/favicon.ico">
+            
+        
+        
+            
+                <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+            
+        
+        
+            
+                <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+            
+        
+    
+    <!-- title -->
+    <title>FPGA.计数器书写——以60进制、24进制举例</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@2/distr/fira_code.css" rel="stylesheet">
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+
+    <div id="header-post">
+    <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+    <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+    <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i
+                class="fas fa-chevron-up fa-lg"></i></a>
+    <span id="menu">
+    <span id="nav">
+      <ul>
+          
+              <li><a href="/">Home</a></li>
+          
+              <li><a href="/archives/">Articles</a></li>
+          
+              <li><a href="/categories/">Category</a></li>
+          
+              <li><a href="/about/">About</a></li>
+          
+              <li><a href="/search/">Search</a></li>
+          
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+          
+              <li><a class="icon" href="/2017/10/27/FPGA.%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5/"><i class="fas fa-chevron-left"
+                                                                           aria-hidden="true"
+                                                                           onmouseover="$('#i-prev').toggle();"
+                                                                           onmouseout="$('#i-prev').toggle();"></i></a></li>
+          
+          
+              <li><a class="icon" href="/2017/05/26/%E5%8D%8A%E5%AF%BC%E4%BD%93%E8%87%B4%E5%86%B7%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E4%BE%8B/"><i class="fas fa-chevron-right"
+                                                                           aria-hidden="true"
+                                                                           onmouseover="$('#i-next').toggle();"
+                                                                           onmouseout="$('#i-next').toggle();"></i></a></li>
+          
+          <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i
+                          class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();"
+                          onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true"
+                                        onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();"
+                                        onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://sirlh.github.io/2017/10/20/FPGA.%E8%AE%A1%E6%95%B0%E5%99%A8%E4%B9%A6%E5%86%99%E2%80%94%E2%80%94%E4%BB%A560%E8%BF%9B%E5%88%B6%E3%80%8124%E8%BF%9B%E5%88%B6%E4%B8%BE%E4%BE%8B/&title=FPGA.计数器书写——以60进制、24进制举例"><i
+                    class="fab fa-qq " aria-hidden="true"></i></a></li>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=https://sirlh.github.io/2017/10/20/FPGA.%E8%AE%A1%E6%95%B0%E5%99%A8%E4%B9%A6%E5%86%99%E2%80%94%E2%80%94%E4%BB%A560%E8%BF%9B%E5%88%B6%E3%80%8124%E8%BF%9B%E5%88%B6%E4%B8%BE%E4%BE%8B/&title=FPGA.计数器书写——以60进制、24进制举例"><i
+                    class="fab fa-weibo " aria-hidden="true"></i></a></li>
+    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://sirlh.github.io/2017/10/20/FPGA.%E8%AE%A1%E6%95%B0%E5%99%A8%E4%B9%A6%E5%86%99%E2%80%94%E2%80%94%E4%BB%A560%E8%BF%9B%E5%88%B6%E3%80%8124%E8%BF%9B%E5%88%B6%E4%B8%BE%E4%BE%8B/&text=FPGA.计数器书写——以60进制、24进制举例"><i
+                    class="fab fa-twitter " aria-hidden="true"></i></a></li>
+    <li><a class="icon" href="mailto:?subject=FPGA.计数器书写——以60进制、24进制举例&body=Check out this article: https://sirlh.github.io/2017/10/20/FPGA.%E8%AE%A1%E6%95%B0%E5%99%A8%E4%B9%A6%E5%86%99%E2%80%94%E2%80%94%E4%BB%A560%E8%BF%9B%E5%88%B6%E3%80%8124%E8%BF%9B%E5%88%B6%E4%B8%BE%E4%BE%8B/"><i
+                    class="fas fa-envelope " aria-hidden="true"></i></a></li>
+</ul>
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#60%E8%BF%9B%E5%88%B6%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">60进制计数器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tb%E6%96%87%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">Tb文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#24%E8%BF%9B%E5%88%B6%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">3.</span> <span class="toc-text">24进制计数器</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+<div class="content index py4">
+    
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        
+    <h1 class="posttitle" itemprop="name headline">
+        FPGA.计数器书写——以60进制、24进制举例
+    </h1>
+
+        <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">
+            Lu Heng
+            
+        </span>
+      </span>
+            
+    <div class="postdate">
+        
+            <time datetime="2017-10-20T19:58:42.000Z"
+                  itemprop="datePublished">2017-10-20</time>
+            
+                (Updated:
+                <time datetime="2021-05-02T20:41:13.652Z"
+                      itemprop="dateModified">2021-05-02</time>)
+            
+        
+    </div>
+
+            
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/FPGA/">FPGA</a>
+    </div>
+
+            
+        </div>
+    </header>
+    
+    <div class="content" itemprop="articleBody">
+        <p><img src="https://raw.githubusercontent.com/sirlh/photo/83b71c45ff8b9c3292afe5f43059badc9af89394/shalou.jpg"></p>
+<p>计数器在数字系统中主要是对脉冲的个数进行计数，以实现测量、计数和控制的功能，同时兼有分频功能。其实说白了，就是正常使用的情况下，你来个脉冲信号，我给你+1。当然实际情况下，为满足我的需要，我们会为计数器加上一“功能”，如：置数，复位。具体情况根据需要而定，但不管怎样，计数器都是较为简单的。</p>
+<span id="more"></span>
+
+<h4 id="60进制计数器"><a href="#60进制计数器" class="headerlink" title="60进制计数器"></a>60进制计数器</h4><p>60机制计数器，也就是从0数到59，然后清零，再来过。如此反复，每到60的时候输出一次脉冲信号。废话不多说,直接看代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">------------------------</span><br><span class="line">-创建时间：2017.10.20  </span><br><span class="line">-创建人：Robin         </span><br><span class="line">-文件名：counter60   </span><br><span class="line">-----------------------</span><br><span class="line">&#96;timescale 1ns &#x2F; 1ps</span><br><span class="line">module counter60(</span><br><span class="line">input clk,clear,load,en,  &#x2F;&#x2F;时钟，清零，置数，使能</span><br><span class="line">input  [3:0]dl,dh, &#x2F;&#x2F;输入</span><br><span class="line">output reg [3:0] ql,qh,  &#x2F;&#x2F;输出</span><br><span class="line">output  cout  &#x2F;&#x2F;进位</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    always @(posedge clk,negedge clear)</span><br><span class="line">    if(!clear)        &#x2F;&#x2F;清零</span><br><span class="line">        begin </span><br><span class="line">            ql&lt;&#x3D;0;qh&lt;&#x3D;0;</span><br><span class="line">        end</span><br><span class="line">    else if(load)</span><br><span class="line">         begin</span><br><span class="line">             ql&lt;&#x3D;dl;  &#x2F;&#x2F;置数</span><br><span class="line">             qh&lt;&#x3D;dh;</span><br><span class="line">         end</span><br><span class="line">    else if(en)</span><br><span class="line">            if(ql&#x3D;&#x3D;4&#39;h9)</span><br><span class="line">            begin </span><br><span class="line">                ql&lt;&#x3D;0;</span><br><span class="line">                if(qh&#x3D;&#x3D;4&#39;h5)</span><br><span class="line">                    qh&lt;&#x3D;0;</span><br><span class="line">                else</span><br><span class="line">                    qh&lt;&#x3D;qh+1;</span><br><span class="line">            end</span><br><span class="line">    else</span><br><span class="line">        ql&lt;&#x3D;ql+1;</span><br><span class="line">    assign cout&#x3D;(en&#x3D;&#x3D;1&#39;b1 &amp;&amp; qh&#x3D;&#x3D;4&#39;d5 &amp;&amp; ql&#x3D;&#x3D;4&#39;d9)?1&#39;b1:1&#39;b0;</span><br><span class="line">endmodule</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>简单说下书写的思路，设计60进制的高低位为[3:0]ql，qh。用高、低两位数表示60因为我们人习惯使用十进制,但是计算机是用二进制的，所以ql，qh是[3:0]四位二进制。cout为计数器的输出。通常来说，低位一直+1,由0~9，当低位是9，如果高位没到5，那么下一个脉冲来的时候，低位清零，高位+1，就像29，变为30。若低位是9，而且高位是5，也就是数到59了，再来个脉冲，两者清零。至于清零，和使能，置数这些，看代码应该很容易理解的。</p>
+<h4 id="Tb文件"><a href="#Tb文件" class="headerlink" title="Tb文件"></a>Tb文件</h4><p>以下的Tb测试文件，该部分请根据需要改变参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">------------------------</span><br><span class="line">-创建时间：2017.10.20  </span><br><span class="line">-创建人：Robin         </span><br><span class="line">-文件名：Tb_counter60   </span><br><span class="line">-----------------------</span><br><span class="line">&#96;timescale 1ns &#x2F; 1ps</span><br><span class="line">module tb_counter;</span><br><span class="line">    reg clk,clear,load,en;</span><br><span class="line">    reg [3:0] dl,dh;</span><br><span class="line">    wire [3:0] ql,qh;</span><br><span class="line">    wire cout;</span><br><span class="line">   &#x2F;&#x2F;例化语句 </span><br><span class="line">    counter60 uut(.clk(clk),.clear(clear),.load(load),.en(en),.dl(dl),.dh(dh),.ql(ql),.qh(qh),.cout(cout));</span><br><span class="line">    &#x2F;&#x2F;时钟信号，周期是30ns</span><br><span class="line">    always </span><br><span class="line">    begin</span><br><span class="line">        clk&lt;&#x3D;1;#15;</span><br><span class="line">        clk&lt;&#x3D;0;#15;</span><br><span class="line">    end</span><br><span class="line">    &#x2F;&#x2F;清零，先清零让ql，qh等于0，再启动</span><br><span class="line">    initial</span><br><span class="line">    begin</span><br><span class="line">        clear&#x3D;0;#30;</span><br><span class="line">        clear&#x3D;1;</span><br><span class="line">    end</span><br><span class="line">    &#x2F;&#x2F;置数</span><br><span class="line">    initial</span><br><span class="line">    begin</span><br><span class="line">        dl&#x3D;1;dh&#x3D;1;</span><br><span class="line">        load&#x3D;0;#800;</span><br><span class="line">        load&#x3D;1;#500;</span><br><span class="line">    end  </span><br><span class="line">    &#x2F;&#x2F;使能信号</span><br><span class="line">    initial</span><br><span class="line">    begin</span><br><span class="line">        en&#x3D;0;#200;</span><br><span class="line">        en&#x3D;1; </span><br><span class="line">    end</span><br><span class="line">endmodule</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+
+<h4 id="24进制计数器"><a href="#24进制计数器" class="headerlink" title="24进制计数器"></a>24进制计数器</h4><p>下面放上24进制的计数器源代码，代码不难理解，就不再过多解释了。Tb文件与60进制的相差不大，把例化语句里的源文件名称修改下就好，我也不再重复贴上去了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">------------------------</span><br><span class="line">-创建时间：2017.10.20  </span><br><span class="line">-创建人：Robin         </span><br><span class="line">-文件名：counter24  </span><br><span class="line">-----------------------</span><br><span class="line">&#96;timescale 1ns &#x2F; 1ps</span><br><span class="line">module counter24(</span><br><span class="line">input clk,clear,load,en,  &#x2F;&#x2F;时钟，清零，置数，使能</span><br><span class="line">input  [3:0]dl,dh, &#x2F;&#x2F;输入</span><br><span class="line">output reg [3:0] ql,qh,  &#x2F;&#x2F;输出</span><br><span class="line">output  cout  &#x2F;&#x2F;进位</span><br><span class="line">    );</span><br><span class="line">    always @(posedge clk,negedge clear)</span><br><span class="line">    &#x2F;&#x2F;清零</span><br><span class="line">    if(!clear)</span><br><span class="line">        begin </span><br><span class="line">            ql&lt;&#x3D;0;qh&lt;&#x3D;0;</span><br><span class="line">        end</span><br><span class="line">    else if(load)</span><br><span class="line">         begin</span><br><span class="line">             ql&lt;&#x3D;dl;  &#x2F;&#x2F;置数</span><br><span class="line">             qh&lt;&#x3D;dh;</span><br><span class="line">         end</span><br><span class="line">        else if(en)</span><br><span class="line">                if(ql&#x3D;&#x3D;4&#39;h3 &amp;&amp; qh&#x3D;&#x3D;4&#39;h2)  </span><br><span class="line">                begin</span><br><span class="line">                    qh&lt;&#x3D;0;</span><br><span class="line">                    ql&lt;&#x3D;0;</span><br><span class="line">                end</span><br><span class="line">                else if(ql&#x3D;&#x3D;4&#39;h9&amp;&amp;(qh&#x3D;&#x3D;4&#39;h1||qh&#x3D;&#x3D;4&#39;h0))</span><br><span class="line">                    begin</span><br><span class="line">                        qh&lt;&#x3D;qh+1;</span><br><span class="line">                        ql&lt;&#x3D;0;</span><br><span class="line">                    end</span><br><span class="line">                    else</span><br><span class="line">                    ql&lt;&#x3D;ql+1;</span><br><span class="line">              else</span><br><span class="line">                 ql&lt;&#x3D;ql;</span><br><span class="line">    assign cout&#x3D;(en&#x3D;&#x3D;1&#39;b1 &amp;&amp; qh&#x3D;&#x3D;4&#39;d2 &amp;&amp; ql&#x3D;&#x3D;4&#39;d3)?1&#39;b1:1&#39;b0;</span><br><span class="line">endmodule</span><br></pre></td></tr></table></figure>
+<p>代码的写法有很多，各有优劣，我这也只是给出一种解决办法，有错误请斧正，欢迎大家在评论区与我交流。</p>
+<p>本文完。</p>
+
+    </div>
+</article>
+
+
+
+<script>
+    //检测推送
+    var pushType = "";
+    var pushLink = "";
+    var siteName = "HENG";
+  
+    var ValineButton = document.getElementsByClassName("vsubmit vbtn")[0];
+    //分情况推送
+    if (pushType === "sc") {
+      var title = "text=" + siteName + "上又有新评论啦~!";
+      function send_valine_Server() {
+        //获取元素信息
+        var pagename = document.title;
+        var wz = pagename.indexOf("|");
+        var res = pagename.substring(0, wz);
+        var pageurl = document.URL;
+        var ptime = new Date();
+        var vnick = document.getElementsByClassName("vnick vinput")[0].value;
+        var vmail = document.getElementsByClassName("vmail vinput")[0].value;
+        var vlink = document.getElementsByClassName("vlink vinput")[0].value;
+        var veditor = document.getElementsByClassName("veditor vinput")[0].value;
+        var text = "desp=";
+        var data =
+          text +
+          "|昵称：" +
+          "|邮箱：" +
+          "|网站地址：" +
+          "|当前页面：" +
+          "|评论内容：" +
+          "|跳转链接：" +
+          "|评论时间" +
+          "\n" +
+          "|----|----|----|----|" +
+          "\n" +
+          "|   " +
+          vnick +
+          "   |   " +
+          vmail +
+          "  |  " +
+          vlink +
+          "|   " +
+          res +
+          "| " +
+          veditor +
+          "| " +
+          pageurl +
+          "|" +
+          ptime.toLocaleString() +
+          "|";
+        var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
+        httpRequest.open("POST", pushLink, true); //第二步：打开连接
+        httpRequest.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded"
+        ); //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+        httpRequest.send(title + "&" + data); //发送请求 将情头体写在send中
+      }
+      ValineButton.onclick = send_valine_Server;
+    } else if (pushType === "qmsg") {
+      var title = "msg=" + siteName + "上又有新评论啦~!\n";
+      function send_valine_Qmsg() {
+        //获取元素信息
+        var pagename = document.title;
+        var wz = pagename.indexOf("|");
+        var res = pagename.substring(0, wz);
+        var pageurl = document.URL;
+        var ptime = new Date();
+        var vnick = document.getElementsByClassName("vnick vinput")[0].value;
+        var vmail = document.getElementsByClassName("vmail vinput")[0].value;
+        var vlink = document.getElementsByClassName("vlink vinput")[0].value;
+        var veditor = document.getElementsByClassName("veditor vinput")[0].value;
+        var data =
+          "昵称：" +
+          vnick +
+          "\n邮箱：" +
+          vmail +
+          "\n网站地址：" +
+          vlink +
+          "\n当前页面：" +
+          pagename +
+          "\n评论内容：" +
+          veditor +
+          "\n跳转链接：" +
+          pageurl +
+          "\n评论时间" +
+          ptime.toLocaleString();
+        var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
+        httpRequest.open("POST", pushLink, true); //第二步：打开连接
+        httpRequest.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded"
+        ); //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+        httpRequest.send(title + data); //发送请求 将情头体写在send中
+      }
+      ValineButton.onclick = send_valine_Qmsg;
+    }
+  </script>
+    
+
+        
+        <iframe src="https://sirlh.github.io/js-reward/public/index.html" style="height:240px; margin: 0 auto"  frameborder="0"></iframe>
+    
+        <div id="footer-post-container">
+    <div id="footer-post">
+
+        <div id="nav-footer" style="display: none">
+            <ul>
+                
+                    <li><a href="/">Home</a></li>
+                
+                    <li><a href="/archives/">Articles</a></li>
+                
+                    <li><a href="/categories/">Category</a></li>
+                
+                    <li><a href="/about/">About</a></li>
+                
+                    <li><a href="/search/">Search</a></li>
+                
+            </ul>
+        </div>
+
+        <div id="toc-footer" style="display: none">
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#60%E8%BF%9B%E5%88%B6%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">60进制计数器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tb%E6%96%87%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">Tb文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#24%E8%BF%9B%E5%88%B6%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">3.</span> <span class="toc-text">24进制计数器</span></a></li></ol>
+        </div>
+
+        <div id="share-footer" style="display: none">
+            <ul>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://sirlh.github.io/2017/10/20/FPGA.%E8%AE%A1%E6%95%B0%E5%99%A8%E4%B9%A6%E5%86%99%E2%80%94%E2%80%94%E4%BB%A560%E8%BF%9B%E5%88%B6%E3%80%8124%E8%BF%9B%E5%88%B6%E4%B8%BE%E4%BE%8B/&title=FPGA.计数器书写——以60进制、24进制举例"><i
+                    class="fab fa-qq fa-lg" aria-hidden="true"></i></a></li>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=https://sirlh.github.io/2017/10/20/FPGA.%E8%AE%A1%E6%95%B0%E5%99%A8%E4%B9%A6%E5%86%99%E2%80%94%E2%80%94%E4%BB%A560%E8%BF%9B%E5%88%B6%E3%80%8124%E8%BF%9B%E5%88%B6%E4%B8%BE%E4%BE%8B/&title=FPGA.计数器书写——以60进制、24进制举例"><i
+                    class="fab fa-weibo fa-lg" aria-hidden="true"></i></a></li>
+    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://sirlh.github.io/2017/10/20/FPGA.%E8%AE%A1%E6%95%B0%E5%99%A8%E4%B9%A6%E5%86%99%E2%80%94%E2%80%94%E4%BB%A560%E8%BF%9B%E5%88%B6%E3%80%8124%E8%BF%9B%E5%88%B6%E4%B8%BE%E4%BE%8B/&text=FPGA.计数器书写——以60进制、24进制举例"><i
+                    class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+    <li><a class="icon" href="mailto:?subject=FPGA.计数器书写——以60进制、24进制举例&body=Check out this article: https://sirlh.github.io/2017/10/20/FPGA.%E8%AE%A1%E6%95%B0%E5%99%A8%E4%B9%A6%E5%86%99%E2%80%94%E2%80%94%E4%BB%A560%E8%BF%9B%E5%88%B6%E3%80%8124%E8%BF%9B%E5%88%B6%E4%B8%BE%E4%BE%8B/"><i
+                    class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+        </div>
+
+        <div id="actions-footer">
+            <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i
+                        class="fas fa-bars fa-lg"
+                        aria-hidden="true"></i> Menu</a>
+            <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i
+                        class="fas fa-list fa-lg"
+                        aria-hidden="true"></i> TOC</a>
+            <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i
+                        class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+            <a id="top" style="display:none" class="icon" href="#"
+               onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg"
+                                                                               aria-hidden="true"></i> Top
+            </a>
+        </div>
+
+    </div>
+</div>
+    
+
+
+    <footer id="footer">
+  
+  <div class="footer-top">
+    
+    &copy; 2021 <i class="fas fa-heart"></i>
+    Lu Heng 
+  </div>
+ <!--
+  <div class="footer-bottom">
+     
+  </div>-->
+</footer>
+
+</div>
+<!-- styles -->
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css">
+
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/justifiedGallery/3.7.0/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+
+<script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://cdn.staticfile.org/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+    
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            // copy-btn HTML
+            var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+            btn += '<i class="far fa-clone"></i>';
+            btn += '</span>';
+            // mount it!
+            $(".highlight .code pre").before(btn);
+            var clip = new ClipboardJS('.btn-copy', {
+                target: function (trigger) {
+                    return trigger.nextElementSibling;
+                }
+            });
+            clip.on('success', function (e) {
+                e.trigger.setAttribute('aria-label', "Copied!");
+                e.clearSelection();
+            })
+        })
+    </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+</body>
+
+</html>

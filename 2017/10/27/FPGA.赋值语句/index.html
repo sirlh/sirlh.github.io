@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    
+    
+        
+            
+                <link rel="shortcut icon" href="/images/favicon.ico">
+            
+        
+        
+            
+                <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+            
+        
+        
+            
+                <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+            
+        
+    
+    <!-- title -->
+    <title>FPGA.赋值语句</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@2/distr/fira_code.css" rel="stylesheet">
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+
+    <div id="header-post">
+    <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+    <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+    <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i
+                class="fas fa-chevron-up fa-lg"></i></a>
+    <span id="menu">
+    <span id="nav">
+      <ul>
+          
+              <li><a href="/">Home</a></li>
+          
+              <li><a href="/archives/">Articles</a></li>
+          
+              <li><a href="/categories/">Category</a></li>
+          
+              <li><a href="/about/">About</a></li>
+          
+              <li><a href="/search/">Search</a></li>
+          
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+          
+              <li><a class="icon" href="/2017/11/03/FPGA.%E7%9F%A9%E9%98%B5%E9%94%AE%E7%9B%98/"><i class="fas fa-chevron-left"
+                                                                           aria-hidden="true"
+                                                                           onmouseover="$('#i-prev').toggle();"
+                                                                           onmouseout="$('#i-prev').toggle();"></i></a></li>
+          
+          
+              <li><a class="icon" href="/2017/10/20/FPGA.%E8%AE%A1%E6%95%B0%E5%99%A8%E4%B9%A6%E5%86%99%E2%80%94%E2%80%94%E4%BB%A560%E8%BF%9B%E5%88%B6%E3%80%8124%E8%BF%9B%E5%88%B6%E4%B8%BE%E4%BE%8B/"><i class="fas fa-chevron-right"
+                                                                           aria-hidden="true"
+                                                                           onmouseover="$('#i-next').toggle();"
+                                                                           onmouseout="$('#i-next').toggle();"></i></a></li>
+          
+          <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i
+                          class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();"
+                          onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true"
+                                        onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();"
+                                        onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://sirlh.github.io/2017/10/27/FPGA.%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5/&title=FPGA.赋值语句"><i
+                    class="fab fa-qq " aria-hidden="true"></i></a></li>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=https://sirlh.github.io/2017/10/27/FPGA.%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5/&title=FPGA.赋值语句"><i
+                    class="fab fa-weibo " aria-hidden="true"></i></a></li>
+    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://sirlh.github.io/2017/10/27/FPGA.%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5/&text=FPGA.赋值语句"><i
+                    class="fab fa-twitter " aria-hidden="true"></i></a></li>
+    <li><a class="icon" href="mailto:?subject=FPGA.赋值语句&body=Check out this article: https://sirlh.github.io/2017/10/27/FPGA.%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5/"><i
+                    class="fas fa-envelope " aria-hidden="true"></i></a></li>
+</ul>
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E%E9%98%BB%E5%A1%9E%E8%B5%8B%E5%80%BC"><span class="toc-number">1.</span> <span class="toc-text">非阻塞赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BB%E5%A1%9E%E5%9E%8B%E8%B5%8B%E5%80%BC"><span class="toc-number">2.</span> <span class="toc-text">阻塞型赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B5%E8%B7%AF%E6%9E%84%E6%88%90%E7%9A%84%E5%B7%AE%E5%BC%82%E6%AF%94%E8%BE%83"><span class="toc-number">3.</span> <span class="toc-text">电路构成的差异比较</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+<div class="content index py4">
+    
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        
+    <h1 class="posttitle" itemprop="name headline">
+        FPGA.赋值语句
+    </h1>
+
+        <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">
+            Lu Heng
+            
+        </span>
+      </span>
+            
+    <div class="postdate">
+        
+            <time datetime="2017-10-27T07:37:17.000Z"
+                  itemprop="datePublished">2017-10-27</time>
+            
+                (Updated:
+                <time datetime="2021-05-02T20:41:02.197Z"
+                      itemprop="dateModified">2021-05-02</time>)
+            
+        
+    </div>
+
+            
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/FPGA/">FPGA</a>
+    </div>
+
+            
+        </div>
+    </header>
+    
+    <div class="content" itemprop="articleBody">
+        <p><img src="https://raw.githubusercontent.com/sirlh/photo/37053cd70b6a797b9b8cc7b9db769272b1ee24dc/timg3GYPGH17.jpg"></p>
+<p>赋值语句应该是开发过程中使用最多的语句，在FPGA中，赋值语句分为“非阻塞赋值”和“阻塞赋值”，什么是“非阻塞赋值”？ 什么是“阻塞赋值”？它们的区别在哪？下面用具体实例来说明。</p>
+<span id="more"></span>
+
+<p>不论学习什么语句，都是先认识，了解一下它再去使用，所谓”知己知彼，方可百战不殆”。</p>
+<h3 id="非阻塞赋值"><a href="#非阻塞赋值" class="headerlink" title="非阻塞赋值"></a>非阻塞赋值</h3><p>赋值很好理解，重点在“非阻塞”，“阻塞” 就是 堵 ，“非”表 否定。非阻塞就是通畅嘛，那通畅怎么样的？</p>
+<p>先看下面这段代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">initial</span><br><span class="line">	begin</span><br><span class="line">		A &lt;&#x3D; B; &#x2F;&#x2F; 语句1</span><br><span class="line">		B &lt;&#x3D; A; &#x2F;&#x2F; 语句2</span><br><span class="line">	end</span><br></pre></td></tr></table></figure>
+<p>其中操作符 “&lt;=” 就是非阻塞型幅值语句。<br>我们看begin — end里的两个句子，到底哪个先执行呢？</p>
+<p>答案是同时执行，因为它是非阻塞幅值，一路通畅啊，谁也拦不了我，我走我的，你走你的，互不干扰，通畅就通畅在这里。</p>
+<p>现在提个问题：若A=1,B=2,那么执行以上语句后，A和B会变成什么呢？</p>
+<p>想知道答案，我最好的办法就是编程，然后仿真看下结果。</p>
+<p>源文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  文件名：非阻塞赋值语句  &#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  修改时间：2017.10.27   &#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">&#96;timescale 1ns &#x2F; 1ps</span><br><span class="line">module n_assignment(</span><br><span class="line">   input wire clk,</span><br><span class="line">   input wire rst,</span><br><span class="line">   output reg [1:0]A,B</span><br><span class="line">   );</span><br><span class="line">    </span><br><span class="line">   always @(posedge clk,negedge rst)</span><br><span class="line">       begin</span><br><span class="line">           if(!rst)</span><br><span class="line">               begin</span><br><span class="line">                   A &lt;&#x3D; 1;</span><br><span class="line">                   B &lt;&#x3D; 2;</span><br><span class="line">               end</span><br><span class="line">            else</span><br><span class="line">               begin</span><br><span class="line">                   A &lt;&#x3D; B;</span><br><span class="line">                   B &lt;&#x3D; A;</span><br><span class="line">               end</span><br><span class="line">       end</span><br><span class="line">endmodule</span><br></pre></td></tr></table></figure>
+<p>写tb文件看下效果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#96;timescale 1ns &#x2F; 1ps</span><br><span class="line">module tb_n_assignment;</span><br><span class="line">   reg clk;</span><br><span class="line">   reg rst;</span><br><span class="line">   wire [1:0]A;</span><br><span class="line">   wire [1:0]B;</span><br><span class="line">   </span><br><span class="line">   &#x2F;&#x2F;例化</span><br><span class="line">   n_assignment uuit(.clk(clk),.rst(rst),.A(A),.B(B));</span><br><span class="line">   </span><br><span class="line">   initial</span><br><span class="line">       begin</span><br><span class="line">           rst &#x3D; 0;#100;</span><br><span class="line">           rst &#x3D; 1; </span><br><span class="line">       end</span><br><span class="line">   </span><br><span class="line">   always</span><br><span class="line">   begin</span><br><span class="line">       clk&#x3D;1;#10; </span><br><span class="line">       clk&#x3D;0;#10;</span><br><span class="line">   end</span><br><span class="line">endmodule</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/n_assignment.PNG" alt="仿真图"></p>
+<p>这样我们从仿真图可以看出，这段代码实现的功能是将A,B两者的数据转换，也就是说执行</p>
+<blockquote>
+<p>   begin<br>            A &lt;= B; // 语句1<br>            B &lt;= A; // 语句2<br>        end</p>
+</blockquote>
+<p>A,B同时给对方值，给的是自己的初值，当一赋值之后就变成了对方＜（＾－＾）＞，这就类似两名相向跑步的运动员，起点便是初值，我们同时出发，速度都一样，所以A到了B出点时，B也到了A的出发点，也就是 A&lt;=B,B&lt;=A，我变成了你，你变成了我。<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/1.png"><br>非阻塞赋值就是这样啦，下面看阻塞型赋值。</p>
+<h3 id="阻塞型赋值"><a href="#阻塞型赋值" class="headerlink" title="阻塞型赋值"></a>阻塞型赋值</h3><p>阻塞型赋值说明在赋值时堵住了，那这堵又是怎么回事呢？<br>老办法，写代码做实验，仿真看结果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  文件名：阻塞赋值语句  &#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  修改时间：2017.10.27   &#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">&#96;timescale 1ns &#x2F; 1ps</span><br><span class="line">module assignment(</span><br><span class="line">   input wire clk,</span><br><span class="line">   input wire rst,</span><br><span class="line">   output reg [1:0]A,B</span><br><span class="line">   );</span><br><span class="line">    </span><br><span class="line">   always @(posedge clk,negedge rst)</span><br><span class="line">       begin</span><br><span class="line">           if(!rst)</span><br><span class="line">               begin</span><br><span class="line">                   A &#x3D; 1;</span><br><span class="line">                   B &#x3D; 2;</span><br><span class="line">               end</span><br><span class="line">            else</span><br><span class="line">               begin</span><br><span class="line">                   A &#x3D; B;</span><br><span class="line">                   B &#x3D; A;</span><br><span class="line">               end</span><br><span class="line">       end</span><br><span class="line">endmodule</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>tb文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">module tb_assignment;</span><br><span class="line">    reg clk;</span><br><span class="line">    reg rst;</span><br><span class="line">    wire [1:0]A;</span><br><span class="line">    wire [1:0]B;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;例化</span><br><span class="line">    assignment uuit(.clk(clk),.rst(rst),.A(A),.B(B));</span><br><span class="line">    </span><br><span class="line">    initial</span><br><span class="line">        begin</span><br><span class="line">            rst &#x3D; 0;#100;</span><br><span class="line">            rst &#x3D; 1; </span><br><span class="line">        end</span><br><span class="line">    </span><br><span class="line">    always</span><br><span class="line">    begin</span><br><span class="line">        clk&#x3D;1;#10; </span><br><span class="line">        clk&#x3D;0;#10;</span><br><span class="line">    end</span><br><span class="line">endmodule</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/2_1.PNG"><br>可以看出这段代码的功能不再是交换A,B两者的值了,毕竟代码改了，赋值变成阻塞的了，功能当然不一样，这好像是废话，(lll￢ω￢)<br>我们再看看这段代码</p>
+<blockquote>
+<p>   begin<br>        A = B;<br>           B = A; //注意赋值是阻塞的<br>    end</p>
+</blockquote>
+<p>它是先执行A=B,B把自身的值给了A，然后再执行A=B。<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/2.PNG"><br>就像接力赛，前面的执行了后面才能执行，语句A拿着接力棒，跑完了自己的路程,即执行了自己的语句，把接力棒交给语句B，B才能往前走，去执行它的语句。</p>
+<h3 id="电路构成的差异比较"><a href="#电路构成的差异比较" class="headerlink" title="电路构成的差异比较"></a>电路构成的差异比较</h3><p>好的，通过上面的两个例子，非阻塞型赋值和阻塞型的性质的都解释好了，下面再看下它们形成电路上的差异。<br>我们看这段代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">module and_block_assign</span><br><span class="line">(</span><br><span class="line">	input wire a,b,c,</span><br><span class="line">	output reg y</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">always @*</span><br><span class="line">	begin</span><br><span class="line">		y&#x3D;a;</span><br><span class="line">		y&#x3D;y&amp;b;</span><br><span class="line">		y&#x3D;y&amp;c;</span><br><span class="line">	end</span><br><span class="line">endmodule</span><br></pre></td></tr></table></figure>
+<p>以上代码描述的电路是这样的<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/1_2.PNG"></p>
+<p>但是阻塞赋值语句变成非阻塞赋值语句后，也就是下面这段代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">module and_block_assign</span><br><span class="line">(</span><br><span class="line">	input wire a,b,c,</span><br><span class="line">	output reg y</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">always @*</span><br><span class="line">	begin</span><br><span class="line">		y&lt;&#x3D;a;</span><br><span class="line">		y&lt;&#x3D;y&amp;b;</span><br><span class="line">		y&lt;&#x3D;y&amp;c;</span><br><span class="line">	end</span><br><span class="line">endmodule</span><br></pre></td></tr></table></figure>
+<p>它描述的电路却是这样的<br><img src="https://raw.githubusercontent.com/sirlh/photo/master/FPGA/assignment/2_2.PNG"></p>
+<p>可以看出两者的差别是还是很大的，好了，关于赋值语句我就唠叨到这里，文章若有什么错误的地方希望读者指出，同时也欢迎大家和我在评论区交流，当然打赏那是最好不过的了。</p>
+
+    </div>
+</article>
+
+
+
+<script>
+    //检测推送
+    var pushType = "";
+    var pushLink = "";
+    var siteName = "HENG";
+  
+    var ValineButton = document.getElementsByClassName("vsubmit vbtn")[0];
+    //分情况推送
+    if (pushType === "sc") {
+      var title = "text=" + siteName + "上又有新评论啦~!";
+      function send_valine_Server() {
+        //获取元素信息
+        var pagename = document.title;
+        var wz = pagename.indexOf("|");
+        var res = pagename.substring(0, wz);
+        var pageurl = document.URL;
+        var ptime = new Date();
+        var vnick = document.getElementsByClassName("vnick vinput")[0].value;
+        var vmail = document.getElementsByClassName("vmail vinput")[0].value;
+        var vlink = document.getElementsByClassName("vlink vinput")[0].value;
+        var veditor = document.getElementsByClassName("veditor vinput")[0].value;
+        var text = "desp=";
+        var data =
+          text +
+          "|昵称：" +
+          "|邮箱：" +
+          "|网站地址：" +
+          "|当前页面：" +
+          "|评论内容：" +
+          "|跳转链接：" +
+          "|评论时间" +
+          "\n" +
+          "|----|----|----|----|" +
+          "\n" +
+          "|   " +
+          vnick +
+          "   |   " +
+          vmail +
+          "  |  " +
+          vlink +
+          "|   " +
+          res +
+          "| " +
+          veditor +
+          "| " +
+          pageurl +
+          "|" +
+          ptime.toLocaleString() +
+          "|";
+        var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
+        httpRequest.open("POST", pushLink, true); //第二步：打开连接
+        httpRequest.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded"
+        ); //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+        httpRequest.send(title + "&" + data); //发送请求 将情头体写在send中
+      }
+      ValineButton.onclick = send_valine_Server;
+    } else if (pushType === "qmsg") {
+      var title = "msg=" + siteName + "上又有新评论啦~!\n";
+      function send_valine_Qmsg() {
+        //获取元素信息
+        var pagename = document.title;
+        var wz = pagename.indexOf("|");
+        var res = pagename.substring(0, wz);
+        var pageurl = document.URL;
+        var ptime = new Date();
+        var vnick = document.getElementsByClassName("vnick vinput")[0].value;
+        var vmail = document.getElementsByClassName("vmail vinput")[0].value;
+        var vlink = document.getElementsByClassName("vlink vinput")[0].value;
+        var veditor = document.getElementsByClassName("veditor vinput")[0].value;
+        var data =
+          "昵称：" +
+          vnick +
+          "\n邮箱：" +
+          vmail +
+          "\n网站地址：" +
+          vlink +
+          "\n当前页面：" +
+          pagename +
+          "\n评论内容：" +
+          veditor +
+          "\n跳转链接：" +
+          pageurl +
+          "\n评论时间" +
+          ptime.toLocaleString();
+        var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
+        httpRequest.open("POST", pushLink, true); //第二步：打开连接
+        httpRequest.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded"
+        ); //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+        httpRequest.send(title + data); //发送请求 将情头体写在send中
+      }
+      ValineButton.onclick = send_valine_Qmsg;
+    }
+  </script>
+    
+
+        
+        <iframe src="https://sirlh.github.io/js-reward/public/index.html" style="height:240px; margin: 0 auto"  frameborder="0"></iframe>
+    
+        <div id="footer-post-container">
+    <div id="footer-post">
+
+        <div id="nav-footer" style="display: none">
+            <ul>
+                
+                    <li><a href="/">Home</a></li>
+                
+                    <li><a href="/archives/">Articles</a></li>
+                
+                    <li><a href="/categories/">Category</a></li>
+                
+                    <li><a href="/about/">About</a></li>
+                
+                    <li><a href="/search/">Search</a></li>
+                
+            </ul>
+        </div>
+
+        <div id="toc-footer" style="display: none">
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E%E9%98%BB%E5%A1%9E%E8%B5%8B%E5%80%BC"><span class="toc-number">1.</span> <span class="toc-text">非阻塞赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BB%E5%A1%9E%E5%9E%8B%E8%B5%8B%E5%80%BC"><span class="toc-number">2.</span> <span class="toc-text">阻塞型赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B5%E8%B7%AF%E6%9E%84%E6%88%90%E7%9A%84%E5%B7%AE%E5%BC%82%E6%AF%94%E8%BE%83"><span class="toc-number">3.</span> <span class="toc-text">电路构成的差异比较</span></a></li></ol>
+        </div>
+
+        <div id="share-footer" style="display: none">
+            <ul>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://sirlh.github.io/2017/10/27/FPGA.%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5/&title=FPGA.赋值语句"><i
+                    class="fab fa-qq fa-lg" aria-hidden="true"></i></a></li>
+    <li><a class="icon"
+           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=https://sirlh.github.io/2017/10/27/FPGA.%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5/&title=FPGA.赋值语句"><i
+                    class="fab fa-weibo fa-lg" aria-hidden="true"></i></a></li>
+    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://sirlh.github.io/2017/10/27/FPGA.%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5/&text=FPGA.赋值语句"><i
+                    class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+    <li><a class="icon" href="mailto:?subject=FPGA.赋值语句&body=Check out this article: https://sirlh.github.io/2017/10/27/FPGA.%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5/"><i
+                    class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+        </div>
+
+        <div id="actions-footer">
+            <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i
+                        class="fas fa-bars fa-lg"
+                        aria-hidden="true"></i> Menu</a>
+            <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i
+                        class="fas fa-list fa-lg"
+                        aria-hidden="true"></i> TOC</a>
+            <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i
+                        class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+            <a id="top" style="display:none" class="icon" href="#"
+               onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg"
+                                                                               aria-hidden="true"></i> Top
+            </a>
+        </div>
+
+    </div>
+</div>
+    
+
+
+    <footer id="footer">
+  
+  <div class="footer-top">
+    
+    &copy; 2021 <i class="fas fa-heart"></i>
+    Lu Heng 
+  </div>
+ <!--
+  <div class="footer-bottom">
+     
+  </div>-->
+</footer>
+
+</div>
+<!-- styles -->
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css">
+
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/justifiedGallery/3.7.0/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+
+<script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://cdn.staticfile.org/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+    
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            // copy-btn HTML
+            var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+            btn += '<i class="far fa-clone"></i>';
+            btn += '</span>';
+            // mount it!
+            $(".highlight .code pre").before(btn);
+            var clip = new ClipboardJS('.btn-copy', {
+                target: function (trigger) {
+                    return trigger.nextElementSibling;
+                }
+            });
+            clip.on('success', function (e) {
+                e.trigger.setAttribute('aria-label', "Copied!");
+                e.clearSelection();
+            })
+        })
+    </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+</body>
+
+</html>
