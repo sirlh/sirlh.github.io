@@ -1639,7 +1639,7 @@ article .content .caption {
 }
 .highlight .code .line,
 .highlight .code .number {
-  font-family: Consolas, Arial, Helvetica, sans-serif;
+  font-family: Consolas, Arial, sans-serif;
 }
 .highlight .code .emphasis {
   font-style: italic;
