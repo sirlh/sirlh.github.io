@@ -13,6 +13,14 @@
     </image>
     
     <item>
+      <title>第一章 信号与系统</title>
+      <link>https://sirlh.github.io/courses/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/chapter1/</link>
+      <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://sirlh.github.io/courses/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/chapter1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Python basics</title>
       <link>https://sirlh.github.io/courses/example/python/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
@@ -867,7 +875,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-763942185&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-792615843&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -877,7 +885,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-763942185&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-792615843&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
