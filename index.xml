@@ -21,73 +21,6 @@
     </item>
     
     <item>
-      <title>Python basics</title>
-      <link>https://sirlh.github.io/courses/example/python/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://sirlh.github.io/courses/example/python/</guid>
-      <description>&lt;p&gt;Build a foundation in Python.&lt;/p&gt;
-&lt;p&gt;
-  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
-&lt;h2 id=&#34;learn&#34;&gt;Learn&lt;/h2&gt;
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/rfscVS0vtbw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&#34;quiz&#34;&gt;Quiz&lt;/h2&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
-  &lt;summary&gt;What is the difference between lists and tuples?&lt;/summary&gt;
-  &lt;p&gt;&lt;p&gt;Lists&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Lists are mutable - they can be changed&lt;/li&gt;
-&lt;li&gt;Slower than tuples&lt;/li&gt;
-&lt;li&gt;Syntax: &lt;code&gt;a_list = [1, 2.0, &#39;Hello world&#39;]&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Tuples&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Tuples are immutable - they can&amp;rsquo;t be changed&lt;/li&gt;
-&lt;li&gt;Tuples are faster than lists&lt;/li&gt;
-&lt;li&gt;Syntax: &lt;code&gt;a_tuple = (1, 2.0, &#39;Hello world&#39;)&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/p&gt;
-&lt;/details&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-3&#34;&gt;
-  &lt;summary&gt;Is Python case-sensitive?&lt;/summary&gt;
-  &lt;p&gt;Yes&lt;/p&gt;
-&lt;/details&gt;</description>
-    </item>
-    
-    <item>
-      <title>Visualization</title>
-      <link>https://sirlh.github.io/courses/example/visualization/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://sirlh.github.io/courses/example/visualization/</guid>
-      <description>&lt;p&gt;Learn how to visualize data with Plotly.&lt;/p&gt;
-&lt;p&gt;
-  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
-&lt;h2 id=&#34;learn&#34;&gt;Learn&lt;/h2&gt;
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/hSPmj7mK6ng&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&#34;quiz&#34;&gt;Quiz&lt;/h2&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
-  &lt;summary&gt;When is a heatmap useful?&lt;/summary&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
-&lt;/details&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-3&#34;&gt;
-  &lt;summary&gt;Write Plotly code to render a bar chart&lt;/summary&gt;
-  &lt;p&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import plotly.express as px
-data_canada = px.data.gapminder().query(&amp;quot;country == &#39;Canada&#39;&amp;quot;)
-fig = px.bar(data_canada, x=&#39;year&#39;, y=&#39;pop&#39;)
-fig.show()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/p&gt;
-&lt;/details&gt;</description>
-    </item>
-    
-    <item>
       <title>Vorlesung 1</title>
       <link>https://sirlh.github.io/courses/informationstheorie-und-codierung/vorlesung1/</link>
       <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
@@ -105,34 +38,6 @@ fig.show()
 Wie hoch ist die Wahrscheinlichkeit für r mal Kopf bei N münze werfen?&lt;/p&gt;
 &lt;p&gt;一枚硬币抛正面的概率是f，那么抛 r 次，有 N 次是正面的概率是多少？&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Statistics</title>
-      <link>https://sirlh.github.io/courses/example/stats/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://sirlh.github.io/courses/example/stats/</guid>
-      <description>&lt;p&gt;Introduction to statistics for data science.&lt;/p&gt;
-&lt;p&gt;
-  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
-&lt;h2 id=&#34;learn&#34;&gt;Learn&lt;/h2&gt;
-&lt;p&gt;The general form of the &lt;strong&gt;normal&lt;/strong&gt; probability density function is:&lt;/p&gt;
-&lt;p&gt;$$
-f(x) = \frac{1}{\sigma \sqrt{2\pi} } e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}
-$$&lt;/p&gt;
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    The parameter $\mu$ is the mean or expectation of the distribution.
-$\sigma$ is its standard deviation.
-The variance of the distribution is $\sigma^{2}$.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&#34;quiz&#34;&gt;Quiz&lt;/h2&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
-  &lt;summary&gt;What is the parameter $\mu$?&lt;/summary&gt;
-  &lt;p&gt;The parameter $\mu$ is the mean or expectation of the distribution.&lt;/p&gt;
-&lt;/details&gt;</description>
     </item>
     
     <item>
@@ -290,77 +195,6 @@ Im Frühjahr pflanze ich auch neue Pflanzen an. Ich habe Samen gekauft und werde
     </item>
     
     <item>
-      <title>006. Im Garten</title>
-      <link>https://sirlh.github.io/post/deutsche-ubersetzung/006-im-garten/</link>
-      <pubDate>Sun, 06 Jun 2021 19:42:47 +0000</pubDate>
-      <guid>https://sirlh.github.io/post/deutsche-ubersetzung/006-im-garten/</guid>
-      <description>&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://slowgerman.com/wp-content/uploads/2018/03/banner-1.jpg&#34; alt=&#34;Im Garten&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;原文地址&#34;&gt;原文地址&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://slowgerman.com/2018/04/20/sg-166-im-garten/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://slowgerman.com/2018/04/20/sg-166-im-garten/&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;音频&#34;&gt;音频&lt;/h2&gt;
-&lt;p&gt;​&lt;audio id=&#34;audio&#34; controls=&#34;&#34; preload=&#34;none&#34;&gt;
-&lt;source id=&#34;mp3&#34; src=&#34;https:\/\/slowgerman.com\/folgen\/sg166.mp3&#34;&gt;
-&lt;/audio&gt;&lt;/p&gt;
-&lt;h2 id=&#34;原文翻译&#34;&gt;原文翻译&lt;/h2&gt;
-&lt;p&gt;Endlich ist der Frühling da und wir können wieder in den Garten gehen. Es gibt viel zu tun, wenn man einen eigenen Garten hat! Zuerst muss ich die Blätter entfernen, die im Herbst auf den Boden gefallen sind und nun alles bedecken. Ich nehme also einen Rechen und reche die Blätter zusammen. Dann kommen die Blätter in unsere braune Mülltonne, die extra für Bio-Abfall gedacht ist. Alle zwei Wochen wird diese Tonne ausgeleert.
-Dann dürfen auch die Pflanzen wieder ausgepackt werden. Da es hier im Süden von Deutschland sehr kalt werden kann, auch diesen Winter war es wieder -15 Grad kalt, habe ich die empfindlichen Pflanzen eingepackt. Das heißt ich habe ihnen spezielle Stoffbeutel übergestülpt, damit sie nicht frieren. Die Rose habe ich mit einem Erdhügel bedeckt. Das kann ich jetzt langsam alles wieder entfernen.&lt;/p&gt;
-&lt;p&gt;Bald werden die Bäume wieder neue Blätter bilden und die ersten Blumen werden aus dem Boden kommen. Die Rose hat hoffentlich bald wieder neue Knospen und auch die Hecke wird wieder Blätter bekommen und nicht mehr so durchsichtig sein wie jetzt.&lt;/p&gt;
-&lt;p&gt;Wenn dann alles wieder grün ist, beginnt die Arbeit wieder von vorne. Wir müssen dann alle zwei Wochen den Rasen mähen, damit er nicht zu lang wird. Einen kleinen Teil des Gartens lassen wir absichtlich verwildern, damit dort Insekten leben können. Dort wird nicht gemäht.&lt;/p&gt;
-&lt;p&gt;Primel / Foto: Larissa VassilianWir müssen dann auch unsere Terrasse wieder putzen und die Gartenmöbel aus dem Keller holen. Dann können wir endlich wieder auf der Terrasse sitzen und im Freien essen. Ich werde auch die Liegestühle wieder aus dem Keller holen, dann kann ich mich draußen in den Garten legen und ein Buch lesen.&lt;/p&gt;
-&lt;p&gt;Manche Pflanzen freuen sich auch, wenn ich ihnen etwas Dünger gebe. Das ist eine Flüssigkeit mit vielen Nährstoffen.&lt;/p&gt;
-&lt;p&gt;Meine Topfpflanzen aus dem Haus dürfen über den Sommer auch nach draußen. Manche von ihnen brauchen einen größeren Topf, also werde ich sie umtopfen.
-Im Frühjahr pflanze ich auch neue Pflanzen an. Ich habe Samen gekauft und werde zunächst einen schönen großen Topf mit verschiedenen Kräutern bepflanzen, die ich zum Kochen brauche. Thymian, Salbei, Basilikum, Schnittlauch und Petersilie.  Dann werde ich etwas später Sonnenblumen pflanzen, die im Hochsommer sehr schön aussehen werden.  Und vielleicht auch wieder Tomatenpflanzen. Eine Paprikapflanze von letztem Jahr habe ich ins Haus geholt – und sie hat den ganzen Winter über Früchte getragen. Diese Pflanze darf im Sommer natürlich wieder nach draußen und Sonne tanken.&lt;/p&gt;
-&lt;p&gt;In Deutschland kann es vor allem nachts noch lange im Frühjahr kalt werden. Zu kalt für Pflanzen, die das nicht gewöhnt sind. Es kann sogar noch zu Bodenfrost kommen. Daher stellen wir die Pflanzen erst nach den „Eisheiligen“ nach draußen. Diese Tage finden Mitte Mai statt.&lt;/p&gt;
-&lt;p&gt;Gerade in Ländern wie Deutschland, wo es fast ein halbes Jahr lang kalt ist, freuen wir uns alle auf den Frühling und die wärmeren Temperaturen. Wir verbringen dann wieder viel Zeit draußen, gehen in den Biergarten, fahren Fahrrad und machen lange Spaziergänge.&lt;/p&gt;
-&lt;h2 id=&#34;相关视频&#34;&gt;相关视频&lt;/h2&gt;
-&lt;iframe src=&#34;//player.bilibili.com/player.html?aid=375805904&amp;bvid=BV16o4y117ye&amp;cid=344750327&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34;style=&#34;width: 100%; height: 56.25vw; &#34;&gt; &lt;/iframe&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://sirlh.github.io/images/drei.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;pdf-下载&#34;&gt;PDF 下载&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://slowgerman.com/folgen/sg166kurz.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://slowgerman.com/folgen/sg166kurz.pdf&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>信号调制演示界面</title>
       <link>https://sirlh.github.io/project/external-project/</link>
       <pubDate>Mon, 10 May 2021 00:00:00 +0000</pubDate>
@@ -450,172 +284,10 @@ Im Frühjahr pflanze ich auch neue Pflanzen an. Ich habe Samen gekauft und werde
     </item>
     
     <item>
-      <title>005. Aberglaube in Deutschland</title>
-      <link>https://sirlh.github.io/post/deutsche-ubersetzung/005-aberglaube-in-deutschland/</link>
-      <pubDate>Fri, 07 May 2021 07:59:48 +0000</pubDate>
-      <guid>https://sirlh.github.io/post/deutsche-ubersetzung/005-aberglaube-in-deutschland/</guid>
-      <description>&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://slowgerman.com/wp-content/uploads/2020/02/209banner.jpg&#34; alt=&#34;Aberglaube in Deutschland&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;原文地址&#34;&gt;原文地址&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://slowgerman.com/2020/05/31/aberglaube-in-deutschland-sg-209/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://slowgerman.com/2020/05/31/aberglaube-in-deutschland-sg-209/&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;音频&#34;&gt;音频&lt;/h2&gt;
-&lt;p&gt;​&lt;audio id=&#34;audio&#34; controls=&#34;&#34; preload=&#34;none&#34;&gt;
-&lt;source id=&#34;mp3&#34; src=&#34;https:\/\/cdn.podseed.org\/slowgerman\/sg209.mp3&#34;&gt;
-&lt;/audio&gt;&lt;/p&gt;
-&lt;h2 id=&#34;原文翻译&#34;&gt;原文翻译&lt;/h2&gt;
-&lt;p&gt;Aberglaube in Deutschland&lt;/p&gt;
-&lt;p&gt;德国的迷信&lt;/p&gt;
-&lt;p&gt;Meine beste Freundin ist Chinesin. Mit ihr habe ich über Aberglaube gesprochen. Denn wenn wir zusammen essen gehen, dürfen wir nicht vier verschiedene Dinge bestellen – denn vier ist eine Zahl, die Unglück bringt. So ist das zumindest in China. Hier in Deutschland mögen wir die vier als Zahl. Viele Produkte sind so abgepackt, dass sie vier Einzelteile enthalten. Vier Brötchen, vier Stifte, vier Äpfel. Vier ist irgendwie eine schöne Zahl, finde ich, weil sie zwei Paare ausdrückt. In China klingt die Zahl aber so wie die Wörter von sterben und Tod – also schlecht.&lt;/p&gt;
-&lt;p&gt;我最好的女性朋友是中国人。我和她说过关于迷信的话题。因为当时我和她出去吃饭，我们不允许点四样不同的东西吃。因为“四”，是带来不幸的数字。最起码在中国这样的。在德国，我们很喜欢“四”这个数字。许多商品都是四个一起打包的。四个面包，四支笔，四个苹果&amp;hellip;。“四”是一个美好的数字，我是这样认为的，因为它代表着两对（好事成双）。然而，在中国这个数字听起来像是“死”这个词，太糟糕了。&lt;/p&gt;
-&lt;p&gt;Das alles ist aber nur die Vorgeschichte dafür, wie unterschiedlich die Kulturen und Nationen mit ihrem Aberglauben umgehen. Und natürlich gibt es auch Dinge, die in Deutschland abergläubischen Menschen Angst machen. Fangen wir mit den Zahlen an. Bei uns ist die 13 die Zahl, die Pech bringt. Es gibt im Flugzeug keine 13. Sitzreihe, im Hotel kein 13. Stockwerk.&lt;/p&gt;
-&lt;p&gt;但这一切只是历史导致的，看在不同的文化和国家中，他们怎么与风俗迷信共处。当然也存在一些事物，让德国的迷信者感到恐惧。我们从数字开始。数字“13”代表着带来厄运的数字。（所以）在飞机中第十三排座椅，在酒店中也没有13楼。&lt;/p&gt;
-&lt;p&gt;Weiter geht’s mit dem Aberglauben: Ich selber liebe Katzen, vor allem wenn sie schwarz sind. Aber wenn eine schwarze Katze von links über den Weg läuft, dann kann das Pech bringen. Die Ursache dafür ist wie so oft das Mittelalter. Im Mittelalter verbrannte man Hexen, man hatte Angst, dass manche Frauen magische böse Kräfte hätten. Schwarze Tiere sollten ebenfalls dämonisch sein, zum Beispiel Raben oder eben schwarze Katzen. Also wurden diese oft getötet. Heute gibt es kaum Katzen, die komplett schwarz sind!&lt;/p&gt;
-&lt;p&gt;继续说关于迷信的话题：我自己很喜欢猫，尤其是黑猫。但是当一只黑猫向左跑的时候，就会带来厄运。这个说法，在中世纪的时候很流行。在中世纪时，人们焚烧女巫，他们担心，那些女人拥有恶魔般的邪恶力量。类似的，黑色的动物也应该是恶魔，例如乌鸦或者黑猫。因此这些动物经常被处死。今天几乎没有全黑的猫了。&lt;/p&gt;
-&lt;p&gt;Dass es vor allem Pech bringt, wenn die Katze von links nach rechts läuft, ist auch interessant. Man sagt nämlich auch, wenn jemand schlechte Laune hat: „Der ist wohl mit dem falschen Fuß aufgestanden“, und meint damit den linken Fuß.&lt;/p&gt;
-&lt;p&gt;有趣的时候，当猫从左向右走的时候，主要带来厄运。（所以）当某人心情不好的时候，人们也会说：幸运可能是站错脚了。他说的是左脚。&lt;/p&gt;
-&lt;p&gt;Pech bringt es in Deutschland auch, wenn man unter einer Leiter hindurchgeht. Angeblich bilden Leiter, Wand und Boden ein Dreieck, und das Dreieck ist die heilige Form. Wer da durchgeht, der macht die Form kaputt, und dann erlebt er Böses. Ich kann mir vorstellen, dass dieser Aberglauben aber einen ziemlich praktischen Ursprung hat: Wenn nämlich oben auf der Leiter ein Maler steht, wird man sicher ganz schön dreckig, wenn man direkt darunter hindurch läuft.&lt;/p&gt;
-&lt;p&gt;在德国人们也认为，当人从梯子下走过时，会带来坏运气。据说是梯子，墙壁和地板会构成一个三角形。而三角形是神圣的形状。谁穿过它，就会对破坏这个形状，然后他就会有苦难（Böses）。我能够理解，这种迷信肯定有一个很实际的来源：如果在梯子上站着一个画家（粉刷匠）的话，那么人从梯子下走过，肯定会弄的自己很脏。&lt;/p&gt;
-&lt;p&gt;Wenn du Geburtstag hast und mit den Menschen an deinem Tisch anstoßen möchtest, nimmst du dein Glas in die Hand und hältst es den anderen Menschen hin. Sie tun das gleiche und stoßen mit dir an. Ganz wichtig: In Deutschland musst du deinem Gegenüber in die Augen schauen, während sich die Gläser berühren! Die Strafe ist sonst besonders schlimm: Sieben Jahre schlechter Sex… Das zumindest sagt der Aberglaube.&lt;/p&gt;
-&lt;p&gt;当你过生日的时候，你想喝餐桌旁的人敬酒时，你可以拿起你的杯子伸向对方。他们也做同样的事情，和你一起敬酒。重要的是，在德国，在碰杯的时候，你必须注视着对方。不然，惩罚会特别可怕：七年性行为障碍（Sieben Jahre schlechter Sex）。至少迷信的说法是这样的。&lt;/p&gt;
-&lt;p&gt;A propos sieben: Wenn du einen Spiegel kaputt machst, dann hast du sieben Jahre Unglück. Denn im Spiegel siehst du deine Seele, und die zerbricht dann mit dem Spiegel. Nach sieben Jahren ist sie wieder geheilt. Komischer Aberglaube, denn auf der anderen Seite haben wir das Sprichwort „Scherben bringen Glück“.&lt;/p&gt;
-&lt;p&gt;说到“七”: 当你打碎一面镜子，七年你都不会走运。因为镜子可以看到你的灵魂，当它破碎时，也会带着灵魂破碎。在七年后，她会自愈。奇怪的说法，因为另一方面我们也有“碎碎平安（Scherben bringen Glück）”的俗语。&lt;/p&gt;
-&lt;p&gt;Du darfst übrigens auch keinem oder keiner Deutschen vor seinem eigentlichen Geburtstag zum Geburtstag gratulieren! Sag also ja nicht am Tag davor: „Alles gute zum Geburtstag!“ Sonst wird dich dieser Mensch sehr böse anschauen. Denn du hast das Schicksal herausgefordert. Wer weiß, was bis morgen noch passiert? Also erst gratulieren, wenn der Tag wirklich da ist.&lt;/p&gt;
-&lt;p&gt;顺便说下，你不要在德国人生日前，祝贺他们的生日。也就说，不要在生日前说 ：&amp;ldquo;生日快乐&amp;rdquo;。不然他们会非常生气的看着你。因为你是在挑战命运。谁知道明天会发生什么。因此，要在那一天真正到来时，再去祝贺。&lt;/p&gt;
-&lt;p&gt;Es gibt auch positiven Aberglauben: Wenn du in eine neue Wohnung oder ein neues Haus einziehst kann es sein, dass deine deutschen Nachbarn oder Freunde dir ein Brot und Salz mitbringen. Das sind die Geschenke, die dir Glück bringen sollen. Wenn du übrigens Salz verschüttest dann bringt das wieder Unglück – und zwar mal wieder sieben Jahre. Die arme Zahl sieben, was hat sie nur verbrochen…&lt;/p&gt;
-&lt;p&gt;也有一些很正面的迷信说法。当你搬进一个新的公寓或者是新的房子的时候，你可以给你的德国邻居带一些面包和盐。这些都是能给你带来幸运的礼物。另外就是，当你把盐给撒了，那它就会给你厄运，又是七年。可怜的数字七，他做错了什么&amp;hellip;&lt;/p&gt;
-&lt;h2 id=&#34;相关视频和作者&#34;&gt;相关视频和作者&lt;/h2&gt;
-&lt;iframe src=&#34;//player.bilibili.com/player.html?aid=500441205&amp;bvid=BV1gK41137uq&amp;cid=261946021&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34; style=&#34;width: 100%; height: 56.25vw;&#34; &gt; &lt;/iframe&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://sirlh.github.io/images/drei.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;pdf-下载&#34;&gt;PDF 下载&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://slowgerman.com/folgen/sg209kurz.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://slowgerman.com/folgen/sg209kurz.pdf&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>004. Kurorte und auf Kur gehen</title>
       <link>https://sirlh.github.io/courses/%E5%BE%B7%E8%AF%AD%E7%BF%BB%E8%AF%91/004-kurorte-und-auf-kur-gehen/</link>
       <pubDate>Thu, 06 May 2021 08:42:47 +0000</pubDate>
       <guid>https://sirlh.github.io/courses/%E5%BE%B7%E8%AF%AD%E7%BF%BB%E8%AF%91/004-kurorte-und-auf-kur-gehen/</guid>
-      <description>&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://slowgerman.com/wp-content/uploads/2019/02/bannerkur-1080x466.jpg&#34; alt=&#34;Kurorte und auf Kur gehen&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;原文地址&#34;&gt;原文地址&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://slowgerman.com/2019/03/01/sg-180-kurorte-und-auf-kur-gehen/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://slowgerman.com/2019/03/01/sg-180-kurorte-und-auf-kur-gehen/&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;音频&#34;&gt;音频&lt;/h2&gt;
-&lt;p&gt;​&lt;audio id=&#34;audio&#34; controls=&#34;&#34; preload=&#34;none&#34;&gt;
-&lt;source id=&#34;mp3&#34; src=&#34;https:\/\/cdn.podseed.org\/slowgerman\/sg180.mp3&#34;&gt;
-&lt;/audio&gt;&lt;/p&gt;
-&lt;h2 id=&#34;原文翻译&#34;&gt;原文翻译&lt;/h2&gt;
-&lt;p&gt;Kurorte und auf Kur gehen
-疗养胜地 和 治疗&lt;/p&gt;
-&lt;p&gt;Habt Ihr schon einmal etwas von Kur gehört? Bei einer Kur geht es um die Gesundheit.&lt;/p&gt;
-&lt;p&gt;您听说过Kur（治愈，疗养）吗？ Kur是与健康有关的。&lt;/p&gt;
-&lt;p&gt;Im Jahr 2000 gab es eine große Gesundheitsreform in Deutschland. Seitdem gibt es das Wort „Kur“ eigentlich nicht mehr im medizinischen Gebrauch – aber wir sprechen alle trotzdem noch davon. Eine Kur kann ich zur Vorsorge machen. Wenn es also darum geht, meine Gesundheit zu erhalten. Also vorzusorgen, dass ich gar nicht erst schlimmer krank werde. So eine Kur dauert in der Regel rund drei Wochen.&lt;/p&gt;
-&lt;p&gt;在2000年德国有一次重大的医疗改革。在那之后，“疗养”一词再也不用于医学领域，但我们还是在谈论它。我可以把疗养当作预防，如果它是关于去保持我的健康的话。也就是说，前提是要确保我不会生重病。一个疗养周期一般是持续三周左右。&lt;/p&gt;
-&lt;p&gt;Wenn ich eine Operation hatte oder einen Unfall, dann kann ich auch auf eine Kur gehen, das nennt sich dann aber Rehabilitation oder kurz Reha. Hier bin ich so lange, bis es mir wieder körperlich besser geht. Dafür sorgen Ärzte, aber auch spezielles Personal, das mit mir beispielsweise Sportübungen macht.&lt;/p&gt;
-&lt;p&gt;当我做了手术或者发生了意外，也可以去疗养，但这成为康复治疗，简称康养。我一直要在这里，直到我的身体得到好转。不仅有医生，还有一些专业人员会照顾我，比如和我一起做康复训练。&lt;/p&gt;
-&lt;p&gt;So eine Kur machen die Menschen vor allem in Kurorten. Das sind Orte, die zum Beispiel eigene Quellen mit Thermalwasser oder durch das Meer gereinigte Luft haben. Dadurch geht es den Menschen dann besser als zum Beispiel in einer stinkigen Stadt.&lt;/p&gt;
-&lt;p&gt;人们进行疗养，主要是在疗养胜地。主要是那些自带温泉或者有海水净化后的空气的地方。人们通过这样，比在一个污浊的城市里生活的更好。&lt;/p&gt;
-&lt;p&gt;Manche Deutsche fahren auch ins Ausland, zum Beispiel in Kurorte in Tschechien, Polen, Ungarn oder Italien. Wer unter Allergien oder Asthma leidet, für den ist zum Beispiel das Klima im Gebirge sehr gut geeignet. Oder auch am Meer. Dafür gibt es sogenannte Luftkurorte. Hier ist die Luft also so gut, dass das medizinisch gut für die Menschen ist. Das muss nachweisbar sein.&lt;/p&gt;
-&lt;p&gt;一些德国人也去外国，比如去捷克，波澜，匈牙利或者意大利的一些疗养胜地。对于那些患有过敏和哮喘的人，一些比如在山区，或者是海边的气候环境非常适合他们。这也就是所谓的天然氧吧 （ Luftkurorte）。这里的空气是如此的好，以至于对人们的身体都好的治愈效果，这都可以证实的。&lt;/p&gt;
-&lt;p&gt;In Deutschland gibt es viele kleine Städte und Gemeinden, die sogar das „Bad“ im Namen tragen. Zum Beispiel Bad Wörishofen, Bad Pyrmont oder Bad Kissingen. In solchen Orten gibt es zum Beispiel wenig Verkehr, damit die Menschen nicht gestört werden. Die Kurorte haben eine lange Geschichte. Viele reiche Menschen fuhren hier hin, um sich etwas Gutes zu tun. Dadurch wurden die Kurorte selber sehr reich – und das sieht man auch. In den meisten Kurorten stehen wunderschöne alte Gebäude.&lt;/p&gt;
-&lt;p&gt;在德国有一些小城市和社区，甚至在他们的名称上都带有“浴池（Bad）”。比如:Bad Wörishofen, Bad Pyrmont 和 Bad Kissingen。在这些地方交通少，所以人们不会受到干扰。疗养圣地有很长的历史。过去许多富人来到这里，为了做一些对自己（身体）有益的事。这使得疗养圣地本身就变得非常富有，人们也可以看到这一点。在大多数的疗养圣地都有很漂亮的古建筑。&lt;/p&gt;
-&lt;p&gt;Vor rund hundert Jahren war es vor allem für Soldaten wichtig, wieder gesund zu werden: Viele von ihnen kamen nach dem Ersten Weltkrieg in einen Kurort, um nach der dortigen Behandlung wieder ein normales Leben beginnen zu können. Das Wort „Kur“ kommt aus dem Lateinischen, denn das Wort „cura“ heißt dort Sorge und Fürsorge. In der Kur sorgt man sich also um kranke Menschen.&lt;/p&gt;
-&lt;p&gt;在大概一百年前，让士兵重新康复变得尤其重要。在第一次世界大战后，他们中的许多人来到疗养圣地，为了在这里治疗后能够不重新开始正常的生活。“疗养（Kur）”一词来自拉丁语，因为这个词“cura”代表着关心和照顾。因此在疗养中，人们照顾生病的人。&lt;/p&gt;
-&lt;p&gt;In solchen Orten gibt es dann Kurhotels, in denen die Menschen leben. Sie haben dann einen festen Plan, wann sie zum Beispiel zu bestimmten Behandlungen gehen.&lt;/p&gt;
-&lt;p&gt;在这样的地方提供疗养酒店，人们可以在里面生活。然后您可以做一个固定的安排，比如什么时候进行哪些特定的治疗。&lt;/p&gt;
-&lt;p&gt;Eine besondere Form der Kur ist die Mutter-Kind-Kur (die es natürlich auch für Väter gibt). Hier können sich Mütter oder Väter gesundheitlich helfen lassen, während die Kinder zwar mitgereist sind, aber vor Ort versorgt werden. Die Kosten dafür übernimmt die Krankenkasse. Warum sie das tut? Weil es darum geht, die Mütter und Väter so zu stärken, dass sie wieder arbeiten und Geld verdienen können. Eltern lernen bei ihrem Aufenthalt, wie sie mit Stress besser umgehen können.&lt;/p&gt;
-&lt;p&gt;治疗的一种特殊形式是Mutter-Kind-Kur(亲子疗养),（当然父亲也可以使用）。在这里，母亲或者父亲在健康方面得到帮助，在此期间尽管会带着小孩，但是他们会在当地得到照顾。这个花费一边是由保险公司来承担 ，他们为什么要这样做？因为这是为了支持父亲和母亲，以便他们能够重新开始工作和赚钱。父母在逗留期间，（学习）如何更好的应对压力。&lt;/p&gt;
-&lt;h2 id=&#34;相关视频&#34;&gt;相关视频&lt;/h2&gt;
-&lt;iframe src=&#34;//player.bilibili.com/player.html?aid=245446482&amp;bvid=BV1Fv411b717&amp;cid=261947236&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34;style=&#34;width: 100%; height: 56.25vw; &#34;&gt; &lt;/iframe&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://sirlh.github.io/images/drei.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;pdf-下载&#34;&gt;PDF 下载&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;hhttps://slowgerman.com/folgen/sg180kurz.pdf&#34;&gt;https://slowgerman.com/folgen/sg180kurz.pdf&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>004. Kurorte und auf Kur gehen</title>
-      <link>https://sirlh.github.io/post/deutsche-ubersetzung/004-kurorte-und-auf-kur-gehen/</link>
-      <pubDate>Thu, 06 May 2021 08:42:47 +0000</pubDate>
-      <guid>https://sirlh.github.io/post/deutsche-ubersetzung/004-kurorte-und-auf-kur-gehen/</guid>
       <description>&lt;p&gt;
 
 
@@ -779,219 +451,10 @@ Im Frühjahr pflanze ich auch neue Pflanzen an. Ich habe Samen gekauft und werde
     </item>
     
     <item>
-      <title>003. Verschwörungsmythen und Verschwörungstheorien</title>
-      <link>https://sirlh.github.io/post/deutsche-ubersetzung/003-verschworungsmythen-und-verschworungstheorien/</link>
-      <pubDate>Wed, 05 May 2021 08:18:02 +0000</pubDate>
-      <guid>https://sirlh.github.io/post/deutsche-ubersetzung/003-verschworungsmythen-und-verschworungstheorien/</guid>
-      <description>&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://slowgerman.com/wp-content/uploads/2016/08/IMG_7005.jpg&#34; alt=&#34;Verschwörungsmythen und Verschwörungstheorien&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;原文地址&#34;&gt;原文地址&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://slowgerman.com/2020/12/01/verschwoerungsmythen-und-verschwoerungstheorien-sg-221/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://slowgerman.com/2020/12/01/verschwoerungsmythen-und-verschwoerungstheorien-sg-221/&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;音频&#34;&gt;音频&lt;/h2&gt;
-&lt;p&gt;​&lt;audio id=&#34;audio&#34; controls=&#34;&#34; preload=&#34;none&#34;&gt;
-&lt;source id=&#34;mp3&#34; src=&#34;https:\/\/cdn.podseed.org\/slowgerman\/sg221.mp3&#34;&gt;
-&lt;/audio&gt;&lt;/p&gt;
-&lt;h2 id=&#34;原文翻译&#34;&gt;原文翻译&lt;/h2&gt;
-&lt;p&gt;Verschwörungsmythen und Verschwörungstheorien
-阴谋论&lt;/p&gt;
-&lt;p&gt;Im Moment verbreiten sich Verschwörungsmythen in Deutschland. Früher nannte man das auch eine Verschwörungstheorie. Was ist das? Es geht darum, dass manche Menschen versuchen, einen Zustand durch eine Verschwörung zu erklären. Eine Verschwörung ist also eine bewusste Aktion einer kleinen Gruppe, die etwas Böses will. Aktuell tauchen diese Verschwörungsmythen vor allem im Zusammenhang mit der Covid-19-Pandemie auf.&lt;/p&gt;
-&lt;p&gt;眼下阴谋传说（阴谋论）正在德国传播。早些时候人们也称其为阴谋论。这是指什么呢？它是说，有些人试图用阴谋去解释一些情况。所以说，阴谋论是一些邪恶团体的蓄意行动。目前这些阴谋论主要与新冠疫情有关&lt;/p&gt;
-&lt;p&gt;Anstatt auf die Wissenschaft zu hören, glauben einige Menschen, dass es Corona gar nicht gibt. Dass es sich einige reiche Menschen wie Bill Gates ausgedacht haben, um damit die Menschen zu Sklaven zu machen, durch Zwangsimpfungen oder durch einen implantierten Chip. Oder durch Chemtrails, diese Streifen, die Flugzeuge am Himmel verursachen.&lt;/p&gt;
-&lt;p&gt;与其相信科学，一些人更愿意相信，新冠是根本不存在的。一些像比尔盖茨这样的有钱人，想要通过注射疫苗或者植入芯片的方式，奴隶人类。又或者是用化学物品，那些飞机在天空（飞过）造成的划痕。&lt;/p&gt;
-&lt;p&gt;Verschwörungsmythen sind nichts Neues. Es gab sie schon in der Antike. Antisemitische Verschwörungsmythen halfen mit, den Holocaust möglich zu machen. Hitler verbreitete Angst und Hass auf das von ihm so genannte „Weltjudentum“. Immer gibt es ein Feindbild in diesen Mythen. Immer wird Hass geschürt und Angst, um danach mit Gewalt auf die betroffene Gruppe reagieren zu können. In den USA gibt es bekannte Verschwörungstheorien um das Attentat auf John F. Kennedy oder die Anschläge auf das World Trade Center im Jahr 2001. Und weil wir heute das Internet haben, verbreiten sich solche Ideen viel schneller als früher.&lt;/p&gt;
-&lt;p&gt;阴谋论并不是一个新的概念。它在古代就已经存在。反对犹太人的阴谋论使得大屠杀成为可能。希特勒散播了他对所谓的“世界犹太人”的恐惧和仇恨情绪。在这些阴谋论中总会有一个敌人，总是充满仇恨与恐惧，为了去激起受影响的群体的暴力行动。在美国，围绕着肯尼迪遇刺和2001年的世贸中心的袭击（911事件），都存在著名的阴谋论。而且因为今天我们拥有了互联网，这些阴谋论要比以前传播的更快。&lt;/p&gt;
-&lt;p&gt;Aber wie entstehen solche Ideen? Es ist eigentlich ganz einfach. Unser Gehirn sucht nach Zusammenhängen. So funktionieren wir nunmal. Wenn wir gestresst sind oder eine Situation für uns nicht erklärbar ist, suchen wir eine Lösung. Wir greifen ein paar Fakten auf und versuchen, diese in einen Zusammenhang zu bringen. Weil wir verstehen wollen, was passiert. Und dann liegt der Gedanke nahe, dass es „wir“ und „sie“ gibt. Also „wir hier unten“ und „die da oben“. Dass es Gut und Böse gibt. Dass irgendjemand uns steuert.&lt;/p&gt;
-&lt;p&gt;但是这些想法（阴谋论）是怎么产生的？总的来说是很简单的。我们的大脑总是在寻找联系。我们总是这样做。当我们处于焦虑或者对一些状况解释不清的时候，便要寻找一个答案。我们猜测一些因素然后尝试，将这些因素联系在一起。因为我们想要理解，到底发生了什么。然后就会出这样，那样的想法，&lt;/p&gt;
-&lt;p&gt;这些想法有好有坏。（感觉）有人在控制我们。&lt;/p&gt;
-&lt;p&gt;Solche Mythen entstehen vor allem in Zeiten, in denen wir eine Krise haben. Wenn wir uns bedroht fühlen und Angst haben. Wenn wir Dinge nicht verstehen können, weil sie zu kompliziert sind. Es ist eben viel einfacher daran zu glauben, dass ein Bösewicht hinter den Dingen steht, als einfach nur ein Zufall.&lt;/p&gt;
-&lt;p&gt;这些阴谋论主要是存在在我们有危机感的时期。(比如：)当我们感觉到恐惧和产生恐惧时，(或者)当我们对一些事情无法理解时，因为它太复杂了。相信在事情背后有一个坏蛋，要比相信是偶然事件，要来得简单得多。&lt;/p&gt;
-&lt;p&gt;Es ist ein sehr spezielles Denken. Den Zufall gibt es für Menschen, die an Verschwörungstheorien glauben, nicht. Alles wird gesteuert, nichts passiert einfach so. Und auch die Dinge, die wir sehen und normal finden, sind nur eine Tarnung. Dahinter passiert etwas anderes, so denken die Verschwörungstheoretiker. Sie sind auf der Suche nach einer geheimen Wahrheit, die wir anderen, dummen Menschen einfach nicht sehen wollen. Sie suchen geheime Muster, sie denken, alles hängt miteinander zusammen. Alles hat einen Sinn.&lt;/p&gt;
-&lt;p&gt;有一个很有代表性的想法。那些相信阴谋的人认为没有偶然。一切事情都是被操控的，而不是简单的发生。也包括哪些我们所见和发现的寻常事情，不过是掩盖而已。在这背后肯定发生了其他事情，阴谋论者认为。他们在寻找那些秘密的真相，我们这些愚蠢的人类都无法看到的真相。他们也寻找神秘的组织，他们认为一切都是有联系的，一切都有目的。&lt;/p&gt;
-&lt;p&gt;Es gibt kleine Verschwörungstheorien und sehr große. Die kleine, an die vielleicht auch du glauben kannst, ist zum Beispiel die Idee, dass die Mondlandung nie stattgefunden hat. Dann gibt es Verschwörungen, die Erklärungen nicht glauben, zum Beispiel die offizielle Erklärung zum Mord an John F. Kennedy. Sie denken, dass noch etwas anderes dahinter steckt. Vielleicht ist das so – wer weiß. Aber dann gibt es die großen Verschwörungsmythen, die einfach wie Märchen klingen. Zum Beispiel, dass es außerirdische Wesen gibt, die uns beherrschen, die sogenannten Reptiloiden. Oder dass die Erde eine Scheibe ist. Ich persönlich kann nicht verstehen, wie man so etwas glauben kann.&lt;/p&gt;
-&lt;p&gt;阴谋论也有大有小。那些小的，比如：你或许会相信这样的想法，我们从来没有登录过月球。然后就是一些不相信任何解释的阴谋论，比如有关肯尼迪被谋杀的官方声明。他们认为，在背后还隐藏着其他东西。或许真的是这样，但谁知道呢。但是，有一些大的阴谋论，听起来就像是通话故事一样。比如，有外星人在控制我们，也就是所谓的小绿人。或者说，地球是平的。就我个人来说，我是无法理解，人们怎么会想着这些东西。&lt;/p&gt;
-&lt;p&gt;Jetzt zu den modernen Verschwörungstheorien, die gerade unterwegs sind. Da gibt es die Leugnung des menschengemachten Klimawandels. Alle Fakten werden bestritten. Es wird behauptet, die Forscher würden ihre Ergebnisse fälschen. Menschen wie Donald Trump machen eifrig mit, solche Ideen zu verbreiten. Er schrieb in einem Tweet 2012, das Konzept des Klimawandels wäre „von den und für die Chinesen erfunden, um der Wettbewerbsfähigkeit der Industrie in den USA zu schaden“.&lt;/p&gt;
-&lt;p&gt;现在一些现代的阴谋论正在发展（正在来的路上）。否认气候变化。所有的事实都是由争议的。据说，研究人伪造了他们的结果。特朗普等人渴望去传播这样的想法。他在2012年的一条推文中写道：“气候变化的概念是中国人发明的，是为了损害美国的工业竞争力”&lt;/p&gt;
-&lt;p&gt;Auch Covid-19 wird nicht einfach als Seuche gesehen, sondern als biologische Waffe, die absichtlich erschaffen wurde. Dahinter sollen George Soros und Bill Gates stecken. Sie wollen damit die Überbevölkerung lösen, so wird behauptet. Andere sagen, der neue Mobilfunkstandard 5G wäre schuld an der Pandemie. Oder: Das Virus existiert gar nicht, wir sollen uns nur alle impfen lassen, damit die Mächtigen unsere Gedanken kontrollieren können.&lt;/p&gt;
-&lt;p&gt;新冠疫情也不被看场一种疾病，而是视为故意制造的生化武器。据说在这背后，是因为索罗斯和比尔盖茨为了解决人口过程的问题。另一种说法是，疫情应该归咎于5G通信。或者说是：病毒根本就不存在，只是想给我们接种疫苗，为了让掌权者控制我们的思想。&lt;/p&gt;
-&lt;p&gt;Aber wem nützen solche Theorien und Mythen? Politikern. Trump hat zum Beispiel den Mythos benutzt, Obama sei nicht in den USA geboren. Er dürfe also gar nicht Präsident sein. Solche Mythen verunsichern die Wähler:innen. Populismus und Verschwörungsmythen passen gut zusammen.&lt;/p&gt;
-&lt;p&gt;那么是谁在利用这些阴谋论呢？政客，比如特朗普运用阴谋论，说奥巴马根本就不是在美国出生的，所以，他根本不应该当总统。这些阴谋论会让选民内心感到不安。阴谋论和民粹主义配合的很好。&lt;/p&gt;
-&lt;p&gt;Ich kann dir nur raten: Bitte teile keine Dinge, die nicht wissenschaftlich gesichert sind. Ja, manches klingt unglaublich und man möchte es weitergeben – aber zum Coronavirus sind beispielsweise ein Viertel aller YouTube-Videos mit falschen Fakten öffentlich. Bitte suche dir gute, verlässliche Quellen, und glaube nicht alles, was du liest.&lt;/p&gt;
-&lt;p&gt;（对此）我只能建议你，请勿分享那些没有科学证实的内容。是的，有些事情让人难以置信，并且人们想要把它继续传播下去。例如，关于新冠病毒，四分之一公开在YouTube视频网站上的视频都存在错误的观点。请找到可靠的来源，不要读过什么都相信。&lt;/p&gt;
-&lt;h2 id=&#34;相关视频和作者&#34;&gt;相关视频和作者&lt;/h2&gt;
-&lt;iframe src=&#34;//player.bilibili.com/player.html?aid=798365771&amp;bvid=BV1by4y1U7um&amp;cid=269872294&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34;style=&#34;width: 100%; height: 56.25vw;&gt; &lt;/iframe&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://sirlh.github.io/images/drei.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;pdf-下载&#34;&gt;PDF 下载&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://slowgerman.com/folgen/sg221kurz.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://slowgerman.com/folgen/sg221kurz.pdf&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>002. Die deutschen Bundesländer</title>
       <link>https://sirlh.github.io/courses/%E5%BE%B7%E8%AF%AD%E7%BF%BB%E8%AF%91/002-die-deutschen-bundeslander/</link>
       <pubDate>Tue, 04 May 2021 14:48:49 +0000</pubDate>
       <guid>https://sirlh.github.io/courses/%E5%BE%B7%E8%AF%AD%E7%BF%BB%E8%AF%91/002-die-deutschen-bundeslander/</guid>
-      <description>&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://slowgerman.com/wp-content/uploads/2014/10/3.jpg&#34; alt=&#34;Die deutschen Bundesländer&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;原文地址&#34;&gt;原文地址&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://slowgerman.com/2018/10/20/sg-174-die-deutschen-bundeslaender/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://slowgerman.com/2018/10/20/sg-174-die-deutschen-bundeslaender/&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;音频&#34;&gt;音频&lt;/h2&gt;
-&lt;p&gt;​&lt;audio id=&#34;audio&#34; controls=&#34;&#34; preload=&#34;none&#34;&gt;
-&lt;source id=&#34;mp3&#34; src=&#34;https:\/\/cdn.podseed.org\/slowgerman\/sg174.mp3&#34;&gt;
-&lt;/audio&gt;&lt;/p&gt;
-&lt;h2 id=&#34;原文翻译&#34;&gt;原文翻译&lt;/h2&gt;
-&lt;p&gt;Die deutschen Bundesländer
-德国的联邦州&lt;/p&gt;
-&lt;p&gt;In Deutschland gibt es 16 Bundesländer. Vor der Wiedervereinigung waren es 11. Berlin, Bremen und Hamburg sind sogenannte Stadtstaaten.&lt;/p&gt;
-&lt;p&gt;在德国有16个联邦州。在两德统一前是11个。柏林，不莱梅和汉堡是直辖市。&lt;/p&gt;
-&lt;p&gt;Das größte Bundesland ist Bayern im Süden von Deutschland. Die Hauptstadt ist München, die Stadt in der ich lebe. In Bayern sind Firmen wie BMW und Audi zu Hause. Und der Fußballverein FC Bayern. Bayern ist sehr ländlich, hier gibt es viel Landwirtschaft. Bayern grenzt an Österreich – wir teilen uns sozusagen die Alpen. Viele Touristen kommen nach Bayern, um hier das Schloss Neuschwanstein zu sehen oder das Oktoberfest. Bayern ist ein Freistaat – ebenso wie Sachsen und Thüringen. Das klingt gut und sehr frei – hat aber eigentlich nichts mehr zu bedeuten.&lt;/p&gt;
-&lt;p&gt;最大的联邦州在德国南部的巴伐利亚州。它的首府是我生活的城市，慕尼黑。许多公司，比如:宝马，奥迪，都在巴伐利亚州。还有足球俱乐部FC Bayern（拜仁慕尼黑）。巴伐利亚州是非常原生态的（乡村的），在这里有许多农业。巴伐利亚州与奥地利接壤，共同分享阿尔卑斯山。 许多游客来到巴伐利亚参观新天鹅堡或慕尼黑啤酒节。巴伐利亚州是一个自由州，就像萨克森州，图林根州一样。这听起来很好，很自由，但是实际上没有太多的意义。&lt;/p&gt;
-&lt;p&gt;Die Wiedervereinigung 再次统一
-Die Fußballverein 足球俱乐部
-an A. grenzen 和&amp;hellip;交界&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Kommen wir zu Nordrhein-Westfalen. Das ist ein Bundesland im Westen des Landes. Hier leben die meisten Menschen, und zwar fast 18 Millionen. In Nordrhein-Westfalen gibt es viele große Städte wie Köln, Düsseldorf oder Essen. Das Land grenzt an die Niederlande. Es wurde lange Zeit geprägt vom Bergbau.&lt;/p&gt;
-&lt;p&gt;接下来我们到北威州，这是在德国西部的一个联邦州。这里的居住的人口最多，确切的说大概有一千八百万。在北威州有许多大城市，比如：科隆，杜塞尔多夫和埃森。这个联邦州和荷兰接壤。在很长的时间里这里的矿业发达（让人印象深刻，有特点）。&lt;/p&gt;
-&lt;p&gt;und zwar 确切来说
-von &amp;hellip; geprägt 有&amp;hellip;特点
-der Bergbau 矿业&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Baden-Württemberg ist ebenfalls im Süden von Deutschland, direkt neben Bayern. Hier wohnen die Schwaben und die Badener. Aus Baden-Württemberg kommt die Automarke Daimler-Benz.&lt;/p&gt;
-&lt;p&gt;巴登符腾堡州同样也是位于德国南部，就在巴伐利亚州旁边。这里住着斯瓦比亚人和巴登人。汽车制造商戴姆勒-奔驰就来自巴登州。&lt;/p&gt;
-&lt;p&gt;ebenfalls 同样的&lt;/p&gt;
-&lt;p&gt;Niedersachsen ist flächenmäßig das zweitgrößte Bundesland. Es liegt in Norddeutschland. Aus Niedersachsen kommt die Automarke VW, also Volkswagen. Niedersachsen hat eine Küste, die Nordseeküste. Die Niedersachsen sind stolz darauf, das reinste Hochdeutsch zu sprechen.&lt;/p&gt;
-&lt;p&gt;萨克森州是从面积上看是第二大的联邦州。它位于北德。大众汽车就来自萨克森州。萨克森州有一个海岸，也就是北海的海岸。萨克森州的居民说标准的高地德语，对此很自豪。&lt;/p&gt;
-&lt;p&gt;flächenmäßig 从面积上看
-stolz auf A. sein 对&amp;hellip;很自豪
-rein 纯粹的，纯净的&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Hessen verwirrt so manche Deutsche. Denn eigentlich denkt jeder bei Hessen an die Stadt Frankfurt am Main. Dort ist das Finanzzentrum Deutschlands, viele Banken haben hier ihr Quartier bezogen. Aber die Hauptstadt ist Wiesbaden.&lt;/p&gt;
-&lt;p&gt;黑森州会让很多德国人都很困惑。因为每当想起黑森州，一定会想起法兰克福。这里是德国的金融中心，许多银行的总部坐落于此。但是首府是威斯巴登。&lt;/p&gt;
-&lt;p&gt;verwirren 使人迷惑的
-Das Quartier 所在地&lt;/p&gt;
-&lt;p&gt;Rheinland-Pfalz liegt am westlichen Rand von Deutschland. Zwei berühmte Persönlichkeiten aus der Pfalz sind Helmut Kohl, der von 1982 bis 1998 deutscher Kanzler war, und Karl Marx. Sehr lecker sind übrigens die Weine aus dieser Gegend.&lt;/p&gt;
-&lt;p&gt;莱茵兰-普法尔茨在德国的西边。有两个名人就来自莱茵兰-普法尔茨。Helmut Kohl，1982到1998年的德国总理，和卡尔马克思。此外许多非常美味的葡萄酒来自这个地区。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Sehr klein ist das Saarland, das direkt an der Grenze zu Frankreich liegt. Hier leben viele Katholiken: Fast 60% der Menschen im Saarland gehören zur katholischen Kirche.&lt;/p&gt;
-&lt;p&gt;非常小的是萨尔州，它直接和法国接壤 。这里住着许多天主教徒，几乎在萨尔州60%的人都是信天主教的。&lt;/p&gt;
-&lt;p&gt;Wieder zurück in den Norden – hier fehlt uns noch Schleswig-Holstein. Es grenzt an Dänemark und hat auf einer Seite die Nordsee und auf der anderen die Ostsee. Hier gibt es die kleinste Stadt Deutschlands: Arnis hat rund 300 Einwohner.&lt;/p&gt;
-&lt;p&gt;再次回到北边，这里还有石荷州。它和丹麦接壤，一侧是北海，另一侧是波罗的海。德国最小的城市就在这里，阿尼斯（Arnis）大概有300名居民。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Kommen wir zu den fünf „neuen“ Bundesländern. Wir hier in Westdeutschland nennen diese ostdeutschen Bundesländer wirklich immer noch so, obwohl sie seit der Wiedervereinigung längst wieder zu uns, also zum Westen gehören. Blöd, oder?&lt;/p&gt;
-&lt;p&gt;我们说到那五个“新的”联邦州。在西德我们确实还是会称这些联邦州是东德的，尽管他们在统一后成为了我们的一部分，也就是说属于西德，这挺愚蠢的，难道不是吗？&lt;/p&gt;
-&lt;p&gt;Also, da ist zum Beispiel Sachsen mit seiner Hauptstadt Dresden. In Sachsen werden am meisten Kinder geboren – pro Frau im Schnitt 1,57 Kinder. 72 Prozent der Sachsen sind nicht religiös. Im schönen Leipzig übrigens gibt es eine Buchmesse, die wirklich einen Besuch lohnt.&lt;/p&gt;
-&lt;p&gt;比如，萨克森的首府德累斯顿。在萨克森的新生儿最多，平均每个妇女生育1.57个小孩，72%的萨克森人民是不信教的。此外，在美丽的莱比锡有一个书展，那很值得去游玩。&lt;/p&gt;
-&lt;p&gt;religiös 信教的&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Brandenburg ist das Bundesland, das sich um Berlin herum schmiegt. Es hat den geringsten Ausländeranteil von ganz Deutschland – und zwar nur 3,6 Prozent. Im Osten leben übrigens generell viel weniger Ausländer als im Westen – im Durchschnitt sind es 3,8 Prozent im Osten und 11,8 Prozent im Westen. Dennoch ist die Ausländerfeindlichkeit im Osten leider höher als im Westen. Interessant: In Berlin, also mitten in Brandenburg, ist der Ausländeranteil bei 15,5 Prozent am höchsten.&lt;/p&gt;
-&lt;p&gt;勃兰登堡州是一个环绕着柏林的联邦州。在这的外国人比例全德最低，准确的说，仅有3.6%。此外住在东德的外国人相比于西德国人少很多，外国人在东德平均比例是3.8%，西德是11.8%。可是在东德，排外心理要高于西德。有趣的是，在柏林，也就是勃兰登堡州的中心，这里的外国人比例是15.5%，全德最高。&lt;/p&gt;
-&lt;p&gt;um  herum 围绕
-schmiegen 紧挨着
-Die Ausländerfeindlichkeit 排外心理&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Kommen wir zu Sachsen-Anhalt, dem Bundesland, das fünf UNESCO-Welterbestätten hat, unter anderem das Bauhaus. Es ist schon interessant, welche Rekorde man so im Internet findet: Sachsen-Anhalt hatte 2006 nämlich die niedrigste Selbstmordrate in Deutschland.&lt;/p&gt;
-&lt;p&gt;说到萨克森-安哈尔特州，该州有五个联合国教科文组织世界遗产地，其中就包含包豪斯。有趣的是，人们可以在网上找到这样的记录，在2006年，萨克森-安哈尔特州的自杀率在全德最低。&lt;/p&gt;
-&lt;p&gt;Das Welterbe 世界遗产&lt;/p&gt;
-&lt;p&gt;Jetzt fehlen noch zwei Bundesländer. Eines ist Mecklenburg-Vorpommern. Es liegt ganz im Norden und hat eine lange Küste an der Ostsee. Hier liegen drei der 16 deutschen Nationalparks und die großen Inseln Rügen und Usedom gehören auch dazu.&lt;/p&gt;
-&lt;p&gt;现在还有两个联邦州没有讲到。一个是梅克伦堡-前波美拉尼亚。 它位于最北端，在波罗的海沿岸有很长的海岸。16个德国国家公园有3个坐落在这里，吕根岛（Rügen）和乌瑟敦岛（Usedom）等大岛也属于这里。&lt;/p&gt;
-&lt;p&gt;Die Küste 海岸&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Bleibt noch Thüringen übrig, das Bundesland, in dem die Goethe- und Schillerstadt Weimar liegt. Und noch ein großer Name ist mit Thüringen verbunden: Martin Luther studierte hier in Erfurt.&lt;/p&gt;
-&lt;p&gt;还有图林根州，歌德和席勒的城市魏玛在这个州里。图林根州还和另一个著名的名字有联系，马丁·路德（Martin Luther）在这里学习，在爱尔福特（Erfurt）。&lt;/p&gt;
-&lt;p&gt;übrigbleiben 剩下&lt;/p&gt;
-&lt;p&gt;Habt Ihr nachgezählt? Ja, das sind jetzt 13 Bundesländer. Aber wie am Anfang gesagt: Es gibt noch die drei Stadtstaaten Bremen, Hamburg und Berlin.&lt;/p&gt;
-&lt;p&gt;你数了吗？是的，现在说了有13个联邦州了。但是正如在开头所说的，还有三个直辖市，不莱梅，汉堡和柏林。&lt;/p&gt;
-&lt;p&gt;Der  Stadtstaat 直辖市&lt;/p&gt;
-&lt;h2 id=&#34;相关视频和作者&#34;&gt;相关视频和作者&lt;/h2&gt;
-&lt;iframe src=&#34;//player.bilibili.com/player.html?aid=416886418&amp;bvid=BV1NV411v7J6&amp;cid=305458014&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34;style=&#34;width: 100%; height: 56.25vw; &#34;&gt; &lt;/iframe&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://sirlh.github.io/images/drei.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;pdf-下载&#34;&gt;PDF 下载&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://slowgerman.com/folgen/sg174kurz.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://slowgerman.com/folgen/sg174kurz.pdf&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>002. Die deutschen Bundesländer</title>
-      <link>https://sirlh.github.io/post/deutsche-ubersetzung/002-die-deutschen-bundeslander/</link>
-      <pubDate>Tue, 04 May 2021 14:48:49 +0000</pubDate>
-      <guid>https://sirlh.github.io/post/deutsche-ubersetzung/002-die-deutschen-bundeslander/</guid>
       <description>&lt;p&gt;
 
 
@@ -1233,469 +696,6 @@ Der Eindruck 印象&lt;/p&gt;
     </item>
     
     <item>
-      <title>001. Das Mittelalter in Deutschland</title>
-      <link>https://sirlh.github.io/post/deutsche-ubersetzung/001-das-mittelalter-in-deutschland/</link>
-      <pubDate>Mon, 03 May 2021 15:21:12 +0000</pubDate>
-      <guid>https://sirlh.github.io/post/deutsche-ubersetzung/001-das-mittelalter-in-deutschland/</guid>
-      <description>&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://slowgerman.com/wp-content/uploads/2018/01/nibelungenbanner.jpg&#34; alt=&#34;Das Mittelalter in Deutschland&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;原文地址&#34;&gt;原文地址&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://slowgerman.com/2019/01/17/sg-177-das-mittelalter-in-deutschland/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://slowgerman.com/2019/01/17/sg-177-das-mittelalter-in-deutschland/&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;音频&#34;&gt;音频&lt;/h2&gt;
-&lt;p&gt;​&lt;audio id=&#34;audio&#34; controls=&#34;&#34; preload=&#34;none&#34;&gt;
-&lt;source id=&#34;mp3&#34; src=&#34;https:\/\/cdn.podseed.org\/slowgerman\/sg177.mp3&#34;&gt;
-&lt;/audio&gt;&lt;/p&gt;
-&lt;h2 id=&#34;原文翻译&#34;&gt;原文翻译&lt;/h2&gt;
-&lt;p&gt;Das Mittelalter in Deutschland
-德国的中世纪&lt;/p&gt;
-&lt;p&gt;Das Mittelalter ist eine Epoche der europäischen Geschichte. Davor gab es die Antike, danach begann die Neuzeit. Das Mittelalter dauerte im heutigen Deutschland von ungefähr 800 bis ungefähr 1500. Was war das für eine Zeit? Wir denken beim Mittelalter an eine dunkle Zeit mit viel Krieg, Krankheit und Gewalt. Aber war es wirklich so?&lt;/p&gt;
-&lt;p&gt;中世纪是欧洲历史的一个阶段。在此之前有古典时代，之后开始了近代。 在如今的德国的土地上，中世纪大概从公元800年持续到公元1500年。这是一个怎样的时代？ 当我们想起中世纪时，会认为这是一个充满战争，疾病和暴力的黑暗时期。然而真的是这样吗？&lt;/p&gt;
-&lt;p&gt;Das Mittelalter  中世纪
-Die Epoche  时期
-Die Antike  古典时代
-Die Neuzeit 近代
-an A. denken 想&amp;hellip;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Damals lebten rund vier Millionen im deutschen Gebiet. Aber alles war anders als heute. Zunächst einmal war Deutschland kein eigenes Land, sondern es war unterteilt in viele Fürstentümer. Viele Volksgruppen kämpften gegeneinander.&lt;/p&gt;
-&lt;p&gt;那时候大概有四百万人居住在德国的土地上。但是一切都和现在不一样。那时候的德国没有完整的（自己的）国土，而是划分成了许多侯国。许多民族彼此斗争。&lt;/p&gt;
-&lt;p&gt;unterteilt 划分
-Das Fürstentum 公国，侯国
-Die Volksgruppe 民族&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Dann gab es ein Ständesystem. Das heißt, dass alle Menschen in verschiedene Kategorien einsortiert wurden. Es gab eine klare Hierarchie. Ganz oben stand der König, die Herzöge und Grafen. Darunter standen die Mönche und Ritter. Ritter war ein Beruf, den es ab dem 9. Jahrhundert gab. Sie waren Soldaten, die auf Pferden saßen. Sie waren durch eine Rüstung aus Eisen geschützt. Dazu gibt es eine eigene Slow German-Folge, also machen wir weiter.&lt;/p&gt;
-&lt;p&gt;那时候存在阶级制度。也就是说，所有人都会被分配到不同的类别中。有一个非常清楚的等级。位于最上层的是国王，大公和伯爵。接下来是僧侣和骑士。骑士是从9.世纪开始有的职业。他们是骑在马上的士兵，会穿着盔甲。对此Slow German有过一篇文章，（在此不再展开）我们继续往下。&lt;/p&gt;
-&lt;p&gt;Das Ständesystem 阶级制度
-Die Kategorie 类别
-einsortieren 分入
-Die Hierarchie 等级
-Der Herzog 大公
-Der Grafe 伯爵
-Der Mönch 僧侣
-Der Ritter 骑士
-Die Rüstung 盔甲&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Weiter unten standen die Kaufleute und Handwerker, dann kamen die Bauern. Die meisten Menschen waren damals Bauern. Manche von ihnen hatten eigenes Land und verteidigten sich mit Waffen. Wenn Krieg war, mussten diese freien Bauern für ihren König kämpfen. Wenn sie das nicht wollten, waren sie auch nicht mehr frei. Dann arbeiteten sie für einen Grundherrn. Diesem gehörte dann das Land. Der Bauer durfte einen Teil der Ernte für sich behalten. Den Rest gab er an den Grundherrn ab.&lt;/p&gt;
-&lt;p&gt;之后的阶层是商人和工匠，然后是农民。那时候大多数人是农民。有些农民有自己的土地和用武器保护自己。当战争来临时，这些自由的农民必须为他们的国王而战。如果他们不愿意，那他们将不再自由。他们会为地主工作，土地属于地主。农民只能留下收成的一部分，剩下的全部归地主所有。&lt;/p&gt;
-&lt;p&gt;verteidigten 抵御，防御
-Der Grundherr 地主
-Die Ernte 收成&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Die Stände blieben so, wie sie waren. Ein Bauer konnte also zum Beispiel nicht zum Ritter aufsteigen. Er blieb ein Bauer. Ab dem 12. Jahrhundert änderte sich das etwas, denn dann wurden die Städte wichtiger. Sie wurden meistens dort gegründet, wo es einen Markt gab, wo also gehandelt wurde. Wenn nun ein unfreier Bauer in die Stadt zog und ein Jahr lang nicht zurückgerufen wurde, war er ein freier Mann.&lt;/p&gt;
-&lt;p&gt;阶级将一直存在。 也就是说，一个农民不能上升到骑士阶层。他会一直是一个农民。在12.世纪这个情况有所改变，因为这个时候城市变得重要了。大多数城市会在市场的地方建立，在那可以交易。如果一个不自由的农民进入城市，在一年时间内没有被抓回去，那他将会得到自由。&lt;/p&gt;
-&lt;p&gt;aufsteigen 上升
-handeln 交易&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Rund 200 Städte schlossen sich im Mittelalter für den Handel zusammen. Sie waren „die Hanse“. Noch heute gibt es in Deutschland Hansestädte wie Rostock, Hamburg, Bremen und Lübeck.&lt;/p&gt;
-&lt;p&gt;在中世纪时，大概有200个城市结成了商业联盟。他们是&amp;quot;Hanse&amp;quot;. 直到今天在德国还有 Hansestädte，比如：罗斯托克，汉堡，不莱梅和吕贝克。&lt;/p&gt;
-&lt;p&gt;zusammenschlossen sich  结成&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Das Mittelalter war auch die Epoche der Kreuzzüge. Christliche Europäer wollten damit heilige Orte wie Jerusalem von der islamischen Herrschaft befreien. Es wurden aber auch gute Dinge gemacht, zum Beispiel Universitäten gegründet und Liebeslieder gesungen (das nannte man Minnesang).&lt;/p&gt;
-&lt;p&gt;中世纪同时也是十字军东征的时代。欧洲基督教徒希望从伊斯兰统治下解放耶路撒冷等圣地。但是，也做了很多好事，例如创办大学和诗歌被传唱（这被称为Minnesang）。&lt;/p&gt;
-&lt;p&gt;Der Kreuzzüge 十字军东征
-heilige 神圣的
-Die Herrschaft 统治
-befreien 解放
-Der Minnesang 抒情诗&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Und dann war da noch die Pest. Sie wurde als Schwarzer Tod bezeichnet. Zwischen 1346 und 1353 gab es eine schwere Pestepidemie. Im heutigen Deutschland starb jeder zehnte Bürger an der Krankheit.&lt;/p&gt;
-&lt;p&gt;而且那时候还有鼠疫。他被称为黑死病。在1346年和1353年之间发生了严重的鼠疫。 在当今的德国，有十分之一的公民死于这种疾病。&lt;/p&gt;
-&lt;p&gt;Die Pest 鼠疫
-Die Epidemie 传染病
-an D. sterben 死于&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Ich könnte noch so viel über das Mittelalter erzählen. Gar nicht so einfach, eine ganze Epoche in einige Minuten zu quetschen. Aber ich hoffe, Ihr habt jetzt einen Eindruck bekommen, wie die Menschen damals lebten.&lt;/p&gt;
-&lt;p&gt;我还能说很多很多关于中世纪的事情。把一个时期挤在几分钟内讲清，是很不容易的。但我希望你们能有个印象，那时候的人们是怎样生活的。&lt;/p&gt;
-&lt;p&gt;quetschen 挤，捏
-Der Eindruck 印象&lt;/p&gt;
-&lt;h2 id=&#34;相关视频&#34;&gt;相关视频&lt;/h2&gt;
-&lt;iframe src=&#34;//player.bilibili.com/player.html?aid=757405415&amp;bvid=BV1A64y1S7mn&amp;cid=319054796&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34;style=&#34;width: 100%; height: 56.25vw; &#34;&gt; &lt;/iframe&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://sirlh.github.io/images/drei.png&#34; alt=&#34;二维码&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;pdf-下载&#34;&gt;PDF 下载&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://slowgerman.com/folgen/sg177kurz.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://slowgerman.com/folgen/sg177kurz.pdf&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Welcome to Wowchemy, the website builder for Hugo</title>
-      <link>https://sirlh.github.io/post/getting-started/</link>
-      <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://sirlh.github.io/post/getting-started/</guid>
-      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;The Wowchemy website builder for Hugo, along with its starter templates, is designed for professional creators, educators, and teams/organizations - although it can be used to create any kind of site&lt;/li&gt;
-&lt;li&gt;The template can be modified and customised to suit your needs. It&amp;rsquo;s a good platform for anyone looking to take control of their data and online identity whilst having the convenience to start off with a &lt;strong&gt;no-code solution (write in Markdown and customize with YAML parameters)&lt;/strong&gt; and having &lt;strong&gt;flexibility to later add even deeper personalization with HTML and CSS&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;You can work with all your favourite tools and apps with hundreds of plugins and integrations to speed up your workflows, interact with your readers, and much more&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-the-template-is-mobile-first-with-a-responsive-design-to-ensure-that-your-site-looks-stunning-on-every-device&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/wowchemy/wowchemy-hugo-modules/master/academic.png&#34; alt=&#34;The template is mobile first with a responsive design to ensure that your site looks stunning on every device.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption&gt;
-      The template is mobile first with a responsive design to ensure that your site looks stunning on every device.
-    &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;get-started&#34;&gt;Get Started&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;👉 &lt;a href=&#34;https://wowchemy.com/templates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Create a new site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;📚 &lt;a href=&#34;https://wowchemy.com/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Personalize your site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;💬 &lt;a href=&#34;https://discord.gg/z8wNYzb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chat with the &lt;strong&gt;Wowchemy community&lt;/strong&gt;&lt;/a&gt; or &lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Hugo community&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;🐦 Twitter: &lt;a href=&#34;https://twitter.com/wowchemy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@wowchemy&lt;/a&gt; &lt;a href=&#34;https://twitter.com/GeorgeCushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@GeorgeCushen&lt;/a&gt; &lt;a href=&#34;https://twitter.com/search?q=%28%23MadeWithWowchemy%20OR%20%23MadeWithAcademic%29&amp;amp;src=typed_query&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#MadeWithWowchemy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;💡 &lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Request a &lt;strong&gt;feature&lt;/strong&gt; or report a &lt;strong&gt;bug&lt;/strong&gt; for &lt;em&gt;Wowchemy&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;⬆️ &lt;strong&gt;Updating Wowchemy?&lt;/strong&gt; View the &lt;a href=&#34;https://wowchemy.com/docs/guide/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Update Guide&lt;/a&gt; and &lt;a href=&#34;https://wowchemy.com/updates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;crowd-funded-open-source-software&#34;&gt;Crowd-funded open-source software&lt;/h2&gt;
-&lt;p&gt;To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.&lt;/p&gt;
-&lt;h3 id=&#34;-click-here-to-become-a-sponsor-and-help-support-wowchemys-future-httpswowchemycomplans&#34;&gt;&lt;a href=&#34;https://wowchemy.com/plans/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;❤️ Click here to become a sponsor and help support Wowchemy&amp;rsquo;s future ❤️&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;As a token of appreciation for sponsoring, you can &lt;strong&gt;unlock &lt;a href=&#34;https://wowchemy.com/plans/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;these&lt;/a&gt; awesome rewards and extra features 🦄✨&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/wowchemy/hugo-academic-cli&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo Academic CLI&lt;/a&gt;:&lt;/strong&gt; Automatically import publications from BibTeX&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;inspiration&#34;&gt;Inspiration&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes, or &lt;a href=&#34;https://wowchemy.com/user-stories/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt; of personal, project, and business sites.&lt;/p&gt;
-&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with &lt;a href=&#34;https://wowchemy.com/docs/page-builder/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;widgets&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;elements&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Edit any type of content&lt;/strong&gt; - Blog posts, publications, talks, slides, projects, and more!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;, &lt;a href=&#34;https://wowchemy.com/docs/import/jupyter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/a&gt;, or &lt;a href=&#34;https://wowchemy.com/docs/install-locally/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable &lt;a href=&#34;https://wowchemy.com/docs/customization/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;color&lt;/strong&gt; and &lt;strong&gt;font themes&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Display Code and Math&lt;/strong&gt; - Code highlighting and &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX math&lt;/a&gt; supported&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - &lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Analytics&lt;/a&gt;, &lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus commenting&lt;/a&gt;, Maps, Contact Forms, and more!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Beautiful Site&lt;/strong&gt; - Simple and refreshing one page design&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Industry-Leading SEO&lt;/strong&gt; - Help get your website found on search engines and social media&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Media Galleries&lt;/strong&gt; - Display your images and videos with captions in a customizable gallery&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mobile Friendly&lt;/strong&gt; - Look amazing on every screen with a mobile friendly version of your site&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multi-language&lt;/strong&gt; - 34+ language packs including English, 中文, and Português&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multi-user&lt;/strong&gt; - Each author gets their own profile page&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Privacy Pack&lt;/strong&gt; - Assists with GDPR&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Stand Out&lt;/strong&gt; - Bring your site to life with animation, parallax backgrounds, and scroll effects&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;One-Click Deployment&lt;/strong&gt; - No servers. No databases. Only files.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
-&lt;p&gt;Wowchemy and its templates come with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Alternatively, visitors can choose their preferred mode - click the moon icon in the top right of the &lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo&lt;/a&gt; to see it in action! Day/night mode can also be disabled by the site admin in &lt;code&gt;params.toml&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/customization&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choose a stunning &lt;strong&gt;theme&lt;/strong&gt; and &lt;strong&gt;font&lt;/strong&gt;&lt;/a&gt; for your site. Themes are fully customizable.&lt;/p&gt;
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-&lt;p&gt;Copyright 2016-present &lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Released under the &lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/blob/master/LICENSE.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Writing technical content in Academic</title>
-      <link>https://sirlh.github.io/post/writing-technical-content/</link>
-      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>https://sirlh.github.io/post/writing-technical-content/</guid>
-      <description>&lt;p&gt;Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Academic.&lt;/p&gt;
-&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
-&lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
-&lt;p&gt;Academic supports a Markdown extension for highlighting code syntax. You can enable this feature by toggling the &lt;code&gt;highlight&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```python
-import pandas as pd
-data = pd.read_csv(&amp;quot;data.csv&amp;quot;)
-data.head()
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
-data = pd.read_csv(&amp;quot;data.csv&amp;quot;)
-data.head()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;charts&#34;&gt;Charts&lt;/h3&gt;
-&lt;p&gt;Academic supports the popular &lt;a href=&#34;https://plot.ly/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Plotly&lt;/a&gt; chart format.&lt;/p&gt;
-&lt;p&gt;Save your Plotly JSON in your page folder, for example &lt;code&gt;chart.json&lt;/code&gt;, and then add the &lt;code&gt;{{&amp;lt; chart data=&amp;quot;chart&amp;quot; &amp;gt;}}&lt;/code&gt; shortcode where you would like the chart to appear.&lt;/p&gt;
-&lt;p&gt;Demo:&lt;/p&gt;
-
-
-&lt;div id=&#34;chart-835416972&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
-&lt;script&gt;
-  (function() {
-    let a = setInterval( function() {
-      if ( typeof window.Plotly === &#39;undefined&#39; ) {
-        return;
-      }
-      clearInterval( a );
-
-      Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-835416972&#39;, chart.data, chart.layout, {responsive: true});
-      });
-    }, 500 );
-  })();
-&lt;/script&gt;
-&lt;p&gt;You might also find the &lt;a href=&#34;http://plotly-json-editor.getforge.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Plotly JSON Editor&lt;/a&gt; useful.&lt;/p&gt;
-&lt;h3 id=&#34;math&#34;&gt;Math&lt;/h3&gt;
-&lt;p&gt;Academic supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the &lt;code&gt;math&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;
-&lt;p&gt;To render &lt;em&gt;inline&lt;/em&gt; or &lt;em&gt;block&lt;/em&gt; math, wrap your LaTeX math with &lt;code&gt;$...$&lt;/code&gt; or &lt;code&gt;$$...$$&lt;/code&gt;, respectively.&lt;/p&gt;
-&lt;p&gt;Example &lt;strong&gt;math block&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-latex&#34;&gt;$$\gamma_{n} = \frac{ 
-\left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T 
-\left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}
-{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;p&gt;$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left |\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right |^2}$$&lt;/p&gt;
-&lt;p&gt;Example &lt;strong&gt;inline math&lt;/strong&gt; &lt;code&gt;$\nabla F(\mathbf{x}_{n})$&lt;/code&gt; renders as $\nabla F(\mathbf{x}_{n})$.&lt;/p&gt;
-&lt;p&gt;Example &lt;strong&gt;multi-line math&lt;/strong&gt; using the &lt;code&gt;\\\\&lt;/code&gt; math linebreak:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-latex&#34;&gt;$$f(k;p_{0}^{*}) = \begin{cases}p_{0}^{*} &amp;amp; \text{if }k=1, \\\\
-1-p_{0}^{*} &amp;amp; \text{if }k=0.\end{cases}$$
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;p&gt;$$f(k;p_{0}^{*}) = \begin{cases}p_{0}^{*} &amp;amp; \text{if }k=1, \\&lt;br&gt;
-1-p_{0}^{*} &amp;amp; \text{if }k=0.\end{cases}$$&lt;/p&gt;
-&lt;h3 id=&#34;diagrams&#34;&gt;Diagrams&lt;/h3&gt;
-&lt;p&gt;Academic supports a Markdown extension for diagrams. You can enable this feature by toggling the &lt;code&gt;diagram&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file or by adding &lt;code&gt;diagram: true&lt;/code&gt; to your page front matter.&lt;/p&gt;
-&lt;p&gt;An example &lt;strong&gt;flowchart&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```mermaid
-graph TD
-A[Hard] --&amp;gt;|Text| B(Round)
-B --&amp;gt; C{Decision}
-C --&amp;gt;|One| D[Result 1]
-C --&amp;gt;|Two| E[Result 2]
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph TD
-A[Hard] --&amp;gt;|Text| B(Round)
-B --&amp;gt; C{Decision}
-C --&amp;gt;|One| D[Result 1]
-C --&amp;gt;|Two| E[Result 2]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;An example &lt;strong&gt;sequence diagram&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```mermaid
-sequenceDiagram
-Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
-loop Healthcheck
-    John-&amp;gt;&amp;gt;John: Fight against hypochondria
-end
-Note right of John: Rational thoughts!
-John--&amp;gt;&amp;gt;Alice: Great!
-John-&amp;gt;&amp;gt;Bob: How about you?
-Bob--&amp;gt;&amp;gt;John: Jolly good!
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;sequenceDiagram
-Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
-loop Healthcheck
-    John-&amp;gt;&amp;gt;John: Fight against hypochondria
-end
-Note right of John: Rational thoughts!
-John--&amp;gt;&amp;gt;Alice: Great!
-John-&amp;gt;&amp;gt;Bob: How about you?
-Bob--&amp;gt;&amp;gt;John: Jolly good!
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;An example &lt;strong&gt;Gantt diagram&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```mermaid
-gantt
-section Section
-Completed :done,    des1, 2014-01-06,2014-01-08
-Active        :active,  des2, 2014-01-07, 3d
-Parallel 1   :         des3, after des1, 1d
-Parallel 2   :         des4, after des1, 1d
-Parallel 3   :         des5, after des3, 1d
-Parallel 4   :         des6, after des4, 1d
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;gantt
-section Section
-Completed :done,    des1, 2014-01-06,2014-01-08
-Active        :active,  des2, 2014-01-07, 3d
-Parallel 1   :         des3, after des1, 1d
-Parallel 2   :         des4, after des1, 1d
-Parallel 3   :         des5, after des3, 1d
-Parallel 4   :         des6, after des4, 1d
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;An example &lt;strong&gt;class diagram&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```mermaid
-classDiagram
-Class01 &amp;lt;|-- AveryLongClass : Cool
-&amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01
-Class09 --&amp;gt; C2 : Where am i?
-Class09 --* C3
-Class09 --|&amp;gt; Class07
-Class07 : equals()
-Class07 : Object[] elementData
-Class01 : size()
-Class01 : int chimp
-Class01 : int gorilla
-class Class10 {
-  &amp;lt;&amp;lt;service&amp;gt;&amp;gt;
-  int id
-  size()
-}
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;classDiagram
-Class01 &amp;lt;|-- AveryLongClass : Cool
-&amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01
-Class09 --&amp;gt; C2 : Where am i?
-Class09 --* C3
-Class09 --|&amp;gt; Class07
-Class07 : equals()
-Class07 : Object[] elementData
-Class01 : size()
-Class01 : int chimp
-Class01 : int gorilla
-class Class10 {
-  &amp;lt;&amp;lt;service&amp;gt;&amp;gt;
-  int id
-  size()
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;An example &lt;strong&gt;state diagram&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```mermaid
-stateDiagram
-[*] --&amp;gt; Still
-Still --&amp;gt; [*]
-Still --&amp;gt; Moving
-Moving --&amp;gt; Still
-Moving --&amp;gt; Crash
-Crash --&amp;gt; [*]
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;stateDiagram
-[*] --&amp;gt; Still
-Still --&amp;gt; [*]
-Still --&amp;gt; Moving
-Moving --&amp;gt; Still
-Moving --&amp;gt; Crash
-Crash --&amp;gt; [*]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;todo-lists&#34;&gt;Todo lists&lt;/h3&gt;
-&lt;p&gt;You can even write your todo lists in Academic too:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;- [x] Write math example
-- [x] Write diagram example
-- [ ] Do something else
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Write math example&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Write diagram example&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Do something else&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;tables&#34;&gt;Tables&lt;/h3&gt;
-&lt;p&gt;Represent your data in tables:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;First Header&lt;/th&gt;
-&lt;th&gt;Second Header&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Content Cell&lt;/td&gt;
-&lt;td&gt;Content Cell&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Content Cell&lt;/td&gt;
-&lt;td&gt;Content Cell&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;callouts&#34;&gt;Callouts&lt;/h3&gt;
-&lt;p&gt;Academic supports a &lt;a href=&#34;https://wowchemy.com/docs/content/writing-markdown-latex/#callouts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcode for callouts&lt;/a&gt;, also referred to as &lt;em&gt;asides&lt;/em&gt;, &lt;em&gt;hints&lt;/em&gt;, or &lt;em&gt;alerts&lt;/em&gt;. By wrapping a paragraph in &lt;code&gt;{{% callout note %}} ... {{% /callout %}}&lt;/code&gt;, it will render as an aside.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% callout note %}}
-A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
-{{% /callout %}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;h3 id=&#34;spoilers&#34;&gt;Spoilers&lt;/h3&gt;
-&lt;p&gt;Add a spoiler to a page to reveal text, such as an answer to a question, after a button is clicked.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; spoiler text=&amp;quot;Click to view the spoiler&amp;quot; &amp;gt;}}
-You found me!
-{{&amp;lt; /spoiler &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
-  &lt;summary&gt;Click to view the spoiler&lt;/summary&gt;
-  &lt;p&gt;You found me!&lt;/p&gt;
-&lt;/details&gt;
-&lt;h3 id=&#34;icons&#34;&gt;Icons&lt;/h3&gt;
-&lt;p&gt;Academic enables you to use a wide range of &lt;a href=&#34;https://sourcethemes.com/academic/docs/page-builder/#icons&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;icons from &lt;em&gt;Font Awesome&lt;/em&gt; and &lt;em&gt;Academicons&lt;/em&gt;&lt;/a&gt; in addition to &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/#emojis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;emojis&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Here are some examples using the &lt;code&gt;icon&lt;/code&gt; shortcode to render icons:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; icon name=&amp;quot;terminal&amp;quot; pack=&amp;quot;fas&amp;quot; &amp;gt;}} Terminal  
-{{&amp;lt; icon name=&amp;quot;python&amp;quot; pack=&amp;quot;fab&amp;quot; &amp;gt;}} Python  
-{{&amp;lt; icon name=&amp;quot;r-project&amp;quot; pack=&amp;quot;fab&amp;quot; &amp;gt;}} R
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;p&gt;
-  &lt;i class=&#34;fas fa-terminal  pr-1 fa-fw&#34;&gt;&lt;/i&gt; Terminal&lt;br&gt;
-
-  &lt;i class=&#34;fab fa-python  pr-1 fa-fw&#34;&gt;&lt;/i&gt; Python&lt;br&gt;
-
-  &lt;i class=&#34;fab fa-r-project  pr-1 fa-fw&#34;&gt;&lt;/i&gt; R&lt;/p&gt;
-&lt;h3 id=&#34;did-you-find-this-page-helpful-consider-sharing-it-&#34;&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h3&gt;
-</description>
-    </item>
-    
-    <item>
       <title>An example preprint / working paper</title>
       <link>https://sirlh.github.io/publication/preprint/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
@@ -1706,70 +706,6 @@ You found me!
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Display Jupyter Notebooks with Academic</title>
-      <link>https://sirlh.github.io/post/jupyter/</link>
-      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://sirlh.github.io/post/jupyter/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from IPython.core.display import Image
-Image(&#39;https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./index_1_0.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(&amp;quot;Welcome to Academic!&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Welcome to Academic!
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;install-python-and-jupyterlab&#34;&gt;Install Python and JupyterLab&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.anaconda.com/distribution/#download-section&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Install Anaconda&lt;/a&gt; which includes Python 3 and JupyterLab.&lt;/p&gt;
-&lt;p&gt;Alternatively, install JupyterLab with &lt;code&gt;pip3 install jupyterlab&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;create-or-upload-a-jupyter-notebook&#34;&gt;Create or upload a Jupyter notebook&lt;/h2&gt;
-&lt;p&gt;Run the following commands in your Terminal, substituting &lt;code&gt;&amp;lt;MY-WEBSITE-FOLDER&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;SHORT-POST-TITLE&amp;gt;&lt;/code&gt; with the file path to your Academic website folder and a short title for your blog post (use hyphens instead of spaces), respectively:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir -p &amp;lt;MY-WEBSITE-FOLDER&amp;gt;/content/post/&amp;lt;SHORT-POST-TITLE&amp;gt;/
-cd &amp;lt;MY-WEBSITE-FOLDER&amp;gt;/content/post/&amp;lt;SHORT-POST-TITLE&amp;gt;/
-jupyter lab index.ipynb
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The &lt;code&gt;jupyter&lt;/code&gt; command above will launch the JupyterLab editor, allowing us to add Academic metadata and write the content.&lt;/p&gt;
-&lt;h2 id=&#34;edit-your-post-metadata&#34;&gt;Edit your post metadata&lt;/h2&gt;
-&lt;p&gt;The first cell of your Jupter notebook will contain your post metadata (&lt;a href=&#34;https://sourcethemes.com/academic/docs/front-matter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;front matter&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;In Jupter, choose &lt;em&gt;Markdown&lt;/em&gt; as the type of the first cell and wrap your Academic metadata in three dashes, indicating that it is YAML front matter:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-title: My post&#39;s title
-date: 2019-09-01
-
-# Put any other Academic metadata here...
----
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Edit the metadata of your post, using the &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; as a guide to the available options.&lt;/p&gt;
-&lt;p&gt;To set a &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#featured-image&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;featured image&lt;/a&gt;, place an image named &lt;code&gt;featured&lt;/code&gt; into your post&amp;rsquo;s folder.&lt;/p&gt;
-&lt;p&gt;For other tips, such as using math, see the guide on &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;writing content with Academic&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;convert-notebook-to-markdown&#34;&gt;Convert notebook to Markdown&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;jupyter nbconvert index.ipynb --to markdown --NbConvertApp.output_files_dir=.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
-&lt;p&gt;This post was created with Jupyter. The orginal files can be found at &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1899,6 +835,394 @@ Three
 &lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/discussions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>半导体致冷原理与实例</title>
+      <link>https://sirlh.github.io/post/%E5%8D%8A%E5%AF%BC%E4%BD%93%E8%87%B4%E5%86%B7%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E4%BE%8B/</link>
+      <pubDate>Fri, 26 May 2017 22:04:20 +0000</pubDate>
+      <guid>https://sirlh.github.io/post/%E5%8D%8A%E5%AF%BC%E4%BD%93%E8%87%B4%E5%86%B7%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E4%BE%8B/</guid>
+      <description>&lt;h2 id=&#34;什么是半导体&#34;&gt;什么是半导体？&lt;/h2&gt;
+&lt;p&gt;我们知道任何物质都是由原子组成，原子是由原子核和电子组成。
+电子以高速度绕原子核转动，受到原子核吸引，因为受到一定的限制，所以电子只能在有限的轨道上运转，不能任意离开，而各层轨道上的电子具有不同的能量(电子势能)。
+离原子核最远轨道上的电子，经常可以脱离原子核吸引，而在原子之间运动，叫导体。
+如果电子不能脱离轨道形成自由电子，故不能参加导电，叫绝缘体。
+&lt;strong&gt;半导体导电能力介于导体与绝缘体之间，叫半导体。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;半导体制冷原理&#34;&gt;半导体制冷原理&lt;/h2&gt;
+&lt;h3 id=&#34;制冷片外观和结构介绍&#34;&gt;制冷片外观和结构介绍&lt;/h3&gt;
+&lt;p&gt;下方两个图中，分别是制冷片的典型结构
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/sirlh/photo/master/bdyl.PNG&#34; alt=&#34;制冷片的典型结构&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;和制冷片的常见外观
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/sirlh/photo/master/bdtwg.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;制冷器是由许多N型和P型半导体之颗粒互相排列而成，而NP之间以一般的导体相连接而成一完整线路，通常是铜、铝或其它金属导体，最后由两片陶瓷片像夹心饼干一样夹起来，陶瓷片必须绝缘且导热良好，外观如下图所示，看起来像三明治。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/sirlh/photo/master/bdtnb.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;介绍完它的结构，那它是如何工作的？接下来说说它的现在说说它的工作原理。&lt;/p&gt;
+&lt;h3 id=&#34;制冷片的工作原理&#34;&gt;制冷片的工作原理&lt;/h3&gt;
+&lt;p&gt;半导体热电偶由N型半导体和P型半导体组成。N型材料有多余的电子，有负温差电势。P型材料电子不足，有正温差电势；当电子从P型穿过结点至N型时，结点的温度降低，其能量必然增加，而且增加的能量相当于结点所消耗的能量。相反，当电子从N型流至P型材料时，结点的温度就会升高。&lt;/p&gt;
+&lt;p&gt;这样，半导体元件可以用各种不同的连接方法来满足使用者的要求。把一个P型半导体元件和一个N型半导体元件联结成一对热电偶，接上直流电源后，在接头处就会产生温差和热量的转移。&lt;/p&gt;
+&lt;p&gt;当电流方向是从N至P，温度下降并且吸热，这就是冷端；而当电流方向是从P至N，温度上升并且放热，因此是热端。&lt;/p&gt;
+&lt;p&gt;因此是半导体制冷片由许多N型和P型半导体之颗粒互相排列而成，而N／P之间以一般的导体相连接而成一完整线路，通常是铜、铝或其他金属导体，最後由两片陶瓷片像夹心饼乾一样夹起来，陶瓷片必须绝缘且导热良好。&lt;/p&gt;
+&lt;p&gt;单纯看了这几句话相信依旧会很模糊，下面关于一些难点进行解答。&lt;/p&gt;
+&lt;h3 id=&#34;疑难解答&#34;&gt;疑难解答&lt;/h3&gt;
+&lt;h4 id=&#34;电能是如何搬运热量的&#34;&gt;电能是如何“搬运”热量的？&lt;/h4&gt;
+&lt;p&gt;不少朋友在看过上面的文字后或许已经提出了能量守恒解释的论点。而实际上，半导体制冷并没有想象中的简单。这从技术理论的提出到真正的实际应用所用的时间就能看出来。人们常常将电流比喻成水流，电源就像水泵，不断的将低电势的电荷“搬运”至高电位，而产生的电动势驱动电荷定向移动。&lt;/p&gt;
+&lt;p&gt;而能量的形势也是多种多样的，粒子不但具有电势能，同时还具有热能等各种能量。在能量的不断转换中，各种能量以不同的方式进行转换。在珀尔帖效应中，如果使用的是半导体，那么半导体中的“自由电子”（相信高中物理学已经说得很透彻，金属的导电性和导热性都是通过“自由电子”作用的）将会在不同导体间的节点处通过电势能转换热量（放热或者吸热），而其具体表现就是制冷片的制冷效果。而半导体中的电动势解析就必须涉及更多的专业知识了。&lt;/p&gt;
+&lt;h4 id=&#34;细说n型p型半导体&#34;&gt;细说N型/P型半导体&lt;/h4&gt;
+&lt;h5 id=&#34;n型半导体&#34;&gt;N型半导体&lt;/h5&gt;
+&lt;p&gt;如果在锗或硅中均匀掺杂五价元素，由于价电子间会互相结合而形成共价键，故每个五价元素会与邻近四价之锗或硅原子互成一共价键，而多出一个电子来，如图(4)所示，这就称为N型半导体。(N表示negative，电子带负电) 。&lt;/p&gt;
+&lt;p&gt;由于加入五甲元素后会添加电子，故五价元素又被称为施体原子。&lt;/p&gt;
+&lt;p&gt;加入五价元素而产生之自由电子，在N型半导体里又占大多数，故称为多数载体(majority carriers) 。由温度的引响所产生之电子─电洞对是少数，所以N型半导体中称电洞为少数载体(minority carriers) 。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/sirlh/photo/master/nbdt.PNG&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h5 id=&#34;p型半导体&#34;&gt;P型半导体&lt;/h5&gt;
+&lt;p&gt;如果在锗或硅中均匀掺杂三价元素，由于价电子间会互相结合而形成共价键，故每个三价元素会与邻近四价之锗或硅原子互成一共价键，而多缺少一个电子，在原子中造成一个空缺来，这个空缺我们称为电洞，如图(5)B 所示，加入三价元素之半导体就称为P型半导体。(P表示positive，电洞视为正电荷) 。&lt;/p&gt;
+&lt;p&gt;由于加入三价元素后会造成一个空缺，故三价元素又被称为受体原子。&lt;/p&gt;
+&lt;p&gt;加入三价元素而产生之电洞，在P型半导体中是多数载体。受热使共价键破坏而产生的电子电洞为少数，故P型半导体中称电子为少数载体。&lt;/p&gt;
+&lt;p&gt;通常我们都用正电荷代表电洞。但侍体中的原子不能移动，所以电洞(一个空位)也应该是不能移动的。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/sirlh/photo/master/pbtd.PNG&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;半导体制冷的三大效应&#34;&gt;半导体制冷的三大效应&lt;/h2&gt;
+&lt;p&gt;这三大效应深究下去都是一门学问，这里不展开，只是为了让大家对半导体制冷有更深的认识。&lt;/p&gt;
+&lt;p&gt;百度百科版解释&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://baike.baidu.com/link?url=x63rlz__xlyI2Z3a_yjm5Ww62ixcFN6ctZMoOx82p2Fr2kNxJHDmOwbQOO_6h8z8oMRU5cxbHlFjelH8TdB8Yb-9RiXnn37M01xA2S8PwTYMQZ3bQhIYHZNQlfrqpJxKk3vdwhFQY_nizP-_qOX-XK&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;塞贝克效应&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://baike.baidu.com/link?url=kWYB8Q128lRkgd_DGsw65e3kY8gSAgUIS1XkYnYntTPSFWtBvSzMJniaJYjFgpgi8SgI8XGdQWhTDi2GbmdysfiDe51yap_U0fWWMEXHyvWVLQIIalb6tTZOOpzz9Y4VeH4v4dbRgQw35e79dUjXia&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;珀尔帖效应&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://baike.baidu.com/link?url=2qHtMqBxdf_i734JZPKVxCD3aOfnSD8UIqN3kcyKtkLMAFzs5FRx-s6DgP_c0a6OaKA3RVNU6PdKWKQr3yhhEknXLctSDXJGyZeKJpneM9yzf99RjG45-Ew1B_vTG8m-I1NS6ihhIr7Ec4pKvwiB2a&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;汤姆逊效应&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;英语好的朋友建议看维基百科版解释&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Thermoelectric_effect#Seebeck_effect&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SEEBECK EFFECT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Thermoelectric_effect#Peltier_effect&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PELTIER EFFECT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Thermoelectric_effect#Thomson_effect&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;THOMSON EFFECT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以上是解释半导体制冷的原理介绍，说实在这样的解释我自己不满意，很多知识点都是云里雾里，但通俗易懂的说句 &lt;strong&gt;电流流过热电偶，发生热电效应，能量发生了转移，所以导致一端冷一端热&lt;/strong&gt; 这样的说法又过于笼统，我尽可能解释到这里，大家就当是科学小知识看待吧。&lt;/p&gt;
+&lt;h2 id=&#34;实例半导体冰箱的制作&#34;&gt;实例：半导体冰箱的制作&lt;/h2&gt;
+&lt;p&gt;再次配图：
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/sirlh/photo/master/bdyl.PNG&#34; alt=&#34;制冷片的典型结构&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;如图所示，图中的电路应该说是特别特别简单的了一个电源（12V）加上一个制冷片。实际上我所制作的半导体冰箱制冷部分就是这么弄的。&lt;/p&gt;
+&lt;p&gt;特别特别的轻松就把它连上了，然后一边凉一边热，貌似就这样成功了。虽然成功，但提醒下大家，这个电路并不实用，另外，注意保护制冷片，它不经摔。&lt;/p&gt;
+&lt;h3 id=&#34;冷热隔离&#34;&gt;冷热隔离&lt;/h3&gt;
+&lt;p&gt;单纯的这样制作显然是不行的，哪有那么容易。冷和热混在一起，不会成为冰箱的，我们所以需要将冷热分开，如何分开？用导体将冷热分离，让相互难以影响，导体实际上就是铝片和铜片。分开后，要防止它们又在一起啊，所以就需要隔离，比较粗糙的做法就是中间就加个板子。但是这样就完成了吗？&lt;/p&gt;
+&lt;h3 id=&#34;处理多余热量&#34;&gt;处理多余热量&lt;/h3&gt;
+&lt;p&gt;没有，冷的一端我们利用了，变成冰箱。但是热的一端呢？不管它？那是不可以的，那样它会&amp;quot;发火&amp;quot;，因为不断地有热量进来，铜片的温度就会增加，然后就会有很大的安全问题，如何解决？加上两个风扇，把热量吹走。&lt;/p&gt;
+&lt;h3 id=&#34;添加温控&#34;&gt;添加温控&lt;/h3&gt;
+&lt;p&gt;这样是不是就可以了呢? 应该说基本功能完成。你可以看到导冷片结冰了。
+但这并不实用，制冷的温度不确定，是十分影响平时的使用。所以我加上了温控。&lt;/p&gt;
+&lt;p&gt;关于温控，基本原理就是利用传感器检测，AD转换后交给单片机处理，根据程序的设定，有上、下限温度，温度高于一定温度时，接通电源，制冷片工作，低于一定温度时，断开电源，制冷片不工作，讲的最简单就是这样了，实际自己制作难度不小。&lt;/p&gt;
+&lt;p&gt;至于控制电源的部分，利用了继电器的原理，因为单片机常用的电压是+5V，而制冷片的工作电压一般是+12V。必须转换。&lt;/p&gt;
+&lt;p&gt;如何检测温度，下面给出仿真图,原理这里不解释，比较复杂。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/sirlh/photo/master/wenduji.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>markdown的基本使用</title>
+      <link>https://sirlh.github.io/post/markdown%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sun, 19 Feb 2017 17:28:15 +0000</pubDate>
+      <guid>https://sirlh.github.io/post/markdown%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://daringfireball.net/projects/markdown/syntax&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;创始人 John Gruber 的 Markdown 语法说明&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wowubuntu.com/markdown/#overview&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Markdown 中文版语法说明&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;标题&#34;&gt;标题&lt;/h2&gt;
+&lt;p&gt;标题是每篇文章必备而且最常用的格式。
+在Markdown中，如果想将一段文字定义为标题，只需要在这段文字前面加上#，再在  # 后加一个空格即可。还可增加二、三、四、五、六级标题，总共六级，只需要增加 # ，增加一个 # ，标题字号相应降低一级。如图：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# H1
+## H2
+### H3
+#### H4
+##### H5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;/p&gt;
+&lt;h1 id=&#34;h1&#34;&gt;H1&lt;/h1&gt;
+&lt;h2 id=&#34;h2&#34;&gt;H2&lt;/h2&gt;
+&lt;h3 id=&#34;h3&#34;&gt;H3&lt;/h3&gt;
+&lt;h4 id=&#34;h4&#34;&gt;H4&lt;/h4&gt;
+&lt;h5 id=&#34;h5&#34;&gt;H5&lt;/h5&gt;
+&lt;h2 id=&#34;列表&#34;&gt;列表&lt;/h2&gt;
+&lt;p&gt;列表格式也很常用，它可以让你的文稿变得井井有条。无序列表，在Markdown中，你只需要在文字前面加上 - 就可以了；如果你希望是有序列表，在文字前面加上 1. 2. 3. 即可。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- 第一行
+- 第二行
+- 第三行
+
+1. 第一行
+2. 第二行
+3. 第三行
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;第一行&lt;/li&gt;
+&lt;li&gt;第二行&lt;/li&gt;
+&lt;li&gt;第三行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;第一行&lt;/li&gt;
+&lt;li&gt;第二行&lt;/li&gt;
+&lt;li&gt;第三行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;注：-、1.和文字之间要保留一个字符的空格。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
+&lt;p&gt;如果你需要在文稿中引用一段别处的句子，那么就要用到「引用」格式。
+在引用文字前加上 &amp;gt; 并与文字保留一个字符的空格，即可。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;	引用：
+	&amp;gt;Across the Great Wall we can reach every corner in the world.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Across the Great Wall we can reach every corner in the world.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;粗体和斜体&#34;&gt;粗体和斜体&lt;/h2&gt;
+&lt;p&gt;Markdown 的粗体和斜体也非常简单：
+用&lt;strong&gt;两个 * 包含一段文本&lt;/strong&gt;就是粗体的语法；
+用&lt;em&gt;一个 * 包含一段文本&lt;/em&gt;就是斜体的语法。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;** 粗体 **
+* 斜体 *
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;链接与图片&#34;&gt;链接与图片&lt;/h2&gt;
+&lt;p&gt;链接：在 Markdown 中，插入链接&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[显示文本] (链接地址)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;图片：在 Markdown 中，插入图片只需要使用 &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;![显示文本] (图片链接地址)即可。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;注：插入图片的语法和链接的语法很像，只是前面多了一个 ！&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;音频和视频&#34;&gt;音频和视频&lt;/h2&gt;
+&lt;p&gt;插入音频&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;​&amp;lt;audio id=&amp;quot;audio&amp;quot; controls=&amp;quot;&amp;quot; preload=&amp;quot;none&amp;quot;&amp;gt;
+      &amp;lt;source id=&amp;quot;mp3&amp;quot; src=&amp;quot;http://music.163.com/song/media/outer/url?id=469249441.mp3&amp;quot;&amp;gt;
+&amp;lt;/audio&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果：
+​&lt;audio id=&#34;audio&#34; controls=&#34;&#34; preload=&#34;none&#34;&gt;
+&lt;source id=&#34;mp3&#34; src=&#34;http://music.163.com/song/media/outer/url?id=469249441.mp3&#34;&gt;
+&lt;/audio&gt;&lt;/p&gt;
+&lt;p&gt;使用 iframe&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;iframe frameborder=&amp;quot;no&amp;quot; border=&amp;quot;0&amp;quot; marginwidth=&amp;quot;0&amp;quot; marginheight=&amp;quot;0&amp;quot; width=330 height=86 src=&amp;quot;//music.163.com/outchain/player?type=2&amp;amp;id=469249441&amp;amp;auto=1&amp;amp;height=66&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果：&lt;/p&gt;
+&lt;iframe frameborder=&#34;no&#34; border=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; width=330 height=86 src=&#34;//music.163.com/outchain/player?type=2&amp;id=469249441&amp;auto=1&amp;height=66&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;插入视频&lt;/p&gt;
+&lt;p&gt;一般在视频网站的分享，会提供嵌入代码，直接复制粘贴即可，以B站视频为例&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;iframe src=&amp;quot;//player.bilibili.com/player.html?aid=69754511&amp;amp;bvid=BV1ZE411D7od&amp;amp;cid=120910162&amp;amp;page=1&amp;quot; scrolling=&amp;quot;no&amp;quot; border=&amp;quot;0&amp;quot; frameborder=&amp;quot;no&amp;quot; framespacing=&amp;quot;0&amp;quot; allowfullscreen=&amp;quot;true&amp;quot;&amp;gt; &amp;lt;/iframe&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果：&lt;/p&gt;
+&lt;iframe src=&#34;//player.bilibili.com/player.html?aid=69754511&amp;bvid=BV1ZE411D7od&amp;cid=120910162&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;但是会发现视频并不能自适应界面，所以需要在ifame上添加样式&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;style=&amp;quot;
+	width: 100%; 
+    height: 56.25vw; /* 16:9 页面 100*9/16 = 56.25 */&amp;quot;
+/* 添加后的标签*/
+&amp;lt;iframe src=&amp;quot;//player.bilibili.com/player.html?aid=69754511&amp;amp;bvid=BV1ZE411D7od&amp;amp;cid=120910162&amp;amp;page=1&amp;quot; scrolling=&amp;quot;no&amp;quot; border=&amp;quot;0&amp;quot; frameborder=&amp;quot;no&amp;quot; framespacing=&amp;quot;0&amp;quot; allowfullscreen=&amp;quot;true&amp;quot;style=&amp;quot;width: 100%; height: 56.25vw; &amp;quot;&amp;gt; &amp;lt;/iframe&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果:&lt;/p&gt;
+&lt;iframe src=&#34;//player.bilibili.com/player.html?aid=69754511&amp;bvid=BV1ZE411D7od&amp;cid=120910162&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34;style=&#34;width: 100%; height: 56.25vw; &#34;&gt; &lt;/iframe&gt;
+&lt;h2 id=&#34;分割线&#34;&gt;分割线&lt;/h2&gt;
+&lt;p&gt;分割线的语法只需要另起一行，连续输入三个星号 *** 即可分割两段文字内容。
+如图：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;下面有条分割线
+***
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;下面有条分割线&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;表格&#34;&gt;表格&lt;/h2&gt;
+&lt;p&gt;当你需要在Markdown文稿中键入表格&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    | Tables        | Are           | Cool  |
+	| ------------- |:-------------:| -----:|
+	| col 3 is      | right-aligned | $1600 |
+	| col 2 is      | centered      |   $12 |
+	| zebra stripes | are neat      |    $1 |
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;效果&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tables&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Are&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Cool&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;col 3 is&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;right-aligned&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$1600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;col 2 is&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;centered&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;zebra stripes&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;are neat&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;待办和清单&#34;&gt;待办和清单&lt;/h2&gt;
+&lt;p&gt;待办事项和清单在日常工作、生活中经常被使用。
+在Markdown中，你只需要在待办的事项文本或者清单文本前加上- [ ]、- [x]即可。
+- [ ] 表示未完成，- [x] 表示已完成。
+注：键入字符与字符之间都要保留一个字符的空格。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- [x] 已完成
+- [ ] 未完成
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 已完成&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 未完成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;流程图&#34;&gt;流程图&lt;/h2&gt;
+&lt;p&gt;参见：&lt;a href=&#34;http://knsv.github.io/mermaid/#flowcharts-basic-syntax&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://knsv.github.io/mermaid/#flowcharts-basic-syntax&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;甘特图&#34;&gt;甘特图&lt;/h2&gt;
+&lt;p&gt;参见：&lt;a href=&#34;http://knsv.github.io/mermaid/#styling39&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://knsv.github.io/mermaid/#styling39&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;代码折叠&#34;&gt;代码折叠&lt;/h2&gt;
+&lt;style&gt;
+.testButton { color:black;font-size:12px;padding-top:10px;padding-bottom:10px;padding-left:25px;padding-right:25px;border-width:;border-color:white;border-style:;border-radius:10px;background-color:#f3f3f3;}.testButton:hover{color:white;background-color:#0684bd;border-color:#87daff;}
+&lt;/style&gt;
+&lt;p&gt;&lt;button class=&#34;testButton&#34; onclick=&#34;document.all.child1.style.display=(document.all.child1.style.display ==&#39;none&#39;)?&#39;&#39;:&#39;none&#39;&#34;&gt;点击显\隐代码&lt;/button&gt;&lt;/p&gt;
+&lt;div id=&#34;child1&#34; style=&#34;display:&#34;&gt;   
+&lt;pre&gt;&lt;code&gt;	&amp;lt;style&amp;gt;
+	.testButton { color:black;font-size:12px;padding-top:10px;padding-bottom:10px;padding-left:25px;padding-right:25px;border-width:;border-color:white;border-style:;border-radius:10px;background-color:#f3f3f3;}.testButton:hover{color:white;background-color:#0684bd;border-color:#87daff;}
+	&amp;lt;/style&amp;gt;
+	&amp;lt;button class=&amp;quot;testButton&amp;quot; onclick=&amp;quot;document.all.child1.style.display=(document.all.child1.style.display ==&#39;none&#39;)?&#39;&#39;:&#39;none&#39;&amp;quot;&amp;gt;点击显\隐代码&amp;lt;/button&amp;gt;
+	&amp;lt;div id=&amp;quot;child1&amp;quot; style=&amp;quot;display:none&amp;quot;&amp;gt; 
+
+	此处放代码
+
+	&amp;lt;/div&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt; 
 </description>
     </item>
     
