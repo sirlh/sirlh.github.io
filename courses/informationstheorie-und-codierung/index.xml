@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Informationstheorie und Codierung | Heng</title>
+    <link>https://sirlh.github.io/courses/informationstheorie-und-codierung/</link>
+      <atom:link href="https://sirlh.github.io/courses/informationstheorie-und-codierung/index.xml" rel="self" type="application/rss+xml" />
+    <description>Informationstheorie und Codierung</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Sun, 29 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://sirlh.github.io/courses/informationstheorie-und-codierung/featured.jpg</url>
+      <title>Informationstheorie und Codierung</title>
+      <link>https://sirlh.github.io/courses/informationstheorie-und-codierung/</link>
+    </image>
+    
+    <item>
+      <title>Vorlesung 1</title>
+      <link>https://sirlh.github.io/courses/informationstheorie-und-codierung/vorlesung1/</link>
+      <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://sirlh.github.io/courses/informationstheorie-und-codierung/vorlesung1/</guid>
+      <description>&lt;h3 id=&#34;课程大纲&#34;&gt;课程大纲&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Binomial distribution 二项分布&lt;/li&gt;
+&lt;li&gt;Permutations 排列组合&lt;/li&gt;
+&lt;li&gt;Poisson distribution 泊松分布&lt;/li&gt;
+&lt;li&gt;binary entropy function以二为底的熵函数&lt;/li&gt;
+&lt;li&gt;Hamming code 汉明码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;binomial-distribution-二项分布&#34;&gt;Binomial distribution 二项分布&lt;/h3&gt;
+&lt;p&gt;wir haben eine münze, die auf Kopf fällt mit Wahrscheinlichkeit f.
+Wie hoch ist die Wahrscheinlichkeit für r mal Kopf bei N münze werfen?&lt;/p&gt;
+&lt;p&gt;一枚硬币抛正面的概率是f，那么抛 r 次，有 N 次是正面的概率是多少？&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
