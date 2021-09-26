@@ -8,7 +8,14 @@
     <loc>https://sirlh.github.io/courses/informationstheorie-und-codierung/vorlesung1/</loc>
     <lastmod>2021-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://sirlh.github.io/gallery/gallery/</loc>
+    <loc>https://sirlh.github.io/gallery/test/</loc>
+    <lastmod>2021-09-26T17:28:15+00:00</lastmod>
+  </url><url>
+    <loc>https://sirlh.github.io/gallery/a/</loc>
+    <lastmod>2021-09-26T17:28:15+00:00</lastmod>
+  </url><url>
+    <loc>https://sirlh.github.io/gallery/dortmund/</loc>
+    <lastmod>2021-09-26T17:28:15+00:00</lastmod>
   </url><url>
     <loc>https://sirlh.github.io/talk/example-talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
@@ -18,6 +25,9 @@
   </url><url>
     <loc>https://sirlh.github.io/event/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirlh.github.io/gallery/</loc>
+    <lastmod>2021-09-26T17:28:15+00:00</lastmod>
   </url><url>
     <loc>https://sirlh.github.io/courses/</loc>
     <lastmod>2021-08-30T00:00:00+00:00</lastmod>
@@ -118,9 +128,5 @@
     <loc>https://sirlh.github.io/admin/</loc>
   </url><url>
     <loc>https://sirlh.github.io/categories/</loc>
-  </url><url>
-    <loc>https://sirlh.github.io/gallery/</loc>
-  </url><url>
-    <loc>https://sirlh.github.io/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
   </url>
 </urlset>
