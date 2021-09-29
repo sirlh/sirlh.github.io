@@ -380,6 +380,10 @@
 &lt;p&gt;参见：&lt;a href=&#34;http://knsv.github.io/mermaid/#flowcharts-basic-syntax&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://knsv.github.io/mermaid/#flowcharts-basic-syntax&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;甘特图&#34;&gt;甘特图&lt;/h2&gt;
 &lt;p&gt;参见：&lt;a href=&#34;http://knsv.github.io/mermaid/#styling39&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://knsv.github.io/mermaid/#styling39&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;在线书写公式&#34;&gt;在线书写公式&lt;/h2&gt;
+&lt;p&gt;参见: &lt;a href=&#34;https://latex.codecogs.com/eqneditor/editor.php&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://latex.codecogs.com/eqneditor/editor.php&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;或&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://zzugbb.github.io/formula-edit/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://zzugbb.github.io/formula-edit/&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;代码折叠&#34;&gt;代码折叠&lt;/h2&gt;
 &lt;style&gt;
 .testButton { color:black;font-size:12px;padding-top:10px;padding-bottom:10px;padding-left:25px;padding-right:25px;border-width:;border-color:white;border-style:;border-radius:10px;background-color:#f3f3f3;}.testButton:hover{color:white;background-color:#0684bd;border-color:#87daff;}
