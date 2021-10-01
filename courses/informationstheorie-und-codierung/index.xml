@@ -17,7 +17,7 @@
       <link>https://sirlh.github.io/courses/informationstheorie-und-codierung/vorlesung1/</link>
       <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
       <guid>https://sirlh.github.io/courses/informationstheorie-und-codierung/vorlesung1/</guid>
-      <description>&lt;h3 id=&#34;课程大纲&#34;&gt;课程大纲&lt;/h3&gt;
+      <description>&lt;h3 id=&#34;课程小结&#34;&gt;课程小结&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Binomial distribution 二项分布&lt;/li&gt;
 &lt;li&gt;Permutations 排列组合&lt;/li&gt;
@@ -25,10 +25,155 @@
 &lt;li&gt;binary entropy function以二为底的熵函数&lt;/li&gt;
 &lt;li&gt;Hamming code 汉明码&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;binomial-distribution-二项分布&#34;&gt;Binomial distribution 二项分布&lt;/h3&gt;
-&lt;p&gt;wir haben eine münze, die auf Kopf fällt mit Wahrscheinlichkeit f.
+&lt;hr&gt;
+&lt;h3 id=&#34;--binomial-distribution-二项分布&#34;&gt;- Binomial distribution 二项分布&lt;/h3&gt;
+&lt;p&gt;Wir haben eine münze, die auf Kopf fällt mit Wahrscheinlichkeit f.
 Wie hoch ist die Wahrscheinlichkeit für r mal Kopf bei N münze werfen?&lt;/p&gt;
 &lt;p&gt;一枚硬币抛正面的概率是f，那么抛 r 次，有 N 次是正面的概率是多少？&lt;/p&gt;
+&lt;h5 id=&#34;二项分布公式&#34;&gt;二项分布公式：&lt;/h5&gt;
+&lt;p&gt;$$ P(r|N,f) = \binom{N}{r} f^{r}(1-f)^{N-r} $$&lt;/p&gt;
+&lt;h5 id=&#34;该分布的均值&#34;&gt;该分布的均值&lt;/h5&gt;
+&lt;p&gt;$$ E(r) = \sum_{r=0}^{N}P(r|N,f)r = Nf $$&lt;/p&gt;
+&lt;h5 id=&#34;方差&#34;&gt;方差&lt;/h5&gt;
+&lt;p&gt;$$ Var[r] = \sum_{r=0}^{N}P(r|f,N)r^{2}-(E[r])^{2} = N(1-f)f$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;--排列组合的写法&#34;&gt;- 排列组合的写法&lt;/h3&gt;
+&lt;p&gt;$$ \binom{N}{r} = \frac{N!}{r!(N-r)!} $$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;--使用泊松分布推导x-和-排列组合公式-的近似值&#34;&gt;- 使用泊松分布推导X! 和 排列组合公式 的近似值&lt;/h3&gt;
+&lt;p&gt;均值为 λ 的泊松分布公司为：
+$$ P(r|\lambda ) = e^{-\lambda} \frac{\lambda^{r}}{r!} $$&lt;/p&gt;
+&lt;p&gt;当 λ 较大时，可使用λ的高斯分布近似取得
+$$ e^{-\lambda} \frac{\lambda^{r}}{r!} \simeq  \frac{1}{\sqrt{2\pi \lambda }}e^{-\frac{(r-\lambda )^2}{2\lambda }}$$&lt;/p&gt;
+&lt;p&gt;当 r = λ 时 ，代入得:
+$$ e^{-\lambda} \frac{\lambda^{\lambda }}{\lambda !} \simeq  \frac{1}{\sqrt{2\pi \lambda }} $$&lt;/p&gt;
+&lt;p&gt;可推出：
+$$\lambda !\simeq \lambda ^{\lambda }e^{-\lambda }\sqrt{2\pi \lambda } $$&lt;/p&gt;
+&lt;p&gt;所以，&lt;strong&gt;阶乘 X! 的近似值&lt;/strong&gt;可写成:
+$$ x!\simeq x ^{x }e^{-x }\sqrt{2\pi x } $$&lt;/p&gt;
+&lt;p&gt;对 X！取对数，可得：
+$$ \ln x! \simeq x\ln x - x+\frac{1}{2}\ln 2\pi x $$&lt;/p&gt;
+&lt;p&gt;将上式应用于排列组合上，可得：
+$$\ln \binom{N}{r} = \ln\frac{N!}{(N-r!)r!} \simeq (N-r)\ln\frac{N}{N-r}+ r\ln\frac{N}{r}$$&lt;/p&gt;
+&lt;p&gt;此处我们引入 &lt;em&gt;以2为底的熵函数&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;$$ H_{2}(x) = x \log \frac{1}{x} + (1-x)\log \frac{1}{(1-x)} $$&lt;/p&gt;
+&lt;p&gt;则排列组合取对数后可写为：
+$$ \ln \binom{N}{r} \simeq NH_{2}(r/N) $$&lt;/p&gt;
+&lt;p&gt;所以，&lt;strong&gt;排列组合公式的近似值&lt;/strong&gt; 可写成：
+$$ \binom{N}{r} = 2^{NH_{2}(r/N)} $$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;重复码&#34;&gt;重复码&lt;/h3&gt;
+&lt;p&gt;在信号传输过程中，往往会出现差错，为了减少差错，我们会加入一些有用的冗余信息，最简单的办法就是多传几个，类似于“重要的事情说三遍”，这就是重复码，而在译码过程中，则采用少数服从多数的办法来获取信源信息。&lt;/p&gt;
+&lt;p&gt;如：重复码 R3 ，重复三次。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;源序列&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;发送序列&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;111&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;重复码的译码是少数服从多数的原则，如R3的译码表：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;接收序列&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;译码序列&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;000&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;001&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;010&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;011&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;101&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;110&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;111&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;练习&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;假设传输过程中的误差为f. 使用R3（重复3次）和R5（重复5次）的编码方式传输，出错的概率分别为多少？&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;重复3次的概率为&lt;/em&gt;：
+$$ P = f^{2}(1-f) \binom{3}{2} + f^{3} \binom{3}{3}$$&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;重复5次的概率为&lt;/em&gt;：
+$$ P = f^{3}(1-f)^{2} \binom{5}{3} + f^{4}(1-f)\binom{5}{4} + f^{5} \binom{5}{5}$$&lt;/p&gt;
+&lt;p&gt;类似的可得出重复 N 次时，重复码的差错概率是：&lt;/p&gt;
+&lt;p&gt;$$ P_{b}=\sum_{n = (N+1)/2}^{N}\binom{N}{n}f^{n}(1-f)^{N-n}$$&lt;/p&gt;
+&lt;p&gt;显然，重复次数越多，误差越低，使用matlab画图可得：&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://sirlh.github.io/images/ITC/Repeat-code.png&#34; alt=&#34;重复次数与差错概率的关系&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;f = 0.5 ; %误差
+T = [1:30]; % 实验次数，假定为30
+  t = length(T);
+Pb = zeros(1,t) ;% 差错概率，初始值设为0
+
+for N = 1:t
+    for n= ceil((N+1)/2) : N
+        Pb(N) = nchoosek(N,n) * power(f,n) * power(1-f,N-n);
+    end
+end
+
+plot(Pb);
+title(&#39;重复次数与差错概率的关系&#39;)
+xlabel(&#39;重复次数N&#39;) 
+ylabel(&#39;差错概率Pb&#39;) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;汉明码&#34;&gt;汉明码&lt;/h3&gt;
 </description>
     </item>
     
