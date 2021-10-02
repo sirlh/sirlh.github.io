@@ -13,6 +13,15 @@
     </image>
     
     <item>
+      <title>Vorlesung 2</title>
+      <link>https://sirlh.github.io/courses/informationstheorie-und-codierung/vorlesung2/</link>
+      <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://sirlh.github.io/courses/informationstheorie-und-codierung/vorlesung2/</guid>
+      <description>&lt;p&gt;待更新&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Vorlesung 1</title>
       <link>https://sirlh.github.io/courses/informationstheorie-und-codierung/vorlesung1/</link>
       <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
@@ -174,6 +183,7 @@ ylabel(&#39;差错概率Pb&#39;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;汉明码&#34;&gt;汉明码&lt;/h3&gt;
+&lt;iframe src=&#34;//player.bilibili.com/player.html?aid=463302078&amp;bvid=BV1ML411s7et&amp;cid=418536112&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34; style=&#34;width: 100%; height: 56.25vw;&#34; &gt; &lt;/iframe&gt;
 </description>
     </item>
     
