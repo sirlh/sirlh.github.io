@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://sirlh.github.io/courses/verilog%E5%9F%BA%E7%A1%80/chapter1/</loc>
+    <lastmod>2021-08-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://sirlh.github.io/courses/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/chapter1/</loc>
     <lastmod>2021-08-24T00:00:00+00:00</lastmod>
   </url><url>
@@ -10,9 +13,6 @@
   </url><url>
     <loc>https://sirlh.github.io/courses/informationstheorie-und-codierung/vorlesung1/</loc>
     <lastmod>2021-08-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://sirlh.github.io/gallery/test/</loc>
-    <lastmod>2021-09-26T17:28:15+00:00</lastmod>
   </url><url>
     <loc>https://sirlh.github.io/gallery/2019reise/</loc>
     <lastmod>2021-09-26T17:28:15+00:00</lastmod>
@@ -35,11 +35,14 @@
     <loc>https://sirlh.github.io/event/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://sirlh.github.io/courses/</loc>
+    <lastmod>2021-10-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirlh.github.io/courses/verilog%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2021-10-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://sirlh.github.io/gallery/</loc>
     <lastmod>2021-09-26T17:28:15+00:00</lastmod>
-  </url><url>
-    <loc>https://sirlh.github.io/courses/</loc>
-    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://sirlh.github.io/courses/%E5%BE%B7%E8%AF%AD%E7%BF%BB%E8%AF%91/</loc>
     <lastmod>2021-08-30T00:00:00+00:00</lastmod>

@@ -30,10 +30,10 @@
   
     
   
-  <meta name="description" content="An ordinary person" />
+  <meta name="description" content="Verilog HDL简介 Verilog HDL 是一种硬件描述语言，用于从算法级、RTL级、" />
 
   
-  <link rel="alternate" hreflang="zh-Hans" href="https://sirlh.github.io/courses/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://sirlh.github.io/courses/verilog%E5%9F%BA%E7%A1%80/chapter1/" />
 
   
 
@@ -268,8 +268,6 @@
   
 
   
-    <link rel="alternate" href="/courses/index.xml" type="application/rss+xml" title="Heng" />
-  
 
   
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -278,7 +276,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://sirlh.github.io/courses/" />
+  <link rel="canonical" href="https://sirlh.github.io/courses/verilog%E5%9F%BA%E7%A1%80/chapter1/" />
 
   
   
@@ -295,14 +293,18 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Heng" />
-  <meta property="og:url" content="https://sirlh.github.io/courses/" />
-  <meta property="og:title" content="Courses | Heng" />
-  <meta property="og:description" content="An ordinary person" /><meta property="og:image" content="https://sirlh.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://sirlh.github.io/courses/verilog%E5%9F%BA%E7%A1%80/chapter1/" />
+  <meta property="og:title" content="第一章 Verilog HDL的简介及模块构成 | Heng" />
+  <meta property="og:description" content="Verilog HDL简介 Verilog HDL 是一种硬件描述语言，用于从算法级、RTL级、" /><meta property="og:image" content="https://sirlh.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://sirlh.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
   
     
-      <meta property="og:updated_time" content="2021-10-02T00:00:00&#43;00:00" />
+      <meta
+        property="article:published_time"
+        content="2021-08-24T00:00:00&#43;00:00"
+      />
     
+    <meta property="article:modified_time" content="2021-08-24T00:00:00&#43;00:00">
   
 
   
@@ -313,15 +315,17 @@
 
   
 
+  
 
 
 
 
-  <title>Courses | Heng</title>
+
+  <title>第一章 Verilog HDL的简介及模块构成 | Heng</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="a98a8836220067f37599a398a7c77b75" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="0a424ddea6a9ec4d75f676bd7ffe0c10" >
 
   
   
@@ -624,407 +628,220 @@
 
 
 
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-<div class="universal-wrapper pt-3">
-  <h1>Courses</h1>
-
-  
-
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-  
-    <div class="article-style"><p>记录学习过程</p>
-</div>
-  
-
-  
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/courses/verilog%E5%9F%BA%E7%A1%80/" >Verilog基础</a>
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          讲述Verilog Hdl的语法，并附带相关的代码示例
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
     </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">搜索...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
 
     
-    <a href="/courses/verilog%E5%9F%BA%E7%A1%80/"  class="summary-link">
-      <div class="article-style">
-        该笔记的主要内容为Verilog的基础语法，并讲述锁存器、触
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
       
 
+      <ul class="nav docs-sidenav">
+        <li><a href="/courses/"><i class="fas fa-arrow-left pr-1"></i>Courses</a></li>
+      </ul>
+
+      
       
         
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Oct 2, 2021
-  </span>
-  
-
-  
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/courses/%E5%BE%B7%E8%AF%AD%E7%BF%BB%E8%AF%91/" >德语翻译</a>
-    </div>
-
-    
-    <a href="/courses/%E5%BE%B7%E8%AF%AD%E7%BF%BB%E8%AF%91/"  class="summary-link">
-      <div class="article-style">
-        持续翻译 Slow German 网站上的文章，不定期更新
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
+          
         
+      
 
-
-<div class="article-metadata">
 
   
-  
-
-  
-  <span class="article-date">
+    
+    
     
     
       
     
-    Aug 30, 2021
-  </span>
-  
+    
 
-  
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-
-</div>
-
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/courses/verilog%E5%9F%BA%E7%A1%80/">讲述Verilog Hdl的语法，并附带相关的代码示例</a>
+    
       
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-    
-    <a href="/courses/%E5%BE%B7%E8%AF%AD%E7%BF%BB%E8%AF%91/" >
-      <img src="/courses/%E5%BE%B7%E8%AF%AD%E7%BF%BB%E8%AF%91/featured_hu85d611b8680e76e62146ecfa8d652510_6598_150x0_resize_q75_lanczos.jpg" alt="德语翻译" loading="lazy">
-    </a>
-    
-  </div>
-</div>
-
-    
-  
-    
+        <ul class="nav docs-sidenav">
       
 
 
+  <li class="active"><a href="/courses/verilog%E5%9F%BA%E7%A1%80/chapter1/">第一章 Verilog HDL的简介及模块构成</a></li>
 
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/courses/informationstheorie-und-codierung/" >Informationstheorie und Codierung</a>
-    </div>
+      
+        </ul>
+      
+    
 
     
-    <a href="/courses/informationstheorie-und-codierung/"  class="summary-link">
-      <div class="article-style">
-        信息论
       </div>
-    </a>
     
 
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
     
-    
-      
-    
-    Aug 29, 2021
-  </span>
   
+</nav>
 
-  
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-
-</div>
-
-      
     </div>
 
     
-
-  </div>
-  <div class="ml-3">
     
-    
-    
-    <a href="/courses/informationstheorie-und-codierung/" >
-      <img src="/courses/informationstheorie-und-codierung/featured_hue3ffeefb4e3314521842a0a24a493588_47201_150x0_resize_q75_lanczos.jpg" alt="Informationstheorie und Codierung" loading="lazy">
-    </a>
-    
-  </div>
-</div>
-
-    
-  
-    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
       
 
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">在本页</a></li>
+      </ul>
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/courses/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/" >信号与系统</a>
-    </div>
-
-    
-    <a href="/courses/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/"  class="summary-link">
-      <div class="article-style">
-        奥本海姆《信号与系统》的读书笔记
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Jan 24, 2021
-  </span>
-  
-
-  
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-
-</div>
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#verilog-hdl简介">Verilog HDL简介</a></li>
+        <li><a href="#verilog-hdl的模块构成">Verilog HDL的模块构成</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
       
     </div>
-
     
 
-  </div>
-  <div class="ml-3">
-    
-    
-    
-    <a href="/courses/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/" >
-      <img src="/courses/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/featured_hu8d8f35d25cc9e0e0d616334df60384ac_129008_150x0_resize_q75_lanczos.jpg" alt="信号与系统" loading="lazy">
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+  
+  
+
+  <li class="breadcrumb-item">
+    <a href="/">
+      
+        Home
+      
     </a>
-    
-  </div>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/">
+      
+        Courses
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/verilog%E5%9F%BA%E7%A1%80/">
+      
+        讲述Verilog Hdl的语法，并附带相关的代码示例
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        第一章 Verilog HDL的简介及模块构成
+      </li>
+    </ol>
+  </nav>
+
+
+          
+
+          <h1>第一章 Verilog HDL的简介及模块构成</h1>
+
+          <div class="article-style">
+            <h3 id="verilog-hdl简介">Verilog HDL简介</h3>
+<p>Verilog HDL 是一种硬件描述语言，用于从算法级、RTL级、门级到开关级的多种抽象设计层次的数字系统建模。被建模的数字系统对象的复杂性可介于简单的门级和完整的电子数字系统之间。数字系统可按层次描述。</p>
+<p>Verilog HDL 语言最初是于1983 年由Gateway Design Automation 公司为其模拟器产品开发的硬件建模语言。那时它只是一种专用语言。由于他们的模拟、仿真器产品的广泛使用，Verilog HDL作为一种便于使用且实用的语言逐渐为众多设计者所接受。在一次努力增加语言普及性的活动中，Verilog HDL 语言于1990 年被推向公众领域。Open Verilog International（OVI）是促进Verilog 发展的国际性组织。1992 年，OVI 决定致力于推广Verilog OVI 标准成为IEEE 标准。这一努力最后获得成功，Verilog 语言于1995 年成为IEEE 标准，称为IEEE Std1364－1995 。</p>
+<h3 id="verilog-hdl的模块构成">Verilog HDL的模块构成</h3>
+<p>现实中的芯片往往集成了几十万到几百万个器件，采用自顶向下的设计方法，Verilog 语言编写的模块也是如此，</p>
+
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
 </div>
 
-    
-  
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>最近更新于 Aug 24, 2021</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
 
   
+  
 
-</div>
-  </div>
 
-  <div class="page-footer">
-    
-    
-    <div class="container">
+
+        </div>
+
+      </article>
+
       <footer class="site-footer">
 
   
@@ -1060,7 +877,15 @@
   </p>
 </footer>
 
-    </div>
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
     
   </div>
 
@@ -1133,6 +958,11 @@
     
 
     
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
     
 
     

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Verilog基础 | Heng</title>
+    <link>https://sirlh.github.io/courses/verilog%E5%9F%BA%E7%A1%80/</link>
+      <atom:link href="https://sirlh.github.io/courses/verilog%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <description>Verilog基础</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Sat, 02 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://sirlh.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Verilog基础</title>
+      <link>https://sirlh.github.io/courses/verilog%E5%9F%BA%E7%A1%80/</link>
+    </image>
+    
+    <item>
+      <title>第一章 Verilog HDL的简介及模块构成</title>
+      <link>https://sirlh.github.io/courses/verilog%E5%9F%BA%E7%A1%80/chapter1/</link>
+      <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://sirlh.github.io/courses/verilog%E5%9F%BA%E7%A1%80/chapter1/</guid>
+      <description>&lt;h3 id=&#34;verilog-hdl简介&#34;&gt;Verilog HDL简介&lt;/h3&gt;
+&lt;p&gt;Verilog HDL 是一种硬件描述语言，用于从算法级、RTL级、门级到开关级的多种抽象设计层次的数字系统建模。被建模的数字系统对象的复杂性可介于简单的门级和完整的电子数字系统之间。数字系统可按层次描述。&lt;/p&gt;
+&lt;p&gt;Verilog HDL 语言最初是于1983 年由Gateway Design Automation 公司为其模拟器产品开发的硬件建模语言。那时它只是一种专用语言。由于他们的模拟、仿真器产品的广泛使用，Verilog HDL作为一种便于使用且实用的语言逐渐为众多设计者所接受。在一次努力增加语言普及性的活动中，Verilog HDL 语言于1990 年被推向公众领域。Open Verilog International（OVI）是促进Verilog 发展的国际性组织。1992 年，OVI 决定致力于推广Verilog OVI 标准成为IEEE 标准。这一努力最后获得成功，Verilog 语言于1995 年成为IEEE 标准，称为IEEE Std1364－1995 。&lt;/p&gt;
+&lt;h3 id=&#34;verilog-hdl的模块构成&#34;&gt;Verilog HDL的模块构成&lt;/h3&gt;
+&lt;p&gt;现实中的芯片往往集成了几十万到几百万个器件，采用自顶向下的设计方法，Verilog 语言编写的模块也是如此，&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

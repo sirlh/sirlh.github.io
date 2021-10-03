@@ -13,6 +13,19 @@
     </image>
     
     <item>
+      <title>第一章 Verilog HDL的简介及模块构成</title>
+      <link>https://sirlh.github.io/courses/verilog%E5%9F%BA%E7%A1%80/chapter1/</link>
+      <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://sirlh.github.io/courses/verilog%E5%9F%BA%E7%A1%80/chapter1/</guid>
+      <description>&lt;h3 id=&#34;verilog-hdl简介&#34;&gt;Verilog HDL简介&lt;/h3&gt;
+&lt;p&gt;Verilog HDL 是一种硬件描述语言，用于从算法级、RTL级、门级到开关级的多种抽象设计层次的数字系统建模。被建模的数字系统对象的复杂性可介于简单的门级和完整的电子数字系统之间。数字系统可按层次描述。&lt;/p&gt;
+&lt;p&gt;Verilog HDL 语言最初是于1983 年由Gateway Design Automation 公司为其模拟器产品开发的硬件建模语言。那时它只是一种专用语言。由于他们的模拟、仿真器产品的广泛使用，Verilog HDL作为一种便于使用且实用的语言逐渐为众多设计者所接受。在一次努力增加语言普及性的活动中，Verilog HDL 语言于1990 年被推向公众领域。Open Verilog International（OVI）是促进Verilog 发展的国际性组织。1992 年，OVI 决定致力于推广Verilog OVI 标准成为IEEE 标准。这一努力最后获得成功，Verilog 语言于1995 年成为IEEE 标准，称为IEEE Std1364－1995 。&lt;/p&gt;
+&lt;h3 id=&#34;verilog-hdl的模块构成&#34;&gt;Verilog HDL的模块构成&lt;/h3&gt;
+&lt;p&gt;现实中的芯片往往集成了几十万到几百万个器件，采用自顶向下的设计方法，Verilog 语言编写的模块也是如此，&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>第一章 信号与系统</title>
       <link>https://sirlh.github.io/courses/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/chapter1/</link>
       <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
@@ -25,7 +38,108 @@
       <link>https://sirlh.github.io/courses/informationstheorie-und-codierung/vorlesung2/</link>
       <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
       <guid>https://sirlh.github.io/courses/informationstheorie-und-codierung/vorlesung2/</guid>
-      <description>&lt;p&gt;待更新&amp;hellip;&lt;/p&gt;
+      <description>&lt;h3 id=&#34;主要内容&#34;&gt;主要内容&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Probabilities and ensembles 概率与总体&lt;/li&gt;
+&lt;li&gt;概率的运算&lt;/li&gt;
+&lt;li&gt;课后练习题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;概率与总体&#34;&gt;概率与总体&lt;/h3&gt;
+&lt;p&gt;**总体（ensemble）**x 是一个3- 元组（triple）(x, Ax ,Px)，其中 x 是一个随机变量，AX 是构成这些变量的集合 Ax = {a1,a2,a3,&amp;hellip;ai}, PX是相对应与每个变量的概率的集合 Px ={P1,P2,P3&amp;hellip;}.&lt;/p&gt;
+&lt;p&gt;他们的之间的关系为： 
+$$\sum_{a \epsilon A_{x} }^{}P(x=a) = 1 $$&lt;/p&gt;
+&lt;p&gt;对于单个元素，它的概率表示为：
+$$ P(x=a1) = P(a1) = P1 $$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;子集的概率&lt;/strong&gt;，假如 T 是 Ax 的一个子集，则子集T的概率可以表示为：
+$$ P(T) =P(x\epsilon T)= \sum_{a \epsilon T }^{}P(x=a)$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;联合概率&lt;/strong&gt;，XY是一个总体，它的结果与两个随机变量 x,y 有关，其中x属于 Ax ={a1,a2,a3&amp;hellip;}， y 属于Ay = {b1,b2,b3&amp;hellip;}，我们称这样的总体为&lt;em&gt;联合总体&lt;/em&gt;，把P(x,y)称为 x 和 y 的联合概率。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;边缘概率&lt;/strong&gt;，我们可以从连个概率 P(x,y)中得到边缘概率P(x)
+$$ P(x=a_{i}) = \sum_{y\epsilon A_{y}}P(x=a_{i},y) $$&lt;/p&gt;
+&lt;p&gt;类似的，可以得出 y 的边缘概率为：
+$$ P(y) = \sum_{x \epsilon A_{x}}P(x,y) $$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;条件概率&lt;/strong&gt;，P(x=a1/y=b1)读作在给定 y = b1 的条件下，x = a1 的概率。
+$$ P(x=a_{i}|y=b_{j}) = \frac{P(x=a_{i},y=b_{j})}{P(y=b_{j})}, P(y=b_{j})\neq 0$$&lt;/p&gt;
+&lt;p&gt;我们可以发现，条件概率P(x/y) 是由 联合概率 P(x,y) 除以 边缘概率 P(y) 得出。&lt;/p&gt;
+&lt;h3 id=&#34;概率的运算&#34;&gt;概率的运算&lt;/h3&gt;
+&lt;p&gt;关于概率的运算常用的法则主要有： 乘法律，加法律，贝叶斯定理。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;乘法律&lt;/strong&gt;
+$$ P(x,y) = P(x|y)P(y) = P(y|x)P(x) $$
+该法则也称为链式法则。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;加法律&lt;/strong&gt;
+$$ P(x) = \sum_{y}P(x,y) = \sum_{y}P(x|y)P(y) $$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;贝叶斯定理&lt;/strong&gt;
+$$ P(x|y) = \frac{P(y|x)\cdot p(x)}{P(y)} = \frac{P(y|x)\cdot p(x)}{\sum_{x&#39;}P(y|x&#39;)\cdot P(x&#39;)} $$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;独立性&lt;/strong&gt;&lt;br&gt;
+如果变量 x , y 相互独立，那么联合概率
+$$ P(x,y) = P(x)P(y) $$&lt;/p&gt;
+&lt;h3 id=&#34;练习题&#34;&gt;练习题&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;例1&lt;/strong&gt; 小明去做了新冠检测，用变量a表示健康状态，患病( a = 1 )，不患病( a=0 )，b表示检查结果，阳性(b=1)，阴性（b=0), 假设检测结果95%是可靠的，普通人患有新冠的概率是 1% ，那当检测结果呈阳性时，小明患有新冠的概率是多少？&lt;/p&gt;
+&lt;iframe  src=&#34;//player.bilibili.com/player.html?aid=505817116&amp;bvid=BV1gg411F7xH&amp;cid=419052424&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34; style=&#34;width: 100%; height: 56.25vw;&#34; &gt; &lt;/iframe&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://sirlh.github.io/images/ITC/t1.jpg&#34; alt=&#34;例1习题解答&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;例2&lt;/strong&gt; 共有11个罐子，标记为 u 属于 {0,1,2,3,&amp;hellip;10}, 每个罐子中有10个球,u号罐子中有u个黑球和 10-u 个白球。小明随机选择一个罐子有放回的抽球 N 次，结果是 b 次是黑球，N-b次是白球，假如一共抽了 N=10 次，其中抽到 b=3 次黑球，N-b=7 次 白球，那么小明选择的罐子是 u 的概率是多少？ u 等于多少时概率最大？&lt;/p&gt;
+&lt;iframe  src=&#34;//player.bilibili.com/player.html?aid=975801826&amp;bvid=BV1Z44y147gN&amp;cid=419152047&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34; style=&#34;width: 100%; height: 56.25vw;&#34; &gt; &lt;/iframe&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://sirlh.github.io/images/ITC/t2-1.jpg&#34; alt=&#34;例2习题解答-1&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://sirlh.github.io/images/ITC/t2-2.jpg&#34; alt=&#34;例2习题解答-2&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 </description>
     </item>
     
@@ -34,7 +148,7 @@
       <link>https://sirlh.github.io/courses/informationstheorie-und-codierung/vorlesung1/</link>
       <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
       <guid>https://sirlh.github.io/courses/informationstheorie-und-codierung/vorlesung1/</guid>
-      <description>&lt;h3 id=&#34;课程小结&#34;&gt;课程小结&lt;/h3&gt;
+      <description>&lt;h3 id=&#34;主要内容&#34;&gt;主要内容&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Binomial distribution 二项分布&lt;/li&gt;
 &lt;li&gt;Permutations 排列组合&lt;/li&gt;
@@ -192,69 +306,6 @@ ylabel(&#39;差错概率Pb&#39;)
 &lt;hr&gt;
 &lt;h3 id=&#34;汉明码&#34;&gt;汉明码&lt;/h3&gt;
 &lt;iframe src=&#34;//player.bilibili.com/player.html?aid=463302078&amp;bvid=BV1ML411s7et&amp;cid=418536112&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34; style=&#34;width: 100%; height: 56.25vw;&#34; &gt; &lt;/iframe&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://sirlh.github.io/gallery/test/</link>
-      <pubDate>Sun, 26 Sep 2021 17:28:15 +0000</pubDate>
-      <guid>https://sirlh.github.io/gallery/test/</guid>
-      <description>&lt;!-- themes 是相片前缀名称，相片存放在 assets/media/albums/ --&gt;
-
-
-
-
-
-
-
-
-
-
-
-&lt;div class=&#34;gallery&#34;&gt;
-
-  
-  
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-test&#34; href=&#34;https://sirlh.github.io/media/albums/test/theme-b.jpg&#34; &gt;
-      &lt;img src=&#34;https://sirlh.github.io/media/albums/test/theme-b_huf1cf2abe43974f2608d3ff2a72514f28_1526284_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;theme-b.jpg&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-test&#34; href=&#34;https://sirlh.github.io/media/albums/test/theme-c.jpg&#34; &gt;
-      &lt;img src=&#34;https://sirlh.github.io/media/albums/test/theme-c_hu2c7aa1d12b36ed6fe4046f5ba249493e_2206470_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;theme-c.jpg&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-test&#34; href=&#34;https://sirlh.github.io/media/albums/test/theme-d.jpg&#34; &gt;
-      &lt;img src=&#34;https://sirlh.github.io/media/albums/test/theme-d_hub1ae4b2db4af6f94c6138041b5897084_2751948_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;theme-d.jpg&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-test&#34; href=&#34;https://sirlh.github.io/media/albums/test/theme-e.jpg&#34; &gt;
-      &lt;img src=&#34;https://sirlh.github.io/media/albums/test/theme-e_hucb7d357ef978d455b3b22e0cf080b383_1986188_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;theme-e.jpg&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-
-&lt;/div&gt;
 </description>
     </item>
     

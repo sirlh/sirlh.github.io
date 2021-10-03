@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="待更新&hellip;" />
+  <meta name="description" content="主要内容 Probabilities and ensembles 概率与总体 概率的运算 课后练习题 概率与总体 **总" />
 
   
   <link rel="alternate" hreflang="zh-Hans" href="https://sirlh.github.io/courses/informationstheorie-und-codierung/vorlesung2/" />
@@ -298,7 +298,7 @@
   <meta property="og:site_name" content="Heng" />
   <meta property="og:url" content="https://sirlh.github.io/courses/informationstheorie-und-codierung/vorlesung2/" />
   <meta property="og:title" content="Vorlesung 2 | Heng" />
-  <meta property="og:description" content="待更新&hellip;" /><meta property="og:image" content="https://sirlh.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:description" content="主要内容 Probabilities and ensembles 概率与总体 概率的运算 课后练习题 概率与总体 **总" /><meta property="og:image" content="https://sirlh.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://sirlh.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
   
     
@@ -730,7 +730,18 @@
         <li><a href="#" id="back_to_top" class="docs-toc-title">在本页</a></li>
       </ul>
 
-      <nav id="TableOfContents"></nav>
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#主要内容">主要内容</a></li>
+        <li><a href="#概率与总体">概率与总体</a></li>
+        <li><a href="#概率的运算">概率的运算</a></li>
+        <li><a href="#练习题">练习题</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
       
     </div>
@@ -789,7 +800,108 @@
           <h1>Vorlesung 2</h1>
 
           <div class="article-style">
-            <p>待更新&hellip;</p>
+            <h3 id="主要内容">主要内容</h3>
+<ul>
+<li>Probabilities and ensembles 概率与总体</li>
+<li>概率的运算</li>
+<li>课后练习题</li>
+</ul>
+<h3 id="概率与总体">概率与总体</h3>
+<p>**总体（ensemble）**x 是一个3- 元组（triple）(x, Ax ,Px)，其中 x 是一个随机变量，AX 是构成这些变量的集合 Ax = {a1,a2,a3,&hellip;ai}, PX是相对应与每个变量的概率的集合 Px ={P1,P2,P3&hellip;}.</p>
+<p>他们的之间的关系为： 
+$$\sum_{a \epsilon A_{x} }^{}P(x=a) = 1 $$</p>
+<p>对于单个元素，它的概率表示为：
+$$ P(x=a1) = P(a1) = P1 $$</p>
+<p><strong>子集的概率</strong>，假如 T 是 Ax 的一个子集，则子集T的概率可以表示为：
+$$ P(T) =P(x\epsilon T)= \sum_{a \epsilon T }^{}P(x=a)$$</p>
+<p><strong>联合概率</strong>，XY是一个总体，它的结果与两个随机变量 x,y 有关，其中x属于 Ax ={a1,a2,a3&hellip;}， y 属于Ay = {b1,b2,b3&hellip;}，我们称这样的总体为<em>联合总体</em>，把P(x,y)称为 x 和 y 的联合概率。</p>
+<p><strong>边缘概率</strong>，我们可以从连个概率 P(x,y)中得到边缘概率P(x)
+$$ P(x=a_{i}) = \sum_{y\epsilon A_{y}}P(x=a_{i},y) $$</p>
+<p>类似的，可以得出 y 的边缘概率为：
+$$ P(y) = \sum_{x \epsilon A_{x}}P(x,y) $$</p>
+<p><strong>条件概率</strong>，P(x=a1/y=b1)读作在给定 y = b1 的条件下，x = a1 的概率。
+$$ P(x=a_{i}|y=b_{j}) = \frac{P(x=a_{i},y=b_{j})}{P(y=b_{j})}, P(y=b_{j})\neq 0$$</p>
+<p>我们可以发现，条件概率P(x/y) 是由 联合概率 P(x,y) 除以 边缘概率 P(y) 得出。</p>
+<h3 id="概率的运算">概率的运算</h3>
+<p>关于概率的运算常用的法则主要有： 乘法律，加法律，贝叶斯定理。</p>
+<p><strong>乘法律</strong>
+$$ P(x,y) = P(x|y)P(y) = P(y|x)P(x) $$
+该法则也称为链式法则。</p>
+<p><strong>加法律</strong>
+$$ P(x) = \sum_{y}P(x,y) = \sum_{y}P(x|y)P(y) $$</p>
+<p><strong>贝叶斯定理</strong>
+$$ P(x|y) = \frac{P(y|x)\cdot p(x)}{P(y)} = \frac{P(y|x)\cdot p(x)}{\sum_{x'}P(y|x')\cdot P(x')} $$</p>
+<p><strong>独立性</strong><br>
+如果变量 x , y 相互独立，那么联合概率
+$$ P(x,y) = P(x)P(y) $$</p>
+<h3 id="练习题">练习题</h3>
+<p><strong>例1</strong> 小明去做了新冠检测，用变量a表示健康状态，患病( a = 1 )，不患病( a=0 )，b表示检查结果，阳性(b=1)，阴性（b=0), 假设检测结果95%是可靠的，普通人患有新冠的概率是 1% ，那当检测结果呈阳性时，小明患有新冠的概率是多少？</p>
+<iframe  src="//player.bilibili.com/player.html?aid=505817116&bvid=BV1gg411F7xH&cid=419052424&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: 56.25vw;" > </iframe>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/images/ITC/t1.jpg" alt="例1习题解答" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p><strong>例2</strong> 共有11个罐子，标记为 u 属于 {0,1,2,3,&hellip;10}, 每个罐子中有10个球,u号罐子中有u个黑球和 10-u 个白球。小明随机选择一个罐子有放回的抽球 N 次，结果是 b 次是黑球，N-b次是白球，假如一共抽了 N=10 次，其中抽到 b=3 次黑球，N-b=7 次 白球，那么小明选择的罐子是 u 的概率是多少？ u 等于多少时概率最大？</p>
+<iframe  src="//player.bilibili.com/player.html?aid=975801826&bvid=BV1Z44y147gN&cid=419152047&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: 56.25vw;" > </iframe>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/images/ITC/t2-1.jpg" alt="例2习题解答-1" loading="lazy" data-zoomable /></div>
+  </div></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/images/ITC/t2-2.jpg" alt="例2习题解答-2" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 
           </div>
 
